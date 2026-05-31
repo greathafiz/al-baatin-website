@@ -21,7 +21,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <span className="text-amber text-xl select-none">☀</span>
           <span className="font-sora font-bold text-white text-lg tracking-tight">
-            Al-Baatin Technologies
+            Al-Baatin <span className="hidden md:inline">Technologies</span>
           </span>
         </div>
         <a
