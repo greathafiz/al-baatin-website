@@ -1,4 +1,3 @@
-// app/components/Services.tsx
 const services = [
   {
     icon: "🏠",
@@ -31,7 +30,9 @@ export default function Services() {
         </p>
 
         <h2 className="font-sora font-bold text-white text-3xl sm:text-4xl md:text-5xl text-center mb-16 leading-tight">
-          Everything Solar,<br />Done Right.
+          Everything Solar,
+          <br />
+          Done Right.
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">

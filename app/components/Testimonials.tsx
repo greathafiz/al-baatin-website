@@ -1,4 +1,3 @@
-// app/components/Testimonials.tsx
 const testimonials = [
   {
     quote:
@@ -29,7 +28,9 @@ export default function Testimonials() {
         </p>
 
         <h2 className="font-sora font-bold text-navy-deep text-3xl sm:text-4xl md:text-5xl text-center mb-16 leading-tight">
-          Real People.<br />Real Results.
+          Real People.
+          <br />
+          Real Results.
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -48,7 +49,9 @@ export default function Testimonials() {
                 <p className="font-sora font-bold text-navy-deep text-sm">
                   {t.name}
                 </p>
-                <p className="font-inter text-body-gray text-xs">{t.location}</p>
+                <p className="font-inter text-body-gray text-xs">
+                  {t.location}
+                </p>
                 <p className="text-amber text-sm mt-2 tracking-widest">★★★★★</p>
               </div>
             </div>

@@ -1,4 +1,3 @@
-// app/components/Footer.tsx
 import { PHONE, WHATSAPP_URL } from "@/app/lib/constants"
 
 export default function Footer() {
@@ -39,7 +38,8 @@ export default function Footer() {
 
       <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-white/5 text-center">
         <p className="font-inter text-slate-600 text-xs">
-          © {new Date().getFullYear()} Al-Baatin Technologies. All rights reserved.
+          © {new Date().getFullYear()} Al-Baatin Technologies. All rights
+          reserved.
         </p>
       </div>
     </footer>

@@ -1,4 +1,3 @@
-// app/components/Hero.tsx
 import { PHONE, WHATSAPP_URL } from "@/app/lib/constants"
 
 export default function Hero() {
@@ -32,8 +31,8 @@ export default function Hero() {
 
         {/* Subtext */}
         <p className="font-inter text-slate-300 text-lg md:text-xl max-w-xl mb-10 mx-auto md:mx-0">
-          Al-Baatin Technologies installs clean, reliable solar systems for homes
-          and businesses across Ibadan. No more generator fumes. No more
+          Al-Baatin Technologies installs clean, reliable solar systems for
+          homes and businesses across Ibadan. No more generator fumes. No more
           darkness.
         </p>
 

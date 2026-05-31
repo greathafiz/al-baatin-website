@@ -1,4 +1,3 @@
-// app/components/Gallery.tsx
 import Image from "next/image"
 
 const photos = Array.from({ length: 9 }, (_, i) => ({
@@ -15,7 +14,9 @@ export default function Gallery() {
         </p>
 
         <h2 className="font-sora font-bold text-navy-deep text-3xl sm:text-4xl md:text-5xl text-center mb-4 leading-tight">
-          20+ Installations<br />Across Ibadan.
+          20+ Installations
+          <br />
+          Across Ibadan.
         </h2>
 
         <p className="font-inter text-body-gray text-lg text-center mb-12">

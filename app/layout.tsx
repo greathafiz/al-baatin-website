@@ -14,7 +14,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Al-Baatin Technologies — Solar Installations in Ibadan",
+  title: "Al-Baatin Technologies",
   description:
     "Professional solar panel installation for homes and businesses in Ibadan, Oyo State. Get a free assessment today.",
 }

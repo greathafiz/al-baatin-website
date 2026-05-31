@@ -1,5 +1,4 @@
-// app/components/Brands.tsx
-const brands = ["Luminous", "Felicity", "Victron"]
+const brands = ["Luminous", "Felicity", "Growatt"]
 
 export default function Brands() {
   return (
@@ -10,11 +9,14 @@ export default function Brands() {
         </p>
 
         <h2 className="font-sora font-bold text-white text-3xl sm:text-4xl md:text-5xl mb-4 leading-tight">
-          Quality Equipment<br />You Can Trust.
+          Quality Equipment
+          <br />
+          You Can Trust.
         </h2>
 
         <p className="font-inter text-slate-400 text-lg mb-12 max-w-lg mx-auto">
-          We only install brands with proven track records in the Nigerian market.
+          We only install brands with proven track records in the Nigerian
+          market.
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">

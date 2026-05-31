@@ -1,4 +1,3 @@
-// app/components/HowItWorks.tsx
 const steps = [
   {
     number: "01",
@@ -26,7 +25,9 @@ export default function HowItWorks() {
         </p>
 
         <h2 className="font-sora font-bold text-white text-3xl sm:text-4xl md:text-5xl text-center mb-16 leading-tight">
-          Getting Started<br />Is Simple.
+          Getting Started
+          <br />
+          Is Simple.
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-14 relative">
@@ -34,7 +35,10 @@ export default function HowItWorks() {
           <div className="hidden sm:block absolute top-8 left-[calc(16.67%+2rem)] right-[calc(16.67%+2rem)] h-px border-t-2 border-dashed border-amber/30" />
 
           {steps.map((step) => (
-            <div key={step.number} className="flex flex-col items-center text-center">
+            <div
+              key={step.number}
+              className="flex flex-col items-center text-center"
+            >
               <div className="w-16 h-16 rounded-full bg-amber flex items-center justify-center mb-6 relative z-10">
                 <span className="font-sora font-bold text-navy-deep text-lg">
                   {step.number}

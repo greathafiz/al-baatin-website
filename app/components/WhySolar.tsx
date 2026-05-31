@@ -1,4 +1,3 @@
-// app/components/WhySolar.tsx
 const painPoints = [
   {
     icon: "⚡",
@@ -26,7 +25,9 @@ export default function WhySolar() {
         </p>
 
         <h2 className="font-sora font-bold text-navy-deep text-3xl sm:text-4xl md:text-5xl text-center mb-4 leading-tight">
-          Tired of Living on<br />NEPA&apos;s Schedule?
+          Tired of Living on
+          <br />
+          NEPA&apos;s Schedule?
         </h2>
 
         <p className="font-inter text-body-gray text-lg text-center mb-12 max-w-xl mx-auto">

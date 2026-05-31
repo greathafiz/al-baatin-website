@@ -1,6 +1,4 @@
-// app/components/WhatsAppButton.tsx
 "use client"
-
 import { WHATSAPP_URL } from "@/app/lib/constants"
 
 export default function WhatsAppButton() {
