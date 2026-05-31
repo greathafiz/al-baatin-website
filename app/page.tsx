@@ -6,6 +6,9 @@ import Gallery from "@/app/components/Gallery"
 import HowItWorks from "@/app/components/HowItWorks"
 import Testimonials from "@/app/components/Testimonials"
 import Brands from "@/app/components/Brands"
+import Contact from "@/app/components/Contact"
+import Footer from "@/app/components/Footer"
+import WhatsAppButton from "@/app/components/WhatsAppButton"
 
 export default function Home() {
   return (
@@ -19,7 +22,10 @@ export default function Home() {
         <HowItWorks />
         <Testimonials />
         <Brands />
+        <Contact />
       </main>
+      <Footer />
+      <WhatsAppButton />
     </>
   )
 }
