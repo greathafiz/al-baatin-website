@@ -2,6 +2,7 @@ import { Frame } from "@/components/layout"
 import { Img } from "@/components/Media"
 import { WhatsAppIcon } from "@/components/ui"
 import { whatsapp } from "@/data/business"
+import { image } from "@/lib/media"
 
 /** The one landscape photo in the set, and the sharpest. */
 const heroPhoto = {
@@ -19,8 +20,24 @@ const heroPhoto = {
  * read as a document.
  */
 export function Hero() {
+  const hero = image(heroPhoto.key)
+
   return (
     <header className="relative isolate flex min-h-[86svh] flex-col justify-end overflow-hidden">
+      {/*
+        Preload the hero: it is the LCP element on every first visit, and
+        without this the browser only discovers it after the stylesheet parses.
+        imageSrcSet mirrors the <img> exactly so preload and render agree on
+        which file to fetch — a mismatch downloads both.
+      */}
+      <link
+        rel="preload"
+        as="image"
+        href={hero.src}
+        imageSrcSet={hero.srcSet}
+        imageSizes="100vw"
+        fetchPriority="high"
+      />
       <Img
         photo={heroPhoto}
         priority

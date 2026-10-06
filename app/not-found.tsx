@@ -1,5 +1,15 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Frame, Section } from "@/components/layout"
+
+export const metadata: Metadata = {
+  title: "Page not found",
+  // A 404 that gets indexed is a 404 that shows up in search results.
+  robots: { index: false, follow: true },
+  // null, not inherited: without this the 404 carries the root layout's
+  // canonical and tells Google this page IS the homepage.
+  alternates: { canonical: null },
+}
 
 export default function NotFound() {
   return (

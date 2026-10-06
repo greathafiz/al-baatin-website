@@ -64,13 +64,13 @@ Last updated: 6 Oct 2026
 - [x] 5.5 Custom 404
 - [x] 5.6 `robots.txt` + `sitemap.xml`
 
-## Stage 6 — SEO, accessibility, polish  `[ ]`
+## Stage 6 — SEO, accessibility, polish  `[~]`
 
-- [ ] 6.1 Per-page titles/descriptions + Open Graph
+- [x] 6.1 Per-page titles/descriptions + Open Graph + canonicals
 - [x] 6.2 `LocalBusiness` JSON-LD
-- [ ] 6.3 Accessibility pass: contrast, keyboard focus, alt text, reduced motion
-- [ ] 6.4 Check at 375px and desktop
-- [ ] 6.5 Lighthouse mobile ≥ 90
+- [x] 6.3 Accessibility pass: contrast, keyboard focus, alt text, reduced motion
+- [x] 6.4 Check at 375px and desktop
+- [~] 6.5 Lighthouse mobile: a11y/BP/SEO 100, performance 79-84 locally (see README)
 
 ## Stage 7 — Ship  `[ ]`
 

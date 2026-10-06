@@ -16,6 +16,8 @@ export const metadata: Metadata = {
   title: "Solar and CCTV training",
   description:
     "NYSC SAED accredited training in solar installation, CCTV and intercom systems. ₦100,000 for the full year, certificate on completion.",
+  alternates: { canonical: "/training/" },
+  openGraph: { url: "/training/" },
 }
 
 export default function TrainingPage() {

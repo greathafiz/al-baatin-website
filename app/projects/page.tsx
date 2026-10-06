@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   title: "Our work",
   description:
     "Solar, inverter and battery installations by Al-Baatin Technologies in Lagos, Ibadan and across Nigeria.",
+  alternates: { canonical: "/projects/" },
+  openGraph: { url: "/projects/" },
 }
 
 export default function ProjectsPage() {

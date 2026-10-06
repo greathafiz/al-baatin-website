@@ -131,17 +131,27 @@
     }
   }
 
-  /* Skip link: offscreen until focused */
-  .skip-link {
-    position: absolute;
-    left: 0.75rem;
-    top: -4rem;
-    z-index: 100;
-    transition: top 150ms ease;
-  }
-  .skip-link:focus {
-    top: 0.75rem;
-  }
+}
+
+/* ---------------------------------------------------------------------------
+   Skip link: offscreen until focused.
+
+   Deliberately OUTSIDE @layer, so it beats Tailwind's utility layer. Inside
+   `@layer utilities` the :focus rule lost the cascade to the base rule and the
+   link stayed at -4rem while focused — a keyboard user tabbed into a link they
+   could not see, which is the one thing a skip link exists to prevent.
+--------------------------------------------------------------------------- */
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -4rem;
+  z-index: 100;
+  transition: top 150ms ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 0.75rem;
 }
 
 @media (prefers-reduced-motion: reduce) {

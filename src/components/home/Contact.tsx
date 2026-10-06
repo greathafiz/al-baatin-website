@@ -56,7 +56,9 @@ export function Contact() {
                       >
                         {phone.number}
                         {phone.primary ? (
-                          <span className="text-meta text-bone/50">
+                          // bone/70, not /50: at 50% this sat at 4.08:1 on the
+                          // canopy field, just under the 4.5 threshold.
+                          <span className="text-meta text-bone/70">
                             WhatsApp
                           </span>
                         ) : null}

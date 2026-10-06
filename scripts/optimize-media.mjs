@@ -6,7 +6,7 @@
  *   node scripts/optimize-media.mjs --video    # images + video transcode/posters
  *   node scripts/optimize-media.mjs --force    # redo work even if up to date
  *
- * Images  -> WebP at 1600px and 800px wide, quality 75.
+ * Images  -> WebP at 1600px and 800px wide, quality 68, plus a JPEG for og:image.
  * Videos  -> 720p H.264 MP4 (<= MAX_VIDEO_SECONDS) plus a WebP poster frame.
  *
  * These photos are the best copies the client has and will not be re-shot, so
@@ -27,7 +27,15 @@ const OUT_DIR = path.join("public", "media")
 const MANIFEST = path.join(OUT_DIR, "manifest.json")
 
 const WIDTHS = [1600, 800]
-const QUALITY = 75
+/**
+ * 68, not 75. Lighthouse flagged ~57KB of avoidable weight on the 800px hero
+ * alone. These are phone photos on mobile data — at this size the difference
+ * is invisible and the saving is not.
+ */
+const QUALITY = 68
+/** og:image JPEG — WhatsApp will not reliably preview WebP. ~300KB ceiling. */
+const SOCIAL_WIDTH = 1200
+const SOCIAL_QUALITY = 62
 const MAX_VIDEO_SECONDS = 20
 const POSTER_AT = 1.0 // seconds into the clip; 0 often lands on a black frame
 
@@ -141,7 +149,48 @@ async function processImage(file, manifest, next) {
     wrote++
   }
 
-  next[slug] = { hash, type: "image", width: srcWidth, height: srcHeight, variants }
+  /**
+   * One JPEG per image, for og:image only — never for the page.
+   *
+   * WhatsApp does not reliably render WebP link previews on either platform,
+   * and WhatsApp is how most of his work gets passed around. A share that
+   * shows no photo is a share that does not sell the job. Capped at 1200px
+   * and quality 72 to stay under WhatsApp's ~300KB preview limit.
+   */
+  const socialWidth = Math.min(SOCIAL_WIDTH, srcWidth)
+  const socialDest = path.join(OUT_DIR, `${slug}-social.jpg`)
+  const social = {
+    src: `/media/${slug}-social.jpg`,
+    width: socialWidth,
+    height: Math.round((socialWidth / srcWidth) * srcHeight),
+  }
+
+  let socialCurrent = manifest[slug]?.hash === hash
+  if (socialCurrent) {
+    try {
+      await fs.access(socialDest)
+    } catch {
+      socialCurrent = false
+    }
+  }
+  if (!socialCurrent) {
+    await fs.mkdir(path.dirname(socialDest), { recursive: true })
+    await sharp(file)
+      .autoOrient()
+      .resize({ width: socialWidth, withoutEnlargement: true })
+      .jpeg({ quality: SOCIAL_QUALITY, mozjpeg: true })
+      .toFile(socialDest)
+    wrote++
+  }
+
+  next[slug] = {
+    hash,
+    type: "image",
+    width: srcWidth,
+    height: srcHeight,
+    variants,
+    social,
+  }
   return wrote
 }
 

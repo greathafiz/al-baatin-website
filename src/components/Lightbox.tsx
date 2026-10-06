@@ -177,7 +177,7 @@ export function Lightbox({
             <figcaption className="text-meta max-w-[60ch] text-center text-white/80">
               {current.alt}
               {photos.length > 1 ? (
-                <span className="mt-1 block text-white/50">
+                <span className="mt-1 block text-white/70">
                   {openAt! + 1} of {photos.length}
                 </span>
               ) : null}

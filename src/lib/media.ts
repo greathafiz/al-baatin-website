@@ -19,6 +19,8 @@ interface ImageEntry {
   width: number
   height: number
   variants: Record<string, Variant>
+  /** JPEG copy for og:image. Absent until `npm run media` is re-run. */
+  social?: Variant
 }
 
 interface VideoEntry {
@@ -95,4 +97,26 @@ export function video(key: MediaKey): ResolvedVideo {
 export const isPortrait = (key: MediaKey): boolean => {
   const entry = manifest[key]
   return entry ? entry.height > entry.width : false
+}
+
+/**
+ * The JPEG copy of an image, for og:image.
+ *
+ * WhatsApp does not reliably preview WebP, and WhatsApp is how most of his
+ * work gets shared — so social cards point at this, never at the WebP the
+ * page itself uses. Falls back to the largest WebP if the manifest predates
+ * the social variant, which is better than emitting no image at all.
+ */
+export function socialImage(key: MediaKey): ResolvedImage {
+  const entry = manifest[key]
+  if (!entry || entry.type !== "image") {
+    throw new Error(`No image in the media manifest for "${key}".`)
+  }
+  const chosen = entry.social ?? entry.variants["1600"]
+  return {
+    src: chosen.src,
+    srcSet: `${chosen.src} ${chosen.width}w`,
+    width: chosen.width,
+    height: chosen.height,
+  }
 }

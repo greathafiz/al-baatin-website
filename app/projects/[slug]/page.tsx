@@ -7,6 +7,7 @@ import { Clip } from "@/components/Media"
 import { WhatsAppIcon } from "@/components/ui"
 import { whatsapp } from "@/data/business"
 import { projects } from "@/data/projects"
+import { socialImage } from "@/lib/media"
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }))
@@ -22,12 +23,38 @@ export async function generateMetadata({
   if (!project) return {}
 
   const where = project.location ? ` in ${project.location}` : ""
+  const description = project.systemSize
+    ? `${project.systemSize}, installed${where} by Al-Baatin Technologies.`
+    : `Installed${where} by Al-Baatin Technologies.`
+
+  // Share the job's own photo, not the generic site card. When someone pastes
+  // this link into WhatsApp — which is how most of his work gets passed around
+  // — the preview should show the actual installation.
+  const lead = project.photos[0]
+  const social = lead ? socialImage(lead.key) : null
+  const url = `/projects/${project.slug}/`
+
   return {
     title: project.title,
-    description:
-      project.systemSize
-        ? `${project.systemSize}, installed${where} by Al-Baatin Technologies.`
-        : `Installed${where} by Al-Baatin Technologies.`,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${project.title} · Al-Baatin Technologies`,
+      description,
+      url,
+      ...(social
+        ? {
+            images: [
+              {
+                url: social.src,
+                width: social.width,
+                height: social.height,
+                alt: lead.alt,
+              },
+            ],
+          }
+        : {}),
+    },
   }
 }
 
