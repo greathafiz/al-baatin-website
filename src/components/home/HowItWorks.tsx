@@ -32,7 +32,14 @@ export function HowItWorks() {
         <ol className="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, i) => (
             <li key={step.title} className="border-t border-canopy pt-5">
-              <p className="font-display text-3xl font-semibold text-canopy/25">
+              {/* aria-hidden: the <ol> already conveys the order to a screen
+                  reader, so reading "01" before each step is noise. It is set
+                  at full ink-soft rather than a 25% tint, which rendered at
+                  1.36:1 — invisible to anyone with low vision. */}
+              <p
+                aria-hidden="true"
+                className="font-display text-3xl font-semibold text-ink-soft"
+              >
                 {String(i + 1).padStart(2, "0")}
               </p>
               <h3 className="mt-3 font-display text-xl font-semibold text-canopy">

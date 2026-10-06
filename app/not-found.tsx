@@ -5,7 +5,13 @@ export default function NotFound() {
   return (
     <Section rhythm="loose">
       <Frame width="wide">
-        <p className="text-spec font-display font-semibold text-canopy/15">404</p>
+        {/* Decorative only — the heading below carries the actual message. */}
+        <p
+          aria-hidden="true"
+          className="text-spec font-display font-semibold text-canopy/20"
+        >
+          404
+        </p>
         <h1 className="text-display mt-4 max-w-[16ch] font-semibold">
           That page is not here
         </h1>

@@ -27,7 +27,7 @@ export function Testimonials() {
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-3 underline underline-offset-4 transition-colors hover:text-canopy"
+              className="ml-3 inline-flex min-h-11 items-center underline underline-offset-4 transition-colors hover:text-canopy"
             >
               {rating.toFixed(1)} from {reviewCount} reviews on Google
             </a>

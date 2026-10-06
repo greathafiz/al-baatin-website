@@ -11,8 +11,15 @@
   /* Brand */
   --color-canopy: #073b1e; /* primary text, headers, footer */
   --color-canopy-soft: #0d5b2e; /* hover state on canopy surfaces */
-  --color-signal: #10a633; /* the one accent: buttons, links, active */
-  --color-signal-dark: #0c7f27; /* accent hover / AA text on light bg */
+  /* The accent, used two ways and only two ways:
+     - as a SURFACE on the dark canopy field (canopy text sits on it at 6.28:1)
+     - as TEXT on the dark canopy field (6.28:1)
+     It is far too light to be text on bone (1.87:1) — use signal-dark there.
+     The earlier #10a633 gave canopy-on-signal only 3.95:1, which put the two
+     most important buttons on the site (Send message, and the WhatsApp button
+     in Contact) below the 4.5:1 threshold for button text. */
+  --color-signal: #46cf66;
+  --color-signal-dark: #0c7f27; /* the accent AS TEXT on light bone: 4.76:1 */
   --color-logo-green: #01fe01; /* logo artwork only — never UI */
   --color-live-red: #d0021b; /* from the logo's RC text + bar mark */
 

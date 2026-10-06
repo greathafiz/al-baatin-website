@@ -58,7 +58,7 @@ export function Hero() {
           </a>
           <a
             href="#work"
-            className="text-meta border-b border-white/40 pb-1 text-white/90 transition-colors hover:border-white"
+            className="text-meta inline-flex min-h-11 items-center border-b border-white/40 text-white/90 transition-colors hover:border-white"
           >
             See the work
           </a>

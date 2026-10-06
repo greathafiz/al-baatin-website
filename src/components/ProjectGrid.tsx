@@ -50,7 +50,7 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
               onClick={() => setFilter(f.value)}
               aria-pressed={active}
               disabled={count === 0}
-              className={`border-b pb-1 text-base transition-colors disabled:opacity-30 ${
+              className={`inline-flex min-h-11 min-w-11 cursor-pointer items-center justify-center border-b text-base transition-colors disabled:cursor-default disabled:opacity-30 ${
                 active
                   ? "border-canopy text-canopy"
                   : "border-transparent text-ink-soft hover:border-hairline hover:text-ink"

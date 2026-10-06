@@ -2,7 +2,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Frame, Section } from "@/components/layout"
-import { Clip, Img } from "@/components/Media"
+import { Lightbox } from "@/components/Lightbox"
+import { Clip } from "@/components/Media"
 import { WhatsAppIcon } from "@/components/ui"
 import { whatsapp } from "@/data/business"
 import { projects } from "@/data/projects"
@@ -86,17 +87,12 @@ export default async function ProjectPage({
         ) : null}
 
         {project.photos.length > 0 ? (
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {project.photos.map((photo, i) => (
-              <Img
-                key={photo.key}
-                photo={photo}
-                sizes="(min-width: 640px) 50vw, 100vw"
-                priority={i === 0}
-                className="w-full"
-              />
-            ))}
-          </div>
+          <Lightbox
+            photos={project.photos}
+            className="mt-10 grid gap-4 sm:grid-cols-2"
+            itemClassName="aspect-4/3"
+            sizes="(min-width: 640px) 50vw, 100vw"
+          />
         ) : null}
 
         {project.videos.length > 0 ? (

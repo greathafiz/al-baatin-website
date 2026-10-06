@@ -3,6 +3,8 @@ import { Fraunces, Inter } from "next/font/google"
 import { SiteFooter } from "@/components/SiteFooter"
 import { SiteHeader } from "@/components/SiteHeader"
 import { StickyWhatsApp } from "@/components/StickyWhatsApp"
+import { StructuredData } from "@/components/StructuredData"
+import { SITE_URL } from "@/data/site"
 import "./globals.css"
 
 // Display face. The logo wordmark is a serif, so the headings inherit from it
@@ -21,7 +23,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://albaatintechnologies.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Al-Baatin Technologies — solar, inverters and security systems",
     template: "%s · Al-Baatin Technologies",
@@ -61,6 +63,7 @@ export default function RootLayout({
         </main>
         <SiteFooter />
         <StickyWhatsApp />
+        <StructuredData />
       </body>
     </html>
   )

@@ -122,9 +122,8 @@ export const projects: Project[] = [
     photos: [
       {
         key: "projects/oasis-integrated-farms/01-hybrid-inverter-and-battery",
-        alt: "A 12kVA hybrid inverter mounted above a floor-standing lithium battery, with a breaker box alongside.",
-        // Tall 9:16 phone shot; the inverter sits high in the frame.
-        focal: "50% 35%",
+        alt: "A 12kVA Felicity hybrid inverter mounted on the wall above a row of breaker boxes, with a floor-standing lithium battery below.",
+        focal: "center",
       },
       {
         key: "projects/oasis-integrated-farms/02-farm-gate-sign",

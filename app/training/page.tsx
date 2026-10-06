@@ -1,9 +1,16 @@
 import type { Metadata } from "next"
+import { Lightbox } from "@/components/Lightbox"
 import { Clip, Img } from "@/components/Media"
 import { Frame, Section } from "@/components/layout"
 import { WhatsAppIcon } from "@/components/ui"
 import { whatsapp } from "@/data/business"
-import { training, trainingPhotos, trainingVideos } from "@/data/training"
+import {
+  certificatePhotos,
+  classPhotos,
+  training,
+  trainingLeadPhoto,
+  trainingVideos,
+} from "@/data/training"
 
 export const metadata: Metadata = {
   title: "Solar and CCTV training",
@@ -28,31 +35,35 @@ export default function TrainingPage() {
         <div className="mt-10 grid gap-10 md:grid-cols-5 md:gap-14">
           <div className="md:col-span-3">
             <Img
-              photo={trainingPhotos[0]}
+              photo={trainingLeadPhoto}
               priority
               sizes="(min-width: 768px) 60vw, 100vw"
               className="aspect-4/3 w-full object-cover"
             />
 
             <div className="mt-8 space-y-6">
+              {/* h3, not h2: these are sub-topics of how the training runs,
+                  sitting under the page title. "From the classes" below is the
+                  next real h2. A screen reader user navigating by heading
+                  should hear the page's shape, not a flat list. */}
               <section>
-                <h2 className="font-display text-xl font-semibold text-canopy">
+                <h3 className="font-display text-xl font-semibold text-canopy">
                   In camp
-                </h2>
+                </h3>
                 <p className="mt-2 text-ink-soft">{training.campProgramme}</p>
               </section>
 
               <section>
-                <h2 className="font-display text-xl font-semibold text-canopy">
+                <h3 className="font-display text-xl font-semibold text-canopy">
                   After camp
-                </h2>
+                </h3>
                 <p className="mt-2 text-ink-soft">{training.fullProgramme}</p>
               </section>
 
               <section>
-                <h2 className="font-display text-xl font-semibold text-canopy">
+                <h3 className="font-display text-xl font-semibold text-canopy">
                   When classes start
-                </h2>
+                </h3>
                 <p className="mt-2 text-ink-soft">{training.schedule}</p>
               </section>
             </div>
@@ -101,18 +112,39 @@ export default function TrainingPage() {
         </div>
 
         <h2 className="text-title mt-20 font-semibold">
-          From the classes
+          Training in progress
         </h2>
-        <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-          {trainingPhotos.slice(1).map((photo) => (
-            <Img
-              key={photo.key}
-              photo={photo}
+        {/* Mixed orientations: these are his phone photos, some 384×288
+            landscape, some 384×512 portrait. A single forced aspect-3/4 was
+            cropping about half out of every landscape shot — including the
+            whiteboard lesson, where the whiteboard is the subject. Each photo
+            keeps its own shape; the columns keep the grid tidy. */}
+        <Lightbox
+          photos={classPhotos}
+          className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4"
+          preserveAspect
+          sizes="(min-width: 1024px) 25vw, 50vw"
+        />
+
+        {/* The certificate is what a corps member leaves with, so it gets its
+            own heading rather than sitting among the practicals. */}
+        {certificatePhotos.length > 0 ? (
+          <>
+            <h2 className="text-title mt-20 font-semibold">
+              Certificates on completion
+            </h2>
+            <p className="text-lede mt-4 max-w-[46ch] text-ink-soft">
+              Every corps member who finishes the programme is presented with an
+              NYSC certificate of participation.
+            </p>
+            <Lightbox
+              photos={certificatePhotos}
+              className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4"
+              preserveAspect
               sizes="(min-width: 1024px) 25vw, 50vw"
-              className="aspect-3/4 w-full object-cover"
             />
-          ))}
-        </div>
+          </>
+        ) : null}
 
         {trainingVideos.length > 0 ? (
           <div className="mt-6 grid gap-6 sm:grid-cols-2">

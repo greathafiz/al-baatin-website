@@ -91,6 +91,16 @@ real secret there.
 | `NEXT_PUBLIC_FORM_KEY` | Web3Forms access key for the contact form. Without it the form renders disabled with a note pointing at WhatsApp. |
 | `NEXT_PUBLIC_SITE_URL` | Canonical origin, no trailing slash. Used by `sitemap.xml`, `robots.txt` and Open Graph tags. |
 
+**These must also be set in Cloudflare Pages**, under *Settings → Environment
+variables*, for the **Production** environment. `.env.local` is gitignored and
+never reaches Cloudflare, so a build without them succeeds but silently ships a
+disabled contact form and a sitemap pointing at the wrong domain. Add them, then
+redeploy — Cloudflare does not rebuild automatically when a variable changes.
+
+After the first deploy, confirm both: open the live site and check the contact
+form shows its fields (not the "message form is not set up yet" notice), and
+open `/sitemap.xml` and check the URLs use the real domain.
+
 ## Deployment
 
 Covered in Stage 7 — Cloudflare Pages, custom domain, and the note about

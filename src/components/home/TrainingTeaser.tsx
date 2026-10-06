@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Frame, Section } from "@/components/layout"
 import { Img } from "@/components/Media"
-import { training, trainingPhotos } from "@/data/training"
+import { training, trainingLeadPhoto } from "@/data/training"
 
 export function TrainingTeaser() {
   return (
@@ -10,7 +10,7 @@ export function TrainingTeaser() {
         <div className="grid items-center gap-10 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-7">
             <Img
-              photo={trainingPhotos[0]}
+              photo={trainingLeadPhoto}
               sizes="(min-width: 768px) 58vw, 100vw"
               className="aspect-4/3 w-full object-cover"
             />
@@ -28,7 +28,7 @@ export function TrainingTeaser() {
             </p>
             <Link
               href="/training/"
-              className="text-lede mt-8 inline-block border-b border-canopy/30 pb-1 text-canopy transition-colors hover:border-canopy"
+              className="text-lede mt-8 inline-flex min-h-11 items-center border-b border-canopy/30 text-canopy transition-colors hover:border-canopy"
             >
               About the training
             </Link>

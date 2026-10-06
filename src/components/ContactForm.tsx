@@ -37,7 +37,7 @@ export function ContactForm() {
           href={whatsapp.quote}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-5 inline-block border-b border-signal pb-1 font-medium text-signal transition-colors hover:border-white hover:text-white"
+          className="mt-5 inline-flex min-h-11 items-center border-b border-signal font-medium text-signal transition-colors hover:border-white hover:text-white"
         >
           Chat on WhatsApp
         </a>
@@ -157,7 +157,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="inline-flex items-center justify-center bg-signal px-7 py-4 font-medium text-canopy transition-colors hover:bg-white disabled:opacity-60"
+        className="inline-flex cursor-pointer items-center justify-center bg-signal px-7 py-4 font-medium text-canopy transition-colors hover:bg-white disabled:cursor-wait disabled:opacity-60"
       >
         {status === "sending" ? "Sending…" : "Send message"}
       </button>

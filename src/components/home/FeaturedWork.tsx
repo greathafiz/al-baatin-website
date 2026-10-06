@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Frame, Section } from "@/components/layout"
 import { Img } from "@/components/Media"
 import { projects } from "@/data/projects"
+import { isPortrait } from "@/lib/media"
 
 /**
  * The work, as a record.
@@ -49,6 +50,24 @@ export function FeaturedWork() {
           const photo = project.photos[0]
           const flip = i % 2 === 1
 
+          /**
+           * Let the photograph keep its own shape.
+           *
+           * The Oasis inverter photo is 720×1280 — a tall wall stack: inverter
+           * at the top, breakers in the middle, battery on the floor. Forcing
+           * it into a 16:10 landscape box threw away about 70% of the height,
+           * so whichever focal point we picked, the frame showed one slice and
+           * cut off either the inverter or the battery. The full stack is the
+           * thing worth seeing, so portrait sources get a portrait box and the
+           * column narrows to stop it towering over the page.
+           */
+          const portrait = isPortrait(photo.key)
+          const mediaCols = portrait ? "md:col-span-5" : "md:col-span-8"
+          const textCols = portrait ? "md:col-span-6" : "md:col-span-4"
+          const ratio = portrait
+            ? "aspect-3/4"
+            : "aspect-4/3 md:aspect-16/10"
+
           return (
             <article key={entry.slug}>
               <Frame width="wide">
@@ -58,7 +77,7 @@ export function FeaturedWork() {
                   }`}
                 >
                   <div
-                    className={`md:col-span-8 ${flip ? "md:[direction:ltr]" : ""}`}
+                    className={`${mediaCols} ${flip ? "md:[direction:ltr]" : ""}`}
                   >
                     <Link
                       href={`/projects/${project.slug}/`}
@@ -66,14 +85,18 @@ export function FeaturedWork() {
                     >
                       <Img
                         photo={photo}
-                        sizes="(min-width: 768px) 66vw, 100vw"
-                        className="aspect-4/3 w-full object-cover transition-transform duration-500 hover:scale-[1.02] md:aspect-16/10"
+                        sizes={
+                          portrait
+                            ? "(min-width: 768px) 40vw, 100vw"
+                            : "(min-width: 768px) 66vw, 100vw"
+                        }
+                        className={`${ratio} w-full object-cover transition-transform duration-500 hover:scale-[1.02]`}
                       />
                     </Link>
                   </div>
 
                   <div
-                    className={`md:col-span-4 ${flip ? "md:[direction:ltr]" : ""}`}
+                    className={`${textCols} ${flip ? "md:[direction:ltr]" : ""}`}
                   >
                     <p className="text-spec font-display font-semibold text-canopy">
                       {entry.figure}
@@ -99,7 +122,7 @@ export function FeaturedWork() {
       <Frame width="wide" className="mt-14 md:mt-20">
         <Link
           href="/projects/"
-          className="text-lede border-b border-canopy/30 pb-1 text-canopy transition-colors hover:border-canopy"
+          className="text-lede inline-flex min-h-11 items-center border-b border-canopy/30 text-canopy transition-colors hover:border-canopy"
         >
           All projects
         </Link>

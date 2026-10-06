@@ -44,20 +44,23 @@ export function Contact() {
             <div className="mt-12 grid gap-8 sm:grid-cols-2">
               <div>
                 <h3 className="text-meta text-bone/60">All our numbers</h3>
-                <ul className="mt-2 space-y-1">
+                {/* Each number is a 44px tap target. These are the single most
+                    likely thing a visitor on a phone will press, and at the
+                    previous 19px they were the smallest targets on the page. */}
+                <ul className="mt-1">
                   {phones.map((phone) => (
                     <li key={phone.dial}>
                       <a
                         href={`tel:${phone.dial}`}
-                        className="text-bone/90 transition-colors hover:text-white"
+                        className="inline-flex min-h-11 items-center gap-2 py-1 text-bone/90 transition-colors hover:text-white"
                       >
                         {phone.number}
+                        {phone.primary ? (
+                          <span className="text-meta text-bone/50">
+                            WhatsApp
+                          </span>
+                        ) : null}
                       </a>
-                      {phone.primary ? (
-                        <span className="text-meta ml-2 text-bone/50">
-                          WhatsApp
-                        </span>
-                      ) : null}
                     </li>
                   ))}
                 </ul>
@@ -65,7 +68,7 @@ export function Contact() {
                 <h3 className="text-meta mt-6 text-bone/60">Email</h3>
                 <a
                   href={`mailto:${business.email}`}
-                  className="mt-1 inline-block break-all text-bone/90 transition-colors hover:text-white"
+                  className="inline-flex min-h-11 items-center break-all text-bone/90 transition-colors hover:text-white"
                 >
                   {business.email}
                 </a>

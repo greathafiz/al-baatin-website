@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import { whatsapp } from "@/data/business"
-import { ButtonAnchor, Container, WhatsAppIcon } from "./ui"
+import { Container, WhatsAppIcon } from "./ui"
 
 const links = [
   { href: "/projects/", label: "Work" },
@@ -20,7 +20,7 @@ export function SiteHeader() {
       <Container className="flex items-center justify-between gap-4 py-3">
         <Link
           href="/"
-          className="flex items-baseline gap-2 font-display text-lg font-semibold leading-none text-canopy"
+          className="flex min-h-11 items-baseline gap-2 py-3 font-display text-lg font-semibold leading-none text-canopy"
           onClick={() => setOpen(false)}
         >
           Al-Baatin
@@ -34,7 +34,7 @@ export function SiteHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-ink transition-colors hover:text-signal-dark"
+              className="inline-flex min-h-11 items-center text-sm text-ink transition-colors hover:text-signal-dark"
             >
               {link.label}
             </Link>
@@ -46,7 +46,7 @@ export function SiteHeader() {
             href={whatsapp.quote}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border-b border-canopy/30 pb-0.5 text-sm text-canopy transition-colors hover:border-canopy"
+            className="inline-flex min-h-11 items-center gap-2 text-sm text-canopy transition-colors hover:text-signal-dark"
           >
             <WhatsAppIcon className="h-4 w-4" />
             WhatsApp
@@ -58,7 +58,7 @@ export function SiteHeader() {
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-controls="mobile-nav"
-          className="-mr-2 inline-flex items-center gap-2 p-2 text-sm text-canopy md:hidden"
+          className="-mr-2 inline-flex min-h-11 min-w-11 cursor-pointer items-center justify-center text-canopy md:hidden"
         >
           <span className="sr-only">
             {open ? "Close menu" : "Open menu"}
@@ -93,7 +93,7 @@ export function SiteHeader() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-hairline/60 py-3 text-base text-ink last:border-0"
+                className="flex min-h-12 items-center border-b border-hairline/60 text-base text-ink last:border-0"
               >
                 {link.label}
               </Link>

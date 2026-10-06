@@ -33,14 +33,18 @@ export function Frame({
 }
 
 /**
- * Vertical rhythm. "loose" is roughly double what felt normal in the first
- * pass — generous space is the most reliable premium signal, and the earlier
- * uniform 4rem gave every section the same weight.
+ * Vertical rhythm.
+ *
+ * An earlier pass pushed "loose" to py-44 (176px top AND bottom, so 352px
+ * between sections). On a 375px phone that is most of a screen of nothing
+ * between a heading and the thing it introduces, which reads as a broken page
+ * rather than a generous one. These values still give the photographs room to
+ * breathe while keeping each heading on screen with its own content.
  */
 const rhythms = {
-  tight: "py-14 md:py-20",
-  normal: "py-20 md:py-32",
-  loose: "py-28 md:py-44",
+  tight: "py-12 md:py-16",
+  normal: "py-16 md:py-24",
+  loose: "py-20 md:py-28",
 }
 
 export function Section({

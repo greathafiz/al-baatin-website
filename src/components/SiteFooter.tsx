@@ -33,12 +33,12 @@ export function SiteFooter() {
 
           <div>
             <h2 className="text-sm font-semibold text-white">Contact</h2>
-            <ul className="mt-2 space-y-1 text-sm">
+            <ul className="mt-1 text-sm">
               {phones.slice(0, 2).map((phone) => (
                 <li key={phone.dial}>
                   <a
                     href={`tel:${phone.dial}`}
-                    className="text-bone/80 hover:text-white"
+                    className="inline-flex min-h-11 items-center text-bone/80 transition-colors hover:text-white"
                   >
                     {phone.number}
                   </a>
@@ -47,7 +47,7 @@ export function SiteFooter() {
               <li>
                 <a
                   href={`mailto:${business.email}`}
-                  className="break-all text-bone/80 hover:text-white"
+                  className="inline-flex min-h-11 items-center break-all text-bone/80 transition-colors hover:text-white"
                 >
                   {business.email}
                 </a>
@@ -57,19 +57,19 @@ export function SiteFooter() {
 
           <div>
             <h2 className="text-sm font-semibold text-white">Pages</h2>
-            <ul className="mt-2 space-y-1 text-sm">
+            <ul className="mt-1 text-sm">
               <li>
-                <Link href="/projects/" className="text-bone/80 hover:text-white">
+                <Link href="/projects/" className="inline-flex min-h-11 items-center text-bone/80 transition-colors hover:text-white">
                   Our work
                 </Link>
               </li>
               <li>
-                <Link href="/training/" className="text-bone/80 hover:text-white">
+                <Link href="/training/" className="inline-flex min-h-11 items-center text-bone/80 transition-colors hover:text-white">
                   Training
                 </Link>
               </li>
               <li>
-                <Link href="/#contact" className="text-bone/80 hover:text-white">
+                <Link href="/#contact" className="inline-flex min-h-11 items-center text-bone/80 transition-colors hover:text-white">
                   Get a quote
                 </Link>
               </li>
@@ -78,14 +78,14 @@ export function SiteFooter() {
 
           <div>
             <h2 className="text-sm font-semibold text-white">Follow</h2>
-            <ul className="mt-2 space-y-1 text-sm">
+            <ul className="mt-1 text-sm">
               {socialLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-bone/80 hover:text-white"
+                    className="inline-flex min-h-11 items-center text-bone/80 transition-colors hover:text-white"
                   >
                     {link.label}
                   </a>

@@ -28,6 +28,13 @@ export const training = {
     "There is no fixed timetable. Classes start whenever someone is ready, so message him on WhatsApp to arrange a start date.",
 } as const
 
+/**
+ * All training photos, lead image first.
+ *
+ * `certificatePhotos` and `classPhotos` below split the tail into the two
+ * groups the page shows separately. The certificate shots are the proof a corps
+ * member walks away with, so they are not buried among the practicals.
+ */
 export const trainingPhotos: Photo[] = [
   {
     key: "training/nysc-saed/13-corps-members-group-photo",
@@ -100,6 +107,25 @@ export const trainingPhotos: Photo[] = [
     focal: "center",
   },
 ]
+
+/** The lead photo, shown large at the top of the page. */
+export const trainingLeadPhoto = trainingPhotos[0]
+
+const isCertificate = (photo: Photo) =>
+  photo.key.includes("certificate-presentation")
+
+/**
+ * Certificate presentations, shown as their own group. Keyed off the filename
+ * so a new `NN-certificate-presentation-*.jpg` lands here without a code change.
+ */
+export const certificatePhotos: Photo[] = trainingPhotos
+  .slice(1)
+  .filter(isCertificate)
+
+/** Everything else from the tail: practicals, camp stand, hall sessions. */
+export const classPhotos: Photo[] = trainingPhotos
+  .slice(1)
+  .filter((photo) => !isCertificate(photo))
 
 export const trainingVideos: Video[] = [
   {

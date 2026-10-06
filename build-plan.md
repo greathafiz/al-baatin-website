@@ -55,19 +55,19 @@ Last updated: 6 Oct 2026
 - [x] 4.10 Footer
 - [x] 4.11 Sticky WhatsApp button (mobile), clear of the footer
 
-## Stage 5 — Other pages  `[~]`
+## Stage 5 — Other pages  `[x]`
 
 - [x] 5.1 `/projects` with All / Homes / Business / Other filters
 - [x] 5.2 `/projects/[slug]` static detail pages (all 6 prerendered)
-- [ ] 5.3 Lightbox for project media
+- [x] 5.3 Lightbox for project media
 - [x] 5.4 `/training` — NYSC SAED page
 - [x] 5.5 Custom 404
-- [ ] 5.6 `robots.txt` + `sitemap.xml`
+- [x] 5.6 `robots.txt` + `sitemap.xml`
 
 ## Stage 6 — SEO, accessibility, polish  `[ ]`
 
 - [ ] 6.1 Per-page titles/descriptions + Open Graph
-- [ ] 6.2 `LocalBusiness` JSON-LD
+- [x] 6.2 `LocalBusiness` JSON-LD
 - [ ] 6.3 Accessibility pass: contrast, keyboard focus, alt text, reduced motion
 - [ ] 6.4 Check at 375px and desktop
 - [ ] 6.5 Lighthouse mobile ≥ 90
