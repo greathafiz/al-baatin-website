@@ -1,11 +1,25 @@
-// Homepage sections land here in Stage 4. Foundation only for now.
+import { About } from "@/components/home/About"
+import { Contact } from "@/components/home/Contact"
+import { FeaturedWork } from "@/components/home/FeaturedWork"
+import { Hero } from "@/components/home/Hero"
+import { HowItWorks } from "@/components/home/HowItWorks"
+import { Services } from "@/components/home/Services"
+import { Testimonials } from "@/components/home/Testimonials"
+import { TrainingTeaser } from "@/components/home/TrainingTeaser"
+import { TrustStrip } from "@/components/home/TrustStrip"
+
 export default function Home() {
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-24">
-      <h1 className="text-display">Al-Baatin Technologies</h1>
-      <p className="text-lede mt-4 text-ink-soft">
-        Solar and inverter installation in Ibadan, Lagos and nationwide.
-      </p>
-    </main>
+    <>
+      <Hero />
+      <TrustStrip />
+      <Services />
+      <FeaturedWork />
+      <HowItWorks />
+      <Testimonials />
+      <TrainingTeaser />
+      <About />
+      <Contact />
+    </>
   )
 }

@@ -14,7 +14,8 @@ export const teamPhotos: Photo[] = [
   {
     key: "team/01-crew-in-hi-vis-daytime",
     alt: "The Al-Baatin crew in branded hi-vis vests standing with coils of cable and boxed equipment in front of their vans before a job.",
-    focal: "center",
+    // The crew stand in the upper half; below them is empty paving.
+    focal: "50% 30%",
   },
   {
     key: "team/02-crew-in-hi-vis-night-a",

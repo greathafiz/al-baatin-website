@@ -31,36 +31,37 @@ Last updated: 6 Oct 2026
 - [x] 2.5 ffmpeg commands documented in the README
 - [x] 2.6 Incremental manifest (`public/media/manifest.json`) with real dimensions, so components can set width/height and avoid layout shift
 
-## Stage 3 — Typed content data  `[ ]`
+## Stage 3 — Typed content data  `[x]`
 
-- [ ] 3.1 `src/data/business.ts` — name, phones (all five), email, addresses, socials, service areas
-- [ ] 3.2 `src/data/services.ts` — solar first, then the rest
-- [ ] 3.3 `src/data/projects.ts` — one entry per project folder, with media lists and alt text
-- [ ] 3.4 `src/data/testimonials.ts` — Google reviews + rating + listing links
-- [ ] 3.5 `src/data/training.ts` — NYSC SAED programme
-- [ ] 3.6 Shared types and a single `whatsappLink()` helper
+- [x] 3.1 `src/data/business.ts` — name, phones (all five), email, addresses, socials, service areas
+- [x] 3.2 `src/data/services.ts` — solar first, then the rest
+- [x] 3.3 `src/data/projects.ts` — one entry per project folder, with media lists and alt text
+- [x] 3.4 `src/data/testimonials.ts` — Google reviews + rating + listing links
+- [x] 3.5 `src/data/training.ts` — NYSC SAED programme
+- [x] 3.6 Shared types, `src/data/team.ts`, and a single `whatsappLink()` helper
+- [x] 3.7 `src/lib/media.ts` — typed manifest access with srcSet and real dimensions
 
-## Stage 4 — Homepage  `[ ]`
+## Stage 4 — Homepage  `[x]`
 
-- [ ] 4.1 Header + nav (mobile menu)
-- [ ] 4.2 Hero
-- [ ] 4.3 Trust strip
-- [ ] 4.4 Services
-- [ ] 4.5 Featured work (images + video)
-- [ ] 4.6 How it works
-- [ ] 4.7 Testimonials (carousel on mobile, grid on desktop)
-- [ ] 4.8 About
-- [ ] 4.9 Contact + form (Web3Forms, `NEXT_PUBLIC_FORM_KEY`)
-- [ ] 4.10 Footer
-- [ ] 4.11 Sticky WhatsApp button (mobile)
+- [x] 4.1 Header + nav (mobile menu)
+- [x] 4.2 Hero
+- [x] 4.3 Trust strip
+- [x] 4.4 Services
+- [x] 4.5 Featured work (8 images + 2 videos)
+- [x] 4.6 How it works
+- [x] 4.7 Testimonials (scroll-snap on mobile, grid on desktop)
+- [x] 4.8 About — with the marked owner placeholder
+- [x] 4.9 Contact + form (Web3Forms, disabled until `NEXT_PUBLIC_FORM_KEY` is set)
+- [x] 4.10 Footer
+- [x] 4.11 Sticky WhatsApp button (mobile), clear of the footer
 
-## Stage 5 — Other pages  `[ ]`
+## Stage 5 — Other pages  `[~]`
 
-- [ ] 5.1 `/projects` with All / Residential / Commercial / Other filters
-- [ ] 5.2 `/projects/[slug]` static detail pages
+- [x] 5.1 `/projects` with All / Homes / Business / Other filters
+- [x] 5.2 `/projects/[slug]` static detail pages (all 6 prerendered)
 - [ ] 5.3 Lightbox for project media
-- [ ] 5.4 `/training` — NYSC SAED page
-- [ ] 5.5 Custom 404
+- [x] 5.4 `/training` — NYSC SAED page
+- [x] 5.5 Custom 404
 - [ ] 5.6 `robots.txt` + `sitemap.xml`
 
 ## Stage 6 — SEO, accessibility, polish  `[ ]`

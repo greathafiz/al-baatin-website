@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from "next"
 import { Fraunces, Inter } from "next/font/google"
+import { SiteFooter } from "@/components/SiteFooter"
+import { SiteHeader } from "@/components/SiteHeader"
+import { StickyWhatsApp } from "@/components/StickyWhatsApp"
 import "./globals.css"
 
 // Display face. The logo wordmark is a serif, so the headings inherit from it
@@ -52,7 +55,12 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        {children}
+        <SiteHeader />
+        <main id="main" className="flex-1">
+          {children}
+        </main>
+        <SiteFooter />
+        <StickyWhatsApp />
       </body>
     </html>
   )

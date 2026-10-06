@@ -19,7 +19,8 @@ export const services: Service[] = [
     photo: {
       key: "_unassigned/mppt-charge-controller-closeup",
       alt: "An MPPT solar charge controller mounted on a board, its display reading 6.3A from the panels and 55.4V at the battery.",
-      focal: "center",
+      // Keep the lit display and the Al-Baatin sticker in frame on a wide crop.
+      focal: "50% 42%",
     },
   },
   {
