@@ -1,35 +1,138 @@
 @import "tailwindcss";
 
-@theme inline {
-  --color-navy-deep: #0a1628;
-  --color-navy-mid: #112240;
-  --color-amber: #f5a623;
-  --color-amber-hover: #e09515;
-  --color-slate-light: #f1f5f9;
-  --color-body-gray: #64748b;
+/* ---------------------------------------------------------------------------
+   Design tokens — Al-Baatin Technologies
+   Colours derived from content/logo.jpg (sampled 6 Oct 2026).
+   The logo's green is #01FE01 (pure RGB green). It fails contrast on white and
+   vibrates on screen, so it is reserved for the logo itself; the UI greens are
+   darkened from the same hue.
+--------------------------------------------------------------------------- */
+@theme {
+  /* Brand */
+  --color-canopy: #073b1e; /* primary text, headers, footer */
+  --color-canopy-soft: #0d5b2e; /* hover state on canopy surfaces */
+  --color-signal: #10a633; /* the one accent: buttons, links, active */
+  --color-signal-dark: #0c7f27; /* accent hover / AA text on light bg */
+  --color-logo-green: #01fe01; /* logo artwork only — never UI */
+  --color-live-red: #d0021b; /* from the logo's RC text + bar mark */
+
+  /* Neutrals */
+  --color-bone: #f7f6f2; /* page background, warm off-white */
+  --color-bone-deep: #eceae3; /* section banding, input fills */
+  --color-ink: #1a1a18; /* body copy */
+  --color-ink-soft: #55554e; /* secondary copy, captions */
+  --color-hairline: #d8d6cd; /* rules and borders */
+
+  /* Utility */
   --color-whatsapp: #25d366;
-  --font-sora: var(--font-sora);
-  --font-inter: var(--font-inter);
+
+  /* Type */
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Type scale — 1.250 major third, clamped for mobile-first */
+  --text-spec: clamp(2.5rem, 1.6rem + 4.5vw, 5rem); /* system-size numerals */
+  --text-spec--line-height: 0.95;
+  --text-spec--letter-spacing: -0.03em;
+
+  --text-display: clamp(2rem, 1.3rem + 3.4vw, 3.75rem);
+  --text-display--line-height: 1.04;
+  --text-display--letter-spacing: -0.02em;
+
+  --text-title: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+  --text-title--line-height: 1.15;
+  --text-title--letter-spacing: -0.015em;
+
+  --text-lede: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
+  --text-lede--line-height: 1.6;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-inter);
-}
-
-@keyframes pulse-slow {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+/* ---------------------------------------------------------------------------
+   Base
+--------------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Stop iOS inflating type in landscape */
+    -webkit-text-size-adjust: 100%;
   }
-  50% {
-    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+
+  body {
+    background-color: var(--color-bone);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    /* Long-form copy reads better slightly open at mobile sizes */
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    color: var(--color-canopy);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Visible keyboard focus everywhere, never removed on mouse use */
+  :focus-visible {
+    outline: 3px solid var(--color-signal-dark);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Media never overflows its box or stretches */
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
   }
 }
 
-.animate-pulse-slow {
-  animation: pulse-slow 3s ease-in-out infinite;
+/* ---------------------------------------------------------------------------
+   Motion — one deliberate moment (the hero settling in), nothing else.
+--------------------------------------------------------------------------- */
+@layer utilities {
+  .hero-settle {
+    animation: hero-settle 900ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+
+  @keyframes hero-settle {
+    from {
+      opacity: 0;
+      transform: scale(1.04);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Skip link: offscreen until focused */
+  .skip-link {
+    position: absolute;
+    left: 0.75rem;
+    top: -4rem;
+    z-index: 100;
+    transition: top 150ms ease;
+  }
+  .skip-link:focus {
+    top: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

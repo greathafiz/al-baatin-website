@@ -1,22 +1,34 @@
-import type { Metadata } from "next"
-import { Sora, Inter } from "next/font/google"
+import type { Metadata, Viewport } from "next"
+import { Fraunces, Inter } from "next/font/google"
 import "./globals.css"
 
-const sora = Sora({
+// Display face. The logo wordmark is a serif, so the headings inherit from it
+// rather than ignoring it. Optical sizing keeps large settings from looking thin.
+const fraunces = Fraunces({
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
-  variable: "--font-sora",
+  axes: ["SOFT", "WONK", "opsz"],
+  variable: "--font-fraunces",
+  display: "swap",
 })
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
 })
 
 export const metadata: Metadata = {
-  title: "Al-Baatin Technologies",
+  metadataBase: new URL("https://albaatintechnologies.com"),
+  title: {
+    default: "Al-Baatin Technologies — solar, inverters and security systems",
+    template: "%s · Al-Baatin Technologies",
+  },
   description:
-    "Professional solar panel installation for homes and businesses in Ibadan, Oyo State. Get a free assessment today.",
+    "Solar and inverter installation for homes and businesses in Ibadan, Lagos and nationwide. Serving customers since 2010.",
+}
+
+export const viewport: Viewport = {
+  themeColor: "#073b1e",
 }
 
 export default function RootLayout({
@@ -24,10 +36,18 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
-      lang="en"
-      className={`${sora.variable} ${inter.variable} h-full antialiased`}
+      lang="en-NG"
+      className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <a
+          href="#main"
+          className="skip-link bg-canopy px-4 py-2 text-sm font-medium text-white"
+        >
+          Skip to content
+        </a>
+        {children}
+      </body>
     </html>
   )
 }

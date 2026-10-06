@@ -1,6 +1,6 @@
 # Oasis Integrated Farms
 
-- **Location:** Oasis Integrated Farms [ASK town/state]
+- **Location:** Oasis Integrated Farms, Lagos-Ibadan Expressway, Ibadan, Oyo State (confirmed 6 Oct 2026)
 - **Type:** commercial (farm)
 - **System size:** 12kVA 48V hybrid inverter, 15kWh lithium battery and 10 x 650W solar panels (6.5kWp). From the owner's note (his text said "1x 15kWh lithium batteries").
 - **Date:** 2026 (installed in stages: electrical work first, then the solar system, per his Instagram)
