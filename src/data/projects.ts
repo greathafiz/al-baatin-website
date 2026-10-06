@@ -66,12 +66,12 @@ export const projects: Project[] = [
     photos: [
       {
         key: "projects/daffodil-gardens-estate-lagos/04-inverter-wall-three-units-angled",
-        alt: "Three Felicity hybrid inverters mounted in a row above three floor-standing lithium batteries, with breaker boxes between them and an Al-Baatin sticker on the end unit.",
+        alt: "Three Felicity hybrid inverters mounted in a row above three floor-standing lithium batteries, with breaker boxes between them and Al-Baatin stickers on the units.",
         focal: "center",
       },
       {
         key: "projects/daffodil-gardens-estate-lagos/05-crew-on-roof-and-balcony",
-        alt: "A three-storey white duplex with Al-Baatin fitters in hi-vis vests working on the roof terrace and balcony, a solar panel waiting by the gate below.",
+        alt: "Al-Baatin fitters in hi-vis vests working on the roof terrace and balcony to mount a solar panel on a two-storey white duplex at Daffodil Gardens Estate.",
         focal: "center",
       },
       {
@@ -81,7 +81,7 @@ export const projects: Project[] = [
       },
       {
         key: "projects/daffodil-gardens-estate-lagos/02-crew-member-at-inverter-wall",
-        alt: "An Al-Baatin fitter standing beside the finished inverter installation.",
+        alt: "Al-Baatin standing beside the finished inverter installation.",
         focal: "center",
       },
       {
@@ -153,7 +153,7 @@ export const projects: Project[] = [
     photos: [
       {
         key: "projects/inverter-install-a/01-three-inverters-two-batteries",
-        alt: "Three Felicity hybrid inverters above a row of breaker boxes, with two floor-standing lithium batteries below and an Al-Baatin fitter standing beside them.",
+        alt: "Three Felicity hybrid inverters above a row of breaker boxes, with two floor-standing lithium batteries below and Al-Baatin standing beside them.",
         focal: "center",
       },
       {
@@ -190,7 +190,7 @@ export const projects: Project[] = [
       },
       {
         key: "projects/inverter-install-c/02-crew-with-inverter-and-battery",
-        alt: "An Al-Baatin fitter beside the completed inverter and battery installation.",
+        alt: "Al-Baatin fitters beside the completed inverter and battery installation.",
         focal: "center",
       },
     ],
@@ -213,7 +213,8 @@ export const projects: Project[] = [
       {
         key: "projects/nysc-oyo-coordinator-office/video-01-installation-at-state-coordinator-office",
         alt: "Al-Baatin fitters in hi-vis vests preparing solar panels, cabling and inverter equipment at the NYSC State Coordinator's office.",
-        caption: "Installation at the NYSC State Coordinator's office, Oyo State",
+        caption:
+          "Installation at the NYSC State Coordinator's office, Oyo State",
       },
     ],
   },

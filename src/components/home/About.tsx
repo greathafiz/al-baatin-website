@@ -38,8 +38,8 @@ export function About() {
                 </p>
                 <p className="text-meta mt-6 max-w-[34ch] border-l-2 border-live-red bg-live-red/5 px-4 py-3 text-ink">
                   <strong className="font-semibold">[PLACEHOLDER]</strong> Needs
-                  a photo of {owner.name} and a few lines in his own words: how
-                  he started in 2010, why solar, what he is proudest of.
+                  a photo of Al-Baatin and a few lines in his own words: how he
+                  started in 2010, why solar, what he is proudest of.
                 </p>
               </>
             )}

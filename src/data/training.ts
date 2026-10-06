@@ -43,12 +43,12 @@ export const trainingPhotos: Photo[] = [
   },
   {
     key: "training/nysc-saed/12-instructor-whiteboard-lesson",
-    alt: "An Al-Baatin instructor teaching beside a whiteboard headed “Al-Baatin Technologies Limited — intercom system”, with a solar panel propped next to him in the camp hall.",
+    alt: "Al-Baatin teaching corps members in the camp hall at NYSC orientation camp in Iseyin, Oyo state.",
     focal: "center",
   },
   {
     key: "training/nysc-saed/07-certificate-presentation-a",
-    alt: "Four corps members holding their NYSC certificates of participation alongside an Al-Baatin trainer and an NYSC camp official.",
+    alt: "Three corps members holding their NYSC certificates of participation alongside Al-Baatin and Mrs Magaret Omaji, NYSC camp official.",
     focal: "center",
   },
   {
@@ -68,17 +68,17 @@ export const trainingPhotos: Photo[] = [
   },
   {
     key: "training/nysc-saed/02-hands-on-training-b",
-    alt: "Corps members working through a practical exercise with an instructor.",
+    alt: "Corps members working through a practical exercise with Al-Baatin.",
     focal: "center",
   },
   {
     key: "training/nysc-saed/05-camp-stand-with-banner",
-    alt: "The Al-Baatin stand at orientation camp, with a banner and a solar panel on display.",
+    alt: "The Al-Baatin stand at NYSC orientation camp, with a Al-Baatin banner and a solar panel on display.",
     focal: "center",
   },
   {
     key: "training/nysc-saed/14-instructor-addressing-camp-hall",
-    alt: "An instructor addressing a hall full of corps members at orientation camp.",
+    alt: "Al-Baatin addressing a hall full of corps members at NYSC orientation camp.",
     focal: "center",
   },
   {
@@ -98,12 +98,12 @@ export const trainingPhotos: Photo[] = [
   },
   {
     key: "training/nysc-saed/11-stand-banner-and-tv",
-    alt: "The Al-Baatin camp stand banner showing the company name and RC number, next to a screen.",
+    alt: "A working CCTV system installed by corps members during a class in NYSC orientation camp.",
     focal: "center",
   },
   {
     key: "training/nysc-saed/09-camp-stand-collage",
-    alt: "A collage of scenes from the Al-Baatin stand at orientation camp.",
+    alt: "A collage of scenes from the Al-Baatin stand at NYSC orientation camp.",
     focal: "center",
   },
 ]
