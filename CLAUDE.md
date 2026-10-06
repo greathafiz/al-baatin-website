@@ -116,6 +116,7 @@ You are building a brochure website for a solar installation business that also 
 The content folder has changed since the brief was written. Where this section and the brief disagree, this section wins.
 
 ### What is in `content/`
+
 - `logo.jpg` (the official logo; a JPG on a white background; do not redesign it; the navy/green "AB" monogram seen on his social posts is NOT official)
 - `business.md`, `services.md`, `testimonials.md`, `2026-10-05-questions-for-client.md` (open questions, ignore for the build)
 - `projects/<site-name>/` with an `info.md`, photos (`01-*.jpg`...) and sometimes videos (`video-01-*.mp4`). Folders named after a site have a known location; `inverter-install-a` and `inverter-install-c` do not, so show only what we know for those.
@@ -126,11 +127,13 @@ The content folder has changed since the brief was written. Where this section a
 - `reference/al-baatin-flyer.pdf`: reference only.
 
 ### Images and videos: use as they are
+
 - All photos are the highest quality he has. They will NOT be replaced with higher-resolution versions. Some are small (640 to 720px wide) or soft, so: never upscale, never stretch; pick the sharper photos for large placements (hero, featured work) and use the smaller ones as thumbnails, gallery items or in grids; crop with `object-fit: cover` and a sensible focal point.
 - `scripts/optimize-media` should still make the WebP versions (1600px and 800px wide) but must not enlarge an image beyond its source width.
 - Videos: keep each under about 20 seconds (one in `daffodil-gardens-estate-lagos` is 25s, trim it), compress to 720p H.264, always a poster image, `preload="none"`, muted, play on tap. For videos we do not have as files, embed the TikTok posts listed in `business.md`.
 
 ### Facts and wording rules
+
 - Show all five phone numbers from `business.md`; the main line and WhatsApp number is 08032392690.
 - Trust strip: "serving customers since 2010" (registered 2018) and "thousands" of installations and trained corps members. Nothing more specific than that.
 - Clients may be named on the site (permission given), e.g. Oasis Integrated Farms, Rhema Chapel, Daffodil Gardens Estate.
@@ -145,6 +148,7 @@ This section records choices that were made deliberately and verified. A later
 pass that "improves" the design should treat these as constraints, not defaults.
 
 ### The design system is derived from his logo, not from a template
+
 The palette comes from sampling `content/logo.jpg`, and the type pairing
 (Fraunces display + Inter body) follows the serif in his own wordmark. A
 generic recommendation engine will suggest things like Archivo/Space Grotesk
@@ -155,6 +159,7 @@ colour taken from his own brand. Do not swap the palette or fonts for a stock
 combination.
 
 ### Accent colour rules (contrast-verified, do not change casually)
+
 - `--color-signal` (`#46cf66`) is used **two ways only**: as a surface on the
   dark canopy field (canopy text on it = 6.28:1), and as text on canopy
   (6.28:1). It is **far too light to be text on bone** (1.87:1).
@@ -166,18 +171,21 @@ combination.
 - Never use `--color-logo-green` (`#01fe01`) in the UI. It is logo artwork only.
 
 ### Spacing
+
 Section rhythm is `py-12/16/20` scaling to `py-16/24/28`. An earlier pass used
-`py-44` (176px top *and* bottom = 352px between sections), which on a 375px
+`py-44` (176px top _and_ bottom = 352px between sections), which on a 375px
 phone is most of a screen of emptiness between a heading and its content. That
 reads as a broken page, not a generous one. Generous white space is right;
 disconnected sections are not.
 
 ### Touch targets
+
 Every phone number, email address and nav link is a minimum 44px tap target
 (`min-h-11`). The phone links are the single most likely thing a visitor on a
 phone will press — they were previously 19px tall. Keep them at 44px.
 
 ### Honesty constraints that also apply to markup
+
 `LocalBusiness` JSON-LD lives in `src/components/StructuredData.tsx` and is
 built from the same typed data as the visible page. It deliberately emits **no
 `aggregateRating`**: the 5.0 is Google's own rating for his listing, and
@@ -185,11 +193,13 @@ re-publishing it as first-party review data is what Google penalises. The
 listing is linked via `sameAs` instead.
 
 ### Single source of truth for the domain
+
 `src/data/site.ts` holds `SITE_URL`, used by the sitemap, robots.txt, Open
 Graph and the JSON-LD `@id`. It is a placeholder until he buys the domain —
 correct it in that one file, not in five.
 
 ### Known broken tooling (not caused by the site code)
+
 `npm run lint` fails: `typescript-eslint` does not support TypeScript 7. The
 build runs its own TypeScript check and passes. Fix by downgrading TS or
 waiting for typescript-eslint support — do not "fix" it by changing site code.

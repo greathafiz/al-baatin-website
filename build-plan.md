@@ -7,7 +7,7 @@ Last updated: 6 Oct 2026
 
 ---
 
-## Stage 0 — Read content and agree the design  `[~]`
+## Stage 0 — Read content and agree the design  `[x]`
 
 - [x] 0.1 Read everything in `content/` and summarise what is there / missing
 - [x] 0.2 Sample the real colours out of `content/logo.jpg`
@@ -72,12 +72,12 @@ Last updated: 6 Oct 2026
 - [x] 6.4 Check at 375px and desktop
 - [~] 6.5 Lighthouse mobile: a11y/BP/SEO 100, performance 79-84 locally (see README)
 
-## Stage 7 — Ship  `[ ]`
+## Stage 7 — Ship  `[x]`
 
-- [ ] 7.1 `npm run build` produces `out/`
-- [ ] 7.2 README: add a project/testimonial, run the media script, deploy to Cloudflare Pages, custom domain, Zoho MX note
-- [ ] 7.3 Final placeholder list
-- [ ] 7.4 Final list of files created/modified
+- [x] 7.1 `npm run build` produces `out/`
+- [x] 7.2 README: add a project/testimonial, run the media script, deploy to Cloudflare Pages, custom domain, Zoho MX note
+- [x] 7.3 Final placeholder list
+- [x] 7.4 Final list of files created/modified
 
 ---
 
@@ -86,15 +86,112 @@ Last updated: 6 Oct 2026
 1. **Old demo components** — build fresh, do not restore. Done.
 2. **Owner photo** — keep a clearly marked placeholder. Do not crop the MD out of `inverter-install-a/01`.
 3. **Training** — gets its own `/training` page.
-4. **Web3Forms key** — ships with the form disabled until `NEXT_PUBLIC_FORM_KEY` is set; documented in `.env.example`.
+4. **Web3Forms key** — form ships disabled until `NEXT_PUBLIC_FORM_KEY` is set. Key supplied 6 Oct 2026; the form is live locally and must also be set in Cloudflare Pages.
 5. **ffmpeg** — installed (Gyan.FFmpeg 9.0.2 via winget).
-6. **Placeholders ship.** Anything unanswered renders as a marked placeholder rather than blocking the build; the full list is kept below for chasing the client.
+6. **Placeholders ship.** Anything unanswered renders as a marked placeholder rather than blocking the build; the full list is in 7.3 below.
+7. **Brand logos** — names set as type, never scraped manufacturer logos: no licence to display their marks, and doing so implies a dealer relationship he may not hold.
+8. **No `aggregateRating` in JSON-LD** — the 5.0 is Google's rating of his listing, linked via `sameAs` rather than republished as first-party review data.
 
-## Blocked on the client (placeholders until answered)
+---
 
-- Locations/dates/type for `inverter-install-a`, `inverter-install-c`
-- ~~Town/state for Oasis Integrated Farms~~ — answered 6 Oct 2026: Lagos-Ibadan Expressway, Ibadan
-- Date and system size for the NYSC Oyo coordinator's office
-- Owner portrait + a few lines of his story
-- Exact warranty terms (site will say "about 2 years" or omit)
-- Photos of CCTV / intercom / electric fence / tracking / satellite work (none exist, so those service cards have no imagery)
+## 7.3 Final placeholder list (verified against the code, 6 Oct 2026)
+
+Everything below renders as a clearly marked placeholder or is simply omitted.
+Nothing is invented, and no row says "N/A".
+
+### Blocks launch
+
+1. **Domain.** `NEXT_PUBLIC_SITE_URL` in `.env.local`, falling back to
+   `https://albaatintechnologies.com` in `src/data/site.ts`. It drives the
+   sitemap, canonicals, Open Graph and the JSON-LD `@id`. Wrong here means
+   search engines index the wrong host. One edit, one file.
+
+### Visible placeholder on the site
+
+2. **Owner portrait and bio.** `business.owner.photo` and `.bio` are both
+   `null`, so the About section leads with a crew photo and shows a red-flagged
+   note. Needs `content/owner.jpg` and a few lines in his own words: how he
+   started in 2010, why solar, what he is proudest of.
+
+### Missing project facts (the line is omitted, not faked)
+
+3. `rhema-chapel-lekki-lagos` — **type** unconfirmed. It is a church, so it is
+   certainly not residential, but we do not guess. It therefore never appears
+   under the Homes/Business filters.
+4. `inverter-install-c` — **location** unknown.
+5. `nysc-oyo-coordinator-office` — **system size** and **date** unknown.
+
+`daffodil-gardens-estate-lagos`, `oasis-integrated-farms` and
+`inverter-install-a` are complete.
+
+### Deliberately absent
+
+6. **Warranty terms.** He says "about 2 years" and it varies by product, so the
+   site states no figure at all. Confirm per product before publishing one.
+7. **Service photography.** No photos exist of the CCTV, intercom, electric
+   fence, tracking or satellite work, so those services are a plain text list
+   rather than cards with stock icons — nine equal cards would imply a parity
+   of evidence we do not have.
+8. **Certificate document.** Not uploaded, deliberately: the two photos of
+   corps members holding theirs prove more than a scan, and a filled-in
+   certificate carries someone else's name and service number.
+
+---
+
+## 7.4 Files created and modified
+
+Across this session (`3cde0ad..HEAD`), excluding regenerated media under
+`public/media/`:
+
+### Created
+
+| File | Why |
+| --- | --- |
+| `app/robots.ts` | robots.txt, `force-static` for `output: export` |
+| `app/sitemap.ts` | sitemap.xml, picks up projects automatically |
+| `src/components/StructuredData.tsx` | `LocalBusiness` JSON-LD, no fabricated rating |
+| `src/components/Lightbox.tsx` | Native `<dialog>` photo viewer, no dependency |
+| `src/data/site.ts` | Single source of truth for the canonical origin |
+
+### Modified
+
+| File | Why |
+| --- | --- |
+| `app/globals.css` | Accent raised to #46cf66; skip link moved outside `@layer` |
+| `app/layout.tsx` | Fonts pinned to used weights; canonical; JSON-LD mounted |
+| `app/not-found.tsx` | Own title, `noindex`, `canonical: null` |
+| `app/projects/[slug]/page.tsx` | Lightbox, per-project OG image, canonical |
+| `app/projects/page.tsx` | Canonical |
+| `app/training/page.tsx` | Certificates split out, heading levels, lightbox |
+| `scripts/optimize-media.mjs` | JPEG social variant; WebP quality 75 -> 68 |
+| `src/components/ContactForm.tsx` | `cursor-pointer`, `cursor-wait`, tap target |
+| `src/components/ProjectGrid.tsx` | Filter buttons to 44px, `cursor-pointer` |
+| `src/components/SiteHeader.tsx` | 44px tap targets, `cursor-pointer` |
+| `src/components/SiteFooter.tsx` | 44px tap targets |
+| `src/components/home/Contact.tsx` | Phone/email 44px; "WhatsApp" label contrast |
+| `src/components/home/FeaturedWork.tsx` | Portrait photos keep their shape |
+| `src/components/home/Hero.tsx` | LCP preload; secondary CTA tap target |
+| `src/components/home/HowItWorks.tsx` | Numerals readable and `aria-hidden` |
+| `src/components/home/Services.tsx` | Brands as type; "Also installed and serviced" |
+| `src/components/home/Testimonials.tsx` | Google link tap target |
+| `src/components/home/TrainingTeaser.tsx` | Named lead photo, tap target |
+| `src/components/layout.tsx` | Section rhythm down from py-44 |
+| `src/data/projects.ts` | Oasis alt text and focal point |
+| `src/data/training.ts` | `classPhotos` / `certificatePhotos` split |
+| `src/lib/media.ts` | `socialImage()` for og:image |
+| `README.md` | Add a project/testimonial, Cloudflare deploy, Zoho MX warning |
+| `CLAUDE.md` | Locked-in design decisions |
+| `build-plan.md` | This file |
+
+---
+
+## Known issues
+
+- **`npm run lint` fails**: `typescript-eslint` does not support TypeScript 7.
+  Pre-existing and unrelated to the site code; `next build` runs its own
+  TypeScript check and passes. Fix by downgrading TS or waiting for support.
+- **Lighthouse performance 79-84 locally**, against a 90 target. Accessibility,
+  best practices and SEO are all 100 and CLS is 0. The figure swings 15+ points
+  per run on a developer machine and `npx serve` sends no cache headers, so the
+  largest reported saving disappears on Cloudflare Pages. Re-measure against
+  the deployed URL before treating it as real.
