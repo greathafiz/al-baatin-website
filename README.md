@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Al-Baatin Technologies — website
 
-## Getting Started
+Brochure site for Al-Baatin Technologies Limited: solar and inverter
+installation, security systems, ICT, and NYSC SAED accredited training.
 
-First, run the development server:
+Next.js (App Router) + TypeScript + Tailwind CSS, exported as a static site for
+Cloudflare Pages.
+
+See [build-plan.md](build-plan.md) for current progress and what is still
+waiting on the client.
+
+## Running it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev          # http://localhost:3000
+pnpm build        # static export into out/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Media pipeline
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Originals live in `content/`. They are never edited in place — the script reads
+them and writes web-ready copies into `public/media/`, which is what the site
+actually loads.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm media        # images only: WebP at 1600px and 800px, quality 75
+pnpm media:video  # the above, plus transcode videos and cut poster frames
+pnpm media -- --force   # rebuild everything, ignoring the cache
+```
 
-## Learn More
+The script tracks each source file's size and modification time in
+`public/media/manifest.json` and skips anything already current, so re-running
+it is cheap. The manifest also records real pixel dimensions for every file, so
+components can set `width`/`height` and avoid layout shift.
 
-To learn more about Next.js, take a look at the following resources:
+**Images are never upscaled.** These photos are the best copies the client has,
+and several are only 720–960px wide. A 720px source emits a 720px file in place
+of the 1600px variant rather than an enlarged, softer one.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Videos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`pnpm media:video` needs ffmpeg:
 
-## Deploy on Vercel
+```bash
+winget install Gyan.FFmpeg     # Windows
+brew install ffmpeg            # macOS
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+It transcodes each clip to 720p H.264 (short side capped at 720, so portrait
+phone clips stay portrait), caps length at 20 seconds, moves the metadata to
+the front with `+faststart`, and extracts a poster frame one second in.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To do it by hand, the equivalent commands are:
+
+```bash
+# Transcode to 720p H.264, trimming to the first 20 seconds
+ffmpeg -i input.mp4 -t 20 \
+  -vf "scale='if(gt(iw,ih),-2,min(720,iw))':'if(gt(iw,ih),min(720,ih),-2)'" \
+  -c:v libx264 -profile:v main -crf 26 -preset slow -pix_fmt yuv420p \
+  -movflags +faststart -c:a aac -b:a 96k output.mp4
+
+# Pull a poster frame one second in
+ffmpeg -ss 1 -i output.mp4 -frames:v 1 poster.png
+```
+
+Videos always render with a poster image and `preload="none"`, muted, playing
+only on tap — never autoplaying with sound. For clips that are too long to
+trim sensibly, embed the TikTok post instead; the post IDs are in
+`content/business.md`.
+
+### Brand assets
+
+```bash
+node scripts/build-brand-assets.mjs
+```
+
+Regenerates `app/icon.png`, `app/apple-icon.png` and `public/og-image.png` from
+`content/logo.jpg`. Only needed if the logo file changes. The favicon crops to
+the three-bar mark rather than shrinking the full wordmark, which is illegible
+at 32px.
+
+## Environment variables
+
+Copy `.env.example` to `.env.local` and fill it in. Both values are
+`NEXT_PUBLIC_*` and get baked into the static HTML at build time, so never put a
+real secret there.
+
+| Variable | Purpose |
+| --- | --- |
+| `NEXT_PUBLIC_FORM_KEY` | Web3Forms access key for the contact form. Without it the form renders disabled with a note pointing at WhatsApp. |
+| `NEXT_PUBLIC_SITE_URL` | Canonical origin, no trailing slash. Used by `sitemap.xml`, `robots.txt` and Open Graph tags. |
+
+## Deployment
+
+Covered in Stage 7 — Cloudflare Pages, custom domain, and the note about
+keeping Zoho Mail MX records clear of the site's DNS.

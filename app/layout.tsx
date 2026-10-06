@@ -25,6 +25,12 @@ export const metadata: Metadata = {
   },
   description:
     "Solar and inverter installation for homes and businesses in Ibadan, Lagos and nationwide. Serving customers since 2010.",
+  openGraph: {
+    type: "website",
+    locale: "en_NG",
+    siteName: "Al-Baatin Technologies Limited",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
 }
 
 export const viewport: Viewport = {

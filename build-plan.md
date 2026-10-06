@@ -14,21 +14,22 @@ Last updated: 6 Oct 2026
 - [x] 0.3 Measure every image and video (dimensions, file size, orientation)
 - [~] 0.4 Design plan: palette, type, layout, principles — **waiting for approval**
 
-## Stage 1 — Project foundation  `[ ]`
+## Stage 1 — Project foundation  `[x]`
 
-- [ ] 1.1 Decide on the existing `app/` code: delete the old demo components or keep (needs confirmation — see "Open decisions")
-- [ ] 1.2 `next.config.ts`: `output: 'export'`, `images: { unoptimized: true }`, drop the unsplash remote pattern
-- [ ] 1.3 Tailwind v4 theme tokens (colours, type scale, spacing) in the global stylesheet
-- [ ] 1.4 Fonts via `next/font` (self-hosted, no network request at runtime)
-- [ ] 1.5 Base layout, metadata defaults, skip link, focus styles, `prefers-reduced-motion`
+- [x] 1.1 Build fresh (old demo components already removed in `d01aae1`)
+- [x] 1.2 `next.config.ts`: `output: 'export'`, `images: { unoptimized: true }`, `trailingSlash`
+- [x] 1.3 Tailwind v4 theme tokens (colours, type scale) in `app/globals.css`
+- [x] 1.4 Fonts via `next/font` — Fraunces (display) + Inter (body), self-hosted
+- [x] 1.5 Base layout, metadata defaults, skip link, focus styles, `prefers-reduced-motion`
 
-## Stage 2 — Media pipeline  `[ ]`
+## Stage 2 — Media pipeline  `[x]`
 
-- [ ] 2.1 `scripts/optimize-media.mjs` with sharp → WebP 1600px + 800px into `public/media/`, never upscaling past source width
-- [ ] 2.2 Video posters: extract a frame per video (needs ffmpeg — **not installed**, so use a hand-picked still or document the command)
-- [ ] 2.3 Run it, confirm output sizes, add `public/media/` handling to `.gitignore` or commit it (decide)
-- [ ] 2.4 Favicon + OG image derived from the logo
-- [ ] 2.5 Document the ffmpeg commands for trimming/compressing video in the README (do not run — ffmpeg absent)
+- [x] 2.1 `scripts/optimize-media.mjs` with sharp → WebP 1600px + 800px into `public/media/`, never upscaling past source width
+- [x] 2.2 Video posters extracted with ffmpeg (installed 9.0.2); poster at 1s to avoid black frames
+- [x] 2.3 Ran it: 84 WebP + 6 MP4 = 28MB. **Committed** to the repo — Cloudflare's build image has no ffmpeg, so generated media must be in the checkout
+- [x] 2.4 Favicon + OG image derived from the logo (`scripts/build-brand-assets.mjs`); removed the stock `app/favicon.ico` which was overriding it
+- [x] 2.5 ffmpeg commands documented in the README
+- [x] 2.6 Incremental manifest (`public/media/manifest.json`) with real dimensions, so components can set width/height and avoid layout shift
 
 ## Stage 3 — Typed content data  `[ ]`
 
@@ -79,12 +80,14 @@ Last updated: 6 Oct 2026
 
 ---
 
-## Open decisions (need your call)
+## Decisions made (6 Oct 2026)
 
-1. **The existing `app/` demo components** — git shows them already deleted in the working tree. Confirm I should build fresh rather than restore them.
-2. **Owner photo** — there is no dedicated portrait, but the MD appears in `inverter-install-a/01`. Use a crop of that for About, or keep a marked placeholder?
-3. **Training** — its own `/training` page, or a homepage section only? (Plan currently assumes a page plus a homepage block.)
-4. **Web3Forms key** — I need `NEXT_PUBLIC_FORM_KEY`, or the form ships disabled with a clear note.
+1. **Old demo components** — build fresh, do not restore. Done.
+2. **Owner photo** — keep a clearly marked placeholder. Do not crop the MD out of `inverter-install-a/01`.
+3. **Training** — gets its own `/training` page.
+4. **Web3Forms key** — ships with the form disabled until `NEXT_PUBLIC_FORM_KEY` is set; documented in `.env.example`.
+5. **ffmpeg** — installed (Gyan.FFmpeg 9.0.2 via winget).
+6. **Placeholders ship.** Anything unanswered renders as a marked placeholder rather than blocking the build; the full list is kept below for chasing the client.
 
 ## Blocked on the client (placeholders until answered)
 

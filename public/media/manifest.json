@@ -1,0 +1,764 @@
+{
+  "projects/daffodil-gardens-estate-lagos/01-three-inverters-three-batteries": {
+    "hash": "4fc12c08ff15",
+    "type": "image",
+    "width": 828,
+    "height": 1097,
+    "variants": {
+      "800": {
+        "src": "/media/projects/daffodil-gardens-estate-lagos/01-three-inverters-three-batteries-800.webp",
+        "width": 800,
+        "height": 1060
+      },
+      "1600": {
+        "src": "/media/projects/daffodil-gardens-estate-lagos/01-three-inverters-three-batteries-1600.webp",
+        "width": 828,
+        "height": 1097
+      }
+    }
+  },
+  "projects/daffodil-gardens-estate-lagos/02-crew-member-at-inverter-wall": {
+    "hash": "ca027365abcc",
+    "type": "image",
+    "width": 1440,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/daffodil-gardens-estate-lagos/02-crew-member-at-inverter-wall-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "1600": {
+        "src": "/media/projects/daffodil-gardens-estate-lagos/02-crew-member-at-inverter-wall-1600.webp",
+        "width": 1440,
+        "height": 2560
+      }
+    }
+  },
+  "projects/daffodil-gardens-estate-lagos/03-estate-entrance-gate": {
+    "hash": "04b98b6b3d7c",
+    "type": "image",
+    "width": 1440,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/daffodil-gardens-estate-lagos/03-estate-entrance-gate-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "1600": {
+        "src": "/media/projects/daffodil-gardens-estate-lagos/03-estate-entrance-gate-1600.webp",
+        "width": 1440,
+        "height": 2560
+      }
+    }
+  },
+  "projects/daffodil-gardens-estate-lagos/04-inverter-wall-three-units-angled": {
+    "hash": "040c9b0f5bd5",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/daffodil-gardens-estate-lagos/04-inverter-wall-three-units-angled-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/daffodil-gardens-estate-lagos/04-inverter-wall-three-units-angled-1600.webp",
+        "width": 1600,
+        "height": 2133
+      }
+    }
+  },
+  "projects/daffodil-gardens-estate-lagos/05-crew-on-roof-and-balcony": {
+    "hash": "c9a990a2ac27",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/daffodil-gardens-estate-lagos/05-crew-on-roof-and-balcony-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/daffodil-gardens-estate-lagos/05-crew-on-roof-and-balcony-1600.webp",
+        "width": 1600,
+        "height": 2133
+      }
+    }
+  },
+  "projects/inverter-install-a/01-three-inverters-two-batteries": {
+    "hash": "6e8fa19da65c",
+    "type": "image",
+    "width": 3000,
+    "height": 4000,
+    "variants": {
+      "800": {
+        "src": "/media/projects/inverter-install-a/01-three-inverters-two-batteries-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/inverter-install-a/01-three-inverters-two-batteries-1600.webp",
+        "width": 1600,
+        "height": 2133
+      }
+    }
+  },
+  "projects/inverter-install-a/02-inverter-wall-front-view": {
+    "hash": "70e301f0a6a9",
+    "type": "image",
+    "width": 3000,
+    "height": 4000,
+    "variants": {
+      "800": {
+        "src": "/media/projects/inverter-install-a/02-inverter-wall-front-view-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/inverter-install-a/02-inverter-wall-front-view-1600.webp",
+        "width": 1600,
+        "height": 2133
+      }
+    }
+  },
+  "projects/inverter-install-a/03-roof-crew-mounting-panels": {
+    "hash": "bcf77ef2238e",
+    "type": "image",
+    "width": 1440,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/inverter-install-a/03-roof-crew-mounting-panels-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "1600": {
+        "src": "/media/projects/inverter-install-a/03-roof-crew-mounting-panels-1600.webp",
+        "width": 1440,
+        "height": 2560
+      }
+    }
+  },
+  "projects/inverter-install-c/01-inverter-and-battery": {
+    "hash": "c7465ef2d8d9",
+    "type": "image",
+    "width": 1440,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/inverter-install-c/01-inverter-and-battery-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "1600": {
+        "src": "/media/projects/inverter-install-c/01-inverter-and-battery-1600.webp",
+        "width": 1440,
+        "height": 2560
+      }
+    }
+  },
+  "projects/inverter-install-c/02-crew-with-inverter-and-battery": {
+    "hash": "06330597da2c",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/inverter-install-c/02-crew-with-inverter-and-battery-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/inverter-install-c/02-crew-with-inverter-and-battery-1600.webp",
+        "width": 1600,
+        "height": 2133
+      }
+    }
+  },
+  "projects/oasis-integrated-farms/01-hybrid-inverter-and-battery": {
+    "hash": "8cc532fc33e1",
+    "type": "image",
+    "width": 720,
+    "height": 1280,
+    "variants": {
+      "800": {
+        "src": "/media/projects/oasis-integrated-farms/01-hybrid-inverter-and-battery-800.webp",
+        "width": 720,
+        "height": 1280
+      },
+      "1600": {
+        "src": "/media/projects/oasis-integrated-farms/01-hybrid-inverter-and-battery-1600.webp",
+        "width": 720,
+        "height": 1280
+      }
+    }
+  },
+  "projects/oasis-integrated-farms/02-farm-gate-sign": {
+    "hash": "7460a903529e",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/oasis-integrated-farms/02-farm-gate-sign-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/oasis-integrated-farms/02-farm-gate-sign-1600.webp",
+        "width": 1600,
+        "height": 2133
+      }
+    }
+  },
+  "projects/rhema-chapel-lekki-lagos/01-solar-array-on-roof": {
+    "hash": "aa17c8452558",
+    "type": "image",
+    "width": 3000,
+    "height": 4000,
+    "variants": {
+      "800": {
+        "src": "/media/projects/rhema-chapel-lekki-lagos/01-solar-array-on-roof-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/rhema-chapel-lekki-lagos/01-solar-array-on-roof-1600.webp",
+        "width": 1600,
+        "height": 2133
+      }
+    }
+  },
+  "projects/rhema-chapel-lekki-lagos/02-panels-completed-from-above": {
+    "hash": "c7f784e37fc2",
+    "type": "image",
+    "width": 1920,
+    "height": 1080,
+    "variants": {
+      "800": {
+        "src": "/media/projects/rhema-chapel-lekki-lagos/02-panels-completed-from-above-800.webp",
+        "width": 800,
+        "height": 450
+      },
+      "1600": {
+        "src": "/media/projects/rhema-chapel-lekki-lagos/02-panels-completed-from-above-1600.webp",
+        "width": 1600,
+        "height": 900
+      }
+    }
+  },
+  "projects/rhema-chapel-lekki-lagos/03-panels-unpacked-in-compound": {
+    "hash": "790a26b4c40c",
+    "type": "image",
+    "width": 1440,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/rhema-chapel-lekki-lagos/03-panels-unpacked-in-compound-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "1600": {
+        "src": "/media/projects/rhema-chapel-lekki-lagos/03-panels-unpacked-in-compound-1600.webp",
+        "width": 1440,
+        "height": 2560
+      }
+    }
+  },
+  "projects/rhema-chapel-lekki-lagos/04-panel-closeup-before-install": {
+    "hash": "a997db5bf7c7",
+    "type": "image",
+    "width": 2560,
+    "height": 1920,
+    "variants": {
+      "800": {
+        "src": "/media/projects/rhema-chapel-lekki-lagos/04-panel-closeup-before-install-800.webp",
+        "width": 800,
+        "height": 600
+      },
+      "1600": {
+        "src": "/media/projects/rhema-chapel-lekki-lagos/04-panel-closeup-before-install-1600.webp",
+        "width": 1600,
+        "height": 1200
+      }
+    }
+  },
+  "projects/rhema-chapel-lekki-lagos/05-crew-unpacking-panels-at-wall": {
+    "hash": "243e6fe08854",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/rhema-chapel-lekki-lagos/05-crew-unpacking-panels-at-wall-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/rhema-chapel-lekki-lagos/05-crew-unpacking-panels-at-wall-1600.webp",
+        "width": 1600,
+        "height": 2133
+      }
+    }
+  },
+  "training/nysc-saed/01-hands-on-training-a": {
+    "hash": "4fa0408c8f46",
+    "type": "image",
+    "width": 1280,
+    "height": 960,
+    "variants": {
+      "800": {
+        "src": "/media/training/nysc-saed/01-hands-on-training-a-800.webp",
+        "width": 800,
+        "height": 600
+      },
+      "1600": {
+        "src": "/media/training/nysc-saed/01-hands-on-training-a-1600.webp",
+        "width": 1280,
+        "height": 960
+      }
+    }
+  },
+  "training/nysc-saed/02-hands-on-training-b": {
+    "hash": "1d33c5ca59a4",
+    "type": "image",
+    "width": 960,
+    "height": 1280,
+    "variants": {
+      "800": {
+        "src": "/media/training/nysc-saed/02-hands-on-training-b-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/training/nysc-saed/02-hands-on-training-b-1600.webp",
+        "width": 960,
+        "height": 1280
+      }
+    }
+  },
+  "training/nysc-saed/03-intercom-practical": {
+    "hash": "d4601b2e4c35",
+    "type": "image",
+    "width": 960,
+    "height": 1280,
+    "variants": {
+      "800": {
+        "src": "/media/training/nysc-saed/03-intercom-practical-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/training/nysc-saed/03-intercom-practical-1600.webp",
+        "width": 960,
+        "height": 1280
+      }
+    }
+  },
+  "training/nysc-saed/04-wiring-practical": {
+    "hash": "789ed03e594b",
+    "type": "image",
+    "width": 960,
+    "height": 1280,
+    "variants": {
+      "800": {
+        "src": "/media/training/nysc-saed/04-wiring-practical-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/training/nysc-saed/04-wiring-practical-1600.webp",
+        "width": 960,
+        "height": 1280
+      }
+    }
+  },
+  "training/nysc-saed/05-camp-stand-with-banner": {
+    "hash": "80735b9d02a3",
+    "type": "image",
+    "width": 2560,
+    "height": 1920,
+    "variants": {
+      "800": {
+        "src": "/media/training/nysc-saed/05-camp-stand-with-banner-800.webp",
+        "width": 800,
+        "height": 600
+      },
+      "1600": {
+        "src": "/media/training/nysc-saed/05-camp-stand-with-banner-1600.webp",
+        "width": 1600,
+        "height": 1200
+      }
+    }
+  },
+  "training/nysc-saed/06-corps-members-at-banner": {
+    "hash": "947385b94fa7",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/training/nysc-saed/06-corps-members-at-banner-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/training/nysc-saed/06-corps-members-at-banner-1600.webp",
+        "width": 1600,
+        "height": 2133
+      }
+    }
+  },
+  "training/nysc-saed/07-certificate-presentation-a": {
+    "hash": "ce2d14c3a9db",
+    "type": "image",
+    "width": 960,
+    "height": 1280,
+    "variants": {
+      "800": {
+        "src": "/media/training/nysc-saed/07-certificate-presentation-a-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/training/nysc-saed/07-certificate-presentation-a-1600.webp",
+        "width": 960,
+        "height": 1280
+      }
+    }
+  },
+  "training/nysc-saed/08-certificate-presentation-b": {
+    "hash": "303f45afa579",
+    "type": "image",
+    "width": 960,
+    "height": 1280,
+    "variants": {
+      "800": {
+        "src": "/media/training/nysc-saed/08-certificate-presentation-b-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/training/nysc-saed/08-certificate-presentation-b-1600.webp",
+        "width": 960,
+        "height": 1280
+      }
+    }
+  },
+  "training/nysc-saed/09-camp-stand-collage": {
+    "hash": "56e12a127c9f",
+    "type": "image",
+    "width": 720,
+    "height": 1280,
+    "variants": {
+      "800": {
+        "src": "/media/training/nysc-saed/09-camp-stand-collage-800.webp",
+        "width": 720,
+        "height": 1280
+      },
+      "1600": {
+        "src": "/media/training/nysc-saed/09-camp-stand-collage-1600.webp",
+        "width": 720,
+        "height": 1280
+      }
+    }
+  },
+  "training/nysc-saed/10-corps-members-in-hall": {
+    "hash": "b8cc041aa361",
+    "type": "image",
+    "width": 800,
+    "height": 640,
+    "variants": {
+      "800": {
+        "src": "/media/training/nysc-saed/10-corps-members-in-hall-800.webp",
+        "width": 800,
+        "height": 640
+      },
+      "1600": {
+        "src": "/media/training/nysc-saed/10-corps-members-in-hall-1600.webp",
+        "width": 800,
+        "height": 640
+      }
+    }
+  },
+  "training/nysc-saed/11-stand-banner-and-tv": {
+    "hash": "2859c0a9bef6",
+    "type": "image",
+    "width": 720,
+    "height": 1280,
+    "variants": {
+      "800": {
+        "src": "/media/training/nysc-saed/11-stand-banner-and-tv-800.webp",
+        "width": 720,
+        "height": 1280
+      },
+      "1600": {
+        "src": "/media/training/nysc-saed/11-stand-banner-and-tv-1600.webp",
+        "width": 720,
+        "height": 1280
+      }
+    }
+  },
+  "training/nysc-saed/12-instructor-whiteboard-lesson": {
+    "hash": "f7cdf03993f0",
+    "type": "image",
+    "width": 2560,
+    "height": 1920,
+    "variants": {
+      "800": {
+        "src": "/media/training/nysc-saed/12-instructor-whiteboard-lesson-800.webp",
+        "width": 800,
+        "height": 600
+      },
+      "1600": {
+        "src": "/media/training/nysc-saed/12-instructor-whiteboard-lesson-1600.webp",
+        "width": 1600,
+        "height": 1200
+      }
+    }
+  },
+  "training/nysc-saed/13-corps-members-group-photo": {
+    "hash": "b9f6d13bab7f",
+    "type": "image",
+    "width": 2560,
+    "height": 1920,
+    "variants": {
+      "800": {
+        "src": "/media/training/nysc-saed/13-corps-members-group-photo-800.webp",
+        "width": 800,
+        "height": 600
+      },
+      "1600": {
+        "src": "/media/training/nysc-saed/13-corps-members-group-photo-1600.webp",
+        "width": 1600,
+        "height": 1200
+      }
+    }
+  },
+  "training/nysc-saed/14-instructor-addressing-camp-hall": {
+    "hash": "2a880e61c32b",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/training/nysc-saed/14-instructor-addressing-camp-hall-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/training/nysc-saed/14-instructor-addressing-camp-hall-1600.webp",
+        "width": 1600,
+        "height": 2133
+      }
+    }
+  },
+  "team/01-crew-in-hi-vis-daytime": {
+    "hash": "846cd81eea8c",
+    "type": "image",
+    "width": 720,
+    "height": 1280,
+    "variants": {
+      "800": {
+        "src": "/media/team/01-crew-in-hi-vis-daytime-800.webp",
+        "width": 720,
+        "height": 1280
+      },
+      "1600": {
+        "src": "/media/team/01-crew-in-hi-vis-daytime-1600.webp",
+        "width": 720,
+        "height": 1280
+      }
+    }
+  },
+  "team/02-crew-in-hi-vis-night-a": {
+    "hash": "f92f58750de3",
+    "type": "image",
+    "width": 1440,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/team/02-crew-in-hi-vis-night-a-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "1600": {
+        "src": "/media/team/02-crew-in-hi-vis-night-a-1600.webp",
+        "width": 1440,
+        "height": 2560
+      }
+    }
+  },
+  "team/03-crew-in-hi-vis-night-b": {
+    "hash": "8faa87aab42f",
+    "type": "image",
+    "width": 1440,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/team/03-crew-in-hi-vis-night-b-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "1600": {
+        "src": "/media/team/03-crew-in-hi-vis-night-b-1600.webp",
+        "width": 1440,
+        "height": 2560
+      }
+    }
+  },
+  "testimonials/01-whatsapp-client-reply": {
+    "hash": "f6448e2f5045",
+    "type": "image",
+    "width": 1080,
+    "height": 2400,
+    "variants": {
+      "800": {
+        "src": "/media/testimonials/01-whatsapp-client-reply-800.webp",
+        "width": 800,
+        "height": 1778
+      },
+      "1600": {
+        "src": "/media/testimonials/01-whatsapp-client-reply-1600.webp",
+        "width": 1080,
+        "height": 2400
+      }
+    }
+  },
+  "_unassigned/car-carrying-panels-low-quality": {
+    "hash": "5706bf57d7bb",
+    "type": "image",
+    "width": 3000,
+    "height": 4000,
+    "variants": {
+      "800": {
+        "src": "/media/_unassigned/car-carrying-panels-low-quality-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/_unassigned/car-carrying-panels-low-quality-1600.webp",
+        "width": 1600,
+        "height": 2133
+      }
+    }
+  },
+  "_unassigned/crew-on-rooftop-wall": {
+    "hash": "fe23431f84ed",
+    "type": "image",
+    "width": 1080,
+    "height": 1920,
+    "variants": {
+      "800": {
+        "src": "/media/_unassigned/crew-on-rooftop-wall-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "1600": {
+        "src": "/media/_unassigned/crew-on-rooftop-wall-1600.webp",
+        "width": 1080,
+        "height": 1920
+      }
+    }
+  },
+  "_unassigned/mppt-charge-controller-closeup": {
+    "hash": "816c35196f7a",
+    "type": "image",
+    "width": 1080,
+    "height": 1920,
+    "variants": {
+      "800": {
+        "src": "/media/_unassigned/mppt-charge-controller-closeup-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "1600": {
+        "src": "/media/_unassigned/mppt-charge-controller-closeup-1600.webp",
+        "width": 1080,
+        "height": 1920
+      }
+    }
+  },
+  "_unassigned/rooftop-install-c-original-sideways": {
+    "hash": "a03c29b35f32",
+    "type": "image",
+    "width": 1080,
+    "height": 1920,
+    "variants": {
+      "800": {
+        "src": "/media/_unassigned/rooftop-install-c-original-sideways-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "1600": {
+        "src": "/media/_unassigned/rooftop-install-c-original-sideways-1600.webp",
+        "width": 1080,
+        "height": 1920
+      }
+    }
+  },
+  "projects/daffodil-gardens-estate-lagos/video-01-roof-panels-installed": {
+    "hash": "46f4da449842",
+    "type": "video",
+    "src": "/media/projects/daffodil-gardens-estate-lagos/video-01-roof-panels-installed.mp4",
+    "poster": "/media/projects/daffodil-gardens-estate-lagos/video-01-roof-panels-installed-poster.webp",
+    "width": 1280,
+    "height": 720,
+    "duration": 7.333333,
+    "trimmed": false
+  },
+  "projects/daffodil-gardens-estate-lagos/video-02-crew-briefing-on-site": {
+    "hash": "fc9668ca899b",
+    "type": "video",
+    "src": "/media/projects/daffodil-gardens-estate-lagos/video-02-crew-briefing-on-site.mp4",
+    "poster": "/media/projects/daffodil-gardens-estate-lagos/video-02-crew-briefing-on-site-poster.webp",
+    "width": 1280,
+    "height": 720,
+    "duration": 14.633333,
+    "trimmed": false
+  },
+  "projects/daffodil-gardens-estate-lagos/video-03-inverter-wall-walkthrough": {
+    "hash": "c9ee1ebf0eef",
+    "type": "video",
+    "src": "/media/projects/daffodil-gardens-estate-lagos/video-03-inverter-wall-walkthrough.mp4",
+    "poster": "/media/projects/daffodil-gardens-estate-lagos/video-03-inverter-wall-walkthrough-poster.webp",
+    "width": 720,
+    "height": 1280,
+    "duration": 20,
+    "trimmed": true
+  },
+  "projects/nysc-oyo-coordinator-office/video-01-installation-at-state-coordinator-office": {
+    "hash": "f0d5142638c6",
+    "type": "video",
+    "src": "/media/projects/nysc-oyo-coordinator-office/video-01-installation-at-state-coordinator-office.mp4",
+    "poster": "/media/projects/nysc-oyo-coordinator-office/video-01-installation-at-state-coordinator-office-poster.webp",
+    "width": 720,
+    "height": 1280,
+    "duration": 13.898333,
+    "trimmed": false
+  },
+  "projects/oasis-integrated-farms/video-01-inverter-and-battery": {
+    "hash": "e72aef5f0eba",
+    "type": "video",
+    "src": "/media/projects/oasis-integrated-farms/video-01-inverter-and-battery.mp4",
+    "poster": "/media/projects/oasis-integrated-farms/video-01-inverter-and-battery-poster.webp",
+    "width": 720,
+    "height": 1280,
+    "duration": 17.630272,
+    "trimmed": false
+  },
+  "training/nysc-saed/video-01-camp-selfie-with-corps-members": {
+    "hash": "1d6d18cc34fb",
+    "type": "video",
+    "src": "/media/training/nysc-saed/video-01-camp-selfie-with-corps-members.mp4",
+    "poster": "/media/training/nysc-saed/video-01-camp-selfie-with-corps-members-poster.webp",
+    "width": 720,
+    "height": 1280,
+    "duration": 9.913016,
+    "trimmed": false
+  }
+}
