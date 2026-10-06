@@ -1,56 +1,33 @@
-import { business, googleListings } from "@/data/business"
-import { Container } from "../ui"
+import { Frame, Section } from "@/components/layout"
+import { googleListings } from "@/data/business"
 
 /**
- * Only claims we can actually stand behind.
+ * One sentence rather than four boxed stats.
  *
- * "Since 2010" is when he started trading; the company was registered in 2018.
- * Installations and trainees are "thousands" because no exact count exists —
- * a made-up number here would be the easiest thing on the site to disprove.
+ * Only claims we can stand behind: 2010 is when he started trading (the
+ * company was registered in 2018), and installations are "thousands" because
+ * no exact count exists. A precise number here would be the easiest thing on
+ * the site to disprove.
  */
-const facts = [
-  { value: "2010", label: "Serving customers since" },
-  { value: "Thousands", label: "Systems installed" },
-  { value: "Nationwide", label: "From Ibadan and Lagos" },
-  {
-    value: googleListings.main.rating.toFixed(1),
-    label: `From ${googleListings.main.reviewCount} Google reviews`,
-    href: googleListings.main.url,
-  },
-]
-
 export function TrustStrip() {
+  const { rating, url } = googleListings.main
+
   return (
-    <section className="border-b border-hairline bg-bone-deep">
-      <Container>
-        <dl className="grid grid-cols-2 divide-hairline sm:grid-cols-4 sm:divide-x">
-          {facts.map((fact) => (
-            <div
-              key={fact.label}
-              className="flex flex-col-reverse gap-1 px-1 py-6 sm:px-6 sm:first:pl-0 sm:last:pr-0"
-            >
-              <dt className="text-sm text-ink-soft">{fact.label}</dt>
-              <dd className="font-display text-2xl font-semibold text-canopy sm:text-3xl">
-                {fact.href ? (
-                  <a
-                    href={fact.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline decoration-hairline underline-offset-4 hover:decoration-signal-dark"
-                  >
-                    {fact.value}
-                  </a>
-                ) : (
-                  fact.value
-                )}
-              </dd>
-            </div>
-          ))}
-        </dl>
-        <p className="sr-only">
-          {business.name}, RC {business.rcNumber}.
+    <Section rhythm="tight" className="border-b border-hairline">
+      <Frame width="wide">
+        <p className="text-title max-w-[22ch] font-display font-semibold text-canopy md:max-w-[44ch]">
+          Installing since 2010. Thousands of systems. Rated{" "}
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-hairline decoration-2 underline-offset-[6px] transition-colors hover:decoration-signal"
+          >
+            {rating.toFixed(1)} on Google
+          </a>
+          .
         </p>
-      </Container>
-    </section>
+      </Frame>
+    </Section>
   )
 }

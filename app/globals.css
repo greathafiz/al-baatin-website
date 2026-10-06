@@ -30,21 +30,32 @@
   --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
-  /* Type scale — 1.250 major third, clamped for mobile-first */
-  --text-spec: clamp(2.5rem, 1.6rem + 4.5vw, 5rem); /* system-size numerals */
-  --text-spec--line-height: 0.95;
-  --text-spec--letter-spacing: -0.03em;
+  /* Type scale — 1.333 perfect fourth. Wider than the usual 1.25 so the jump
+     from body to display is unmistakable; a timid scale is what makes a page
+     read as a document rather than a design. */
 
-  --text-display: clamp(2rem, 1.3rem + 3.4vw, 3.75rem);
-  --text-display--line-height: 1.04;
-  --text-display--letter-spacing: -0.02em;
+  /* Spec numerals: 24kVA, 45kWh. These are the proof, so they are set as
+     display objects, not as body text in a definition list. */
+  --text-spec: clamp(3rem, 1.8rem + 6vw, 7rem);
+  --text-spec--line-height: 0.88;
+  --text-spec--letter-spacing: -0.045em;
 
-  --text-title: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
-  --text-title--line-height: 1.15;
-  --text-title--letter-spacing: -0.015em;
+  --text-display: clamp(2.75rem, 1.7rem + 5vw, 6rem);
+  --text-display--line-height: 0.98;
+  --text-display--letter-spacing: -0.035em;
 
-  --text-lede: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
-  --text-lede--line-height: 1.6;
+  --text-title: clamp(1.875rem, 1.3rem + 2.6vw, 3.25rem);
+  --text-title--line-height: 1.06;
+  --text-title--letter-spacing: -0.025em;
+
+  --text-lede: clamp(1.125rem, 1.02rem + 0.5vw, 1.5rem);
+  --text-lede--line-height: 1.5;
+  --text-lede--letter-spacing: -0.01em;
+
+  /* Small caption/meta text — locations, dates, figure captions. */
+  --text-meta: 0.8125rem;
+  --text-meta--line-height: 1.45;
+  --text-meta--letter-spacing: 0.01em;
 }
 
 /* ---------------------------------------------------------------------------

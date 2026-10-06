@@ -39,15 +39,18 @@ export function SiteHeader() {
               {link.label}
             </Link>
           ))}
-          <ButtonAnchor
+          {/* Quiet, not a filled button: the hero already carries the primary
+              call to action, and two competing green buttons on one screen is
+              what made the first pass feel busy. */}
+          <a
             href={whatsapp.quote}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 text-sm"
+            className="inline-flex items-center gap-2 border-b border-canopy/30 pb-0.5 text-sm text-canopy transition-colors hover:border-canopy"
           >
             <WhatsAppIcon className="h-4 w-4" />
-            Chat on WhatsApp
-          </ButtonAnchor>
+            WhatsApp
+          </a>
         </nav>
 
         <button

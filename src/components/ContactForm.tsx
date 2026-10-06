@@ -5,8 +5,11 @@ import { whatsapp } from "@/data/business"
 
 type Status = "idle" | "sending" | "sent" | "error"
 
+// The form sits on the dark canopy field, so inputs are light-on-dark.
 const field =
-  "w-full rounded-sm border border-hairline bg-white px-3 py-2.5 text-base text-ink placeholder:text-ink-soft/60 focus:border-signal-dark"
+  "w-full border border-bone/25 bg-white/5 px-4 py-3 text-base text-white placeholder:text-bone/40 focus:border-signal focus:outline-none"
+
+const label = "block text-meta text-bone/70"
 
 /**
  * Web3Forms via a client-side POST — the site is a static export, so there is
@@ -23,23 +26,26 @@ export function ContactForm() {
 
   if (!accessKey) {
     return (
-      <div className="rounded-sm border border-hairline bg-bone-deep p-5">
-        <p className="font-medium text-canopy">The message form is not set up yet</p>
-        <p className="mt-2 text-sm text-ink-soft">
+      <div className="border border-bone/25 p-6">
+        <p className="font-display text-xl font-semibold text-white">
+          The message form is not set up yet
+        </p>
+        <p className="mt-2 text-bone/75">
           Message us on WhatsApp or call instead — both reach us straight away.
         </p>
         <a
           href={whatsapp.quote}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-block text-sm font-medium text-signal-dark underline underline-offset-4"
+          className="mt-5 inline-block border-b border-signal pb-1 font-medium text-signal transition-colors hover:border-white hover:text-white"
         >
           Chat on WhatsApp
         </a>
         {/* Visible to whoever is building the site, not to customers. */}
-        <p className="mt-4 border-l-2 border-live-red bg-live-red/5 px-3 py-2 text-xs text-ink">
-          <strong>[PLACEHOLDER]</strong> Set NEXT_PUBLIC_FORM_KEY in .env.local
-          to enable this form. See .env.example.
+        <p className="text-meta mt-6 border-l-2 border-live-red bg-live-red/15 px-3 py-2 text-bone">
+          <strong className="font-semibold">[PLACEHOLDER]</strong> Set
+          NEXT_PUBLIC_FORM_KEY in .env.local to enable this form. See
+          .env.example.
         </p>
       </div>
     )
@@ -70,16 +76,15 @@ export function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div
-        role="status"
-        className="rounded-sm border border-signal-dark/30 bg-signal/5 p-5"
-      >
-        <p className="font-medium text-canopy">Message sent</p>
-        <p className="mt-2 text-sm text-ink-soft">
+      <div role="status" className="border border-signal/40 bg-signal/10 p-6">
+        <p className="font-display text-xl font-semibold text-white">
+          Message sent
+        </p>
+        <p className="mt-2 text-bone/80">
           We will get back to you shortly. If it is urgent, call{" "}
           <a
             href={`tel:${whatsapp.dial}`}
-            className="font-medium text-signal-dark underline underline-offset-4"
+            className="font-medium text-signal underline underline-offset-4"
           >
             {whatsapp.display}
           </a>
@@ -107,14 +112,14 @@ export function ContactForm() {
       />
 
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-canopy">
+        <label htmlFor="name" className={label}>
           Your name
         </label>
         <input id="name" name="name" required autoComplete="name" className={`${field} mt-1.5`} />
       </div>
 
       <div>
-        <label htmlFor="phone" className="block text-sm font-medium text-canopy">
+        <label htmlFor="phone" className={label}>
           Phone number
         </label>
         <input
@@ -129,7 +134,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-canopy">
+        <label htmlFor="message" className={label}>
           What do you need?
         </label>
         <textarea
@@ -143,7 +148,7 @@ export function ContactForm() {
       </div>
 
       {status === "error" ? (
-        <p role="alert" className="text-sm text-live-red">
+        <p role="alert" className="text-sm text-red-300">
           That did not send. Try again, or message us on WhatsApp — the button
           is at the top of this section.
         </p>
@@ -152,7 +157,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="inline-flex items-center justify-center rounded-sm bg-signal-dark px-5 py-3 font-medium text-white transition-colors hover:bg-canopy-soft disabled:opacity-60"
+        className="inline-flex items-center justify-center bg-signal px-7 py-4 font-medium text-canopy transition-colors hover:bg-white disabled:opacity-60"
       >
         {status === "sending" ? "Sending…" : "Send message"}
       </button>

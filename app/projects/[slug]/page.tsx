@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import { Frame, Section } from "@/components/layout"
 import { Clip, Img } from "@/components/Media"
-import { ButtonAnchor, Container, WhatsAppIcon } from "@/components/ui"
+import { WhatsAppIcon } from "@/components/ui"
 import { whatsapp } from "@/data/business"
 import { projects } from "@/data/projects"
 
@@ -53,28 +54,30 @@ export default async function ProjectPage({
   ].filter(Boolean) as { label: string; value: string }[]
 
   return (
-    <article className="py-12 md:py-16">
-      <Container>
+    <Section rhythm="normal">
+      <Frame width="wide">
         <Link
           href="/projects/"
-          className="text-sm text-ink-soft underline underline-offset-4 hover:text-signal-dark"
+          className="text-meta text-ink-soft underline underline-offset-4 transition-colors hover:text-canopy"
         >
           Back to all work
         </Link>
 
-        <h1 className="text-display mt-4 font-semibold">{project.title}</h1>
+        <h1 className="text-display mt-5 max-w-[16ch] font-semibold">
+          {project.title}
+        </h1>
         {project.description ? (
-          <p className="text-lede mt-4 max-w-prose text-ink-soft">
+          <p className="text-lede mt-6 max-w-[46ch] text-ink-soft">
             {project.description}
           </p>
         ) : null}
 
         {specs.length > 0 ? (
-          <dl className="mt-8 grid gap-x-8 gap-y-4 border-t border-hairline pt-6 sm:grid-cols-2 lg:grid-cols-4">
+          <dl className="mt-12 grid gap-x-10 gap-y-8 border-t border-canopy pt-6 sm:grid-cols-2 lg:grid-cols-4">
             {specs.map((spec) => (
               <div key={spec.label}>
-                <dt className="text-sm text-ink-soft">{spec.label}</dt>
-                <dd className="mt-0.5 font-display text-lg font-semibold text-canopy">
+                <dt className="text-meta text-ink-soft">{spec.label}</dt>
+                <dd className="mt-1 font-display text-xl font-semibold text-canopy sm:text-2xl">
                   {spec.value}
                 </dd>
               </div>
@@ -90,7 +93,7 @@ export default async function ProjectPage({
                 photo={photo}
                 sizes="(min-width: 640px) 50vw, 100vw"
                 priority={i === 0}
-                className="w-full rounded-sm"
+                className="w-full"
               />
             ))}
           </div>
@@ -99,29 +102,27 @@ export default async function ProjectPage({
         {project.videos.length > 0 ? (
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
             {project.videos.map((clip) => (
-              <Clip key={clip.key} clip={clip} className="[&_video]:rounded-sm" />
+              <Clip key={clip.key} clip={clip}  />
             ))}
           </div>
         ) : null}
 
-        <div className="mt-12 border-t border-hairline pt-8">
-          <h2 className="font-display text-xl font-semibold text-canopy">
-            Want something like this?
-          </h2>
-          <p className="mt-2 max-w-prose text-ink-soft">
+        <div className="mt-16 border-t border-hairline pt-10">
+          <h2 className="text-title font-semibold">Want something like this?</h2>
+          <p className="text-lede mt-4 max-w-[40ch] text-ink-soft">
             Tell us what you run and we will size a system for it.
           </p>
-          <ButtonAnchor
+          <a
             href={whatsapp.quote}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5"
+            className="mt-7 inline-flex items-center gap-2.5 bg-canopy px-7 py-4 font-medium text-white transition-colors hover:bg-signal-dark"
           >
-            <WhatsAppIcon />
+            <WhatsAppIcon className="h-5 w-5" />
             Chat on WhatsApp
-          </ButtonAnchor>
+          </a>
         </div>
-      </Container>
-    </article>
+      </Frame>
+    </Section>
   )
 }

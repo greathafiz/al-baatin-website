@@ -1,3 +1,6 @@
+import { Frame, Section } from "@/components/layout"
+import { ContactForm } from "../ContactForm"
+import { WhatsAppIcon } from "../ui"
 import {
   addresses,
   business,
@@ -5,102 +8,96 @@ import {
   serviceAreas,
   whatsapp,
 } from "@/data/business"
-import { ContactForm } from "../ContactForm"
-import { ButtonAnchor, Container, SectionHeading, WhatsAppIcon } from "../ui"
 
 export function Contact() {
   return (
-    <section id="contact" className="scroll-mt-20 bg-bone-deep py-16 md:py-24">
-      <Container>
-        <SectionHeading>Get a quote</SectionHeading>
-        <p className="text-lede mt-3 max-w-prose text-ink-soft">
-          WhatsApp is the fastest way to reach us. Send a photo of your meter
-          board or inverter space and we can tell you a lot before visiting.
-        </p>
+    <Section id="contact" rhythm="loose" className="bg-canopy text-bone">
+      <Frame width="wide">
+        <div className="grid gap-12 md:grid-cols-12 md:gap-16">
+          <div className="md:col-span-5">
+            <h2 className="text-display max-w-[14ch] font-semibold text-white">
+              Tell us what you run
+            </h2>
+            <p className="text-lede mt-6 max-w-[38ch] text-bone/75">
+              Send a photo of your meter board and we can size a system before
+              we ever visit.
+            </p>
 
-        <div className="mt-10 grid gap-10 md:grid-cols-2 md:gap-14">
-          <div>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <ButtonAnchor
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
                 href={whatsapp.quote}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 bg-signal px-7 py-4 font-medium text-canopy transition-colors hover:bg-white"
               >
-                <WhatsAppIcon />
+                <WhatsAppIcon className="h-5 w-5" />
                 Chat on WhatsApp
-              </ButtonAnchor>
-              <ButtonAnchor
+              </a>
+              <a
                 href={`tel:${phones[0].dial}`}
-                variant="secondary"
+                className="inline-flex items-center border border-bone/30 px-7 py-4 font-medium text-bone transition-colors hover:border-bone"
               >
                 Call {phones[0].number}
-              </ButtonAnchor>
-            </div>
-
-            <div className="mt-8">
-              <h3 className="text-sm font-semibold text-canopy">
-                All our numbers
-              </h3>
-              <ul className="mt-2 flex flex-wrap gap-x-5 gap-y-1">
-                {phones.map((phone) => (
-                  <li key={phone.dial}>
-                    <a
-                      href={`tel:${phone.dial}`}
-                      className="text-ink underline decoration-hairline underline-offset-4 hover:decoration-signal-dark"
-                    >
-                      {phone.number}
-                    </a>
-                    {phone.primary ? (
-                      <span className="ml-1.5 text-xs text-ink-soft">
-                        (WhatsApp)
-                      </span>
-                    ) : null}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="mt-6">
-              <h3 className="text-sm font-semibold text-canopy">Email</h3>
-              <a
-                href={`mailto:${business.email}`}
-                className="mt-1 inline-block break-all text-ink underline decoration-hairline underline-offset-4 hover:decoration-signal-dark"
-              >
-                {business.email}
               </a>
             </div>
 
-            <div className="mt-6 grid gap-5 sm:grid-cols-3">
-              {addresses.map((address) => (
-                <div key={address.label}>
-                  <h3 className="text-sm font-semibold text-canopy">
-                    {address.label}
-                  </h3>
-                  <address className="mt-1 text-sm not-italic text-ink-soft">
-                    {address.lines.map((line) => (
-                      <span key={line} className="block">
-                        {line}
-                      </span>
-                    ))}
-                  </address>
-                </div>
-              ))}
+            <div className="mt-12 grid gap-8 sm:grid-cols-2">
+              <div>
+                <h3 className="text-meta text-bone/60">All our numbers</h3>
+                <ul className="mt-2 space-y-1">
+                  {phones.map((phone) => (
+                    <li key={phone.dial}>
+                      <a
+                        href={`tel:${phone.dial}`}
+                        className="text-bone/90 transition-colors hover:text-white"
+                      >
+                        {phone.number}
+                      </a>
+                      {phone.primary ? (
+                        <span className="text-meta ml-2 text-bone/50">
+                          WhatsApp
+                        </span>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
+
+                <h3 className="text-meta mt-6 text-bone/60">Email</h3>
+                <a
+                  href={`mailto:${business.email}`}
+                  className="mt-1 inline-block break-all text-bone/90 transition-colors hover:text-white"
+                >
+                  {business.email}
+                </a>
+              </div>
+
+              <div>
+                {addresses.map((address) => (
+                  <div key={address.label} className="mb-5 last:mb-0">
+                    <h3 className="text-meta text-bone/60">{address.label}</h3>
+                    <address className="mt-1 text-sm not-italic text-bone/85">
+                      {address.lines.map((line) => (
+                        <span key={line} className="block">
+                          {line}
+                        </span>
+                      ))}
+                    </address>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="mt-6">
-              <h3 className="text-sm font-semibold text-canopy">
-                Where we work
-              </h3>
-              <p className="mt-1 text-sm text-ink-soft">
-                Nationwide, most often in {serviceAreas.slice(0, -1).join(", ")}{" "}
-                and {serviceAreas.at(-1)}.
-              </p>
-            </div>
+            <p className="text-meta mt-8 max-w-[44ch] text-bone/60">
+              Nationwide, most often in {serviceAreas.slice(0, -1).join(", ")}{" "}
+              and {serviceAreas.at(-1)}.
+            </p>
           </div>
 
-          <ContactForm />
+          <div className="md:col-span-6 md:col-start-7">
+            <ContactForm />
+          </div>
         </div>
-      </Container>
-    </section>
+      </Frame>
+    </Section>
   )
 }

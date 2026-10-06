@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
+import { Frame, Section } from "@/components/layout"
 import { ProjectGrid } from "@/components/ProjectGrid"
-import { Container } from "@/components/ui"
 import { projects } from "@/data/projects"
 
 export const metadata: Metadata = {
@@ -11,18 +11,18 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <section className="py-12 md:py-16">
-      <Container>
-        <h1 className="text-display font-semibold">Our work</h1>
-        <p className="text-lede mt-4 max-w-prose text-ink-soft">
-          Every system here was installed by our own crew. Sizes are the real
-          ones we fitted, not examples.
+    <Section rhythm="normal">
+      <Frame width="wide">
+        <h1 className="text-display max-w-[14ch] font-semibold">Our work</h1>
+        <p className="text-lede mt-6 max-w-[46ch] text-ink-soft">
+          Every system here was installed by our own crew. The sizes are the
+          real ones we fitted.
         </p>
 
-        <div className="mt-10">
+        <div className="mt-14">
           <ProjectGrid projects={projects} />
         </div>
-      </Container>
-    </section>
+      </Frame>
+    </Section>
   )
 }

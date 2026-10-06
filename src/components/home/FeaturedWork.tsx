@@ -1,88 +1,109 @@
+import Link from "next/link"
+import { Frame, Section } from "@/components/layout"
+import { Img } from "@/components/Media"
 import { projects } from "@/data/projects"
-import { Clip, Img } from "../Media"
-import { ButtonLink, Container, SectionHeading } from "../ui"
 
 /**
- * Eight photos and two clips, hand-picked for sharpness rather than pulled in
- * order. Portrait phone shots stay portrait: forcing 18 vertical photos into
- * 16:9 boxes would crop the inverter walls — the actual subject — out of frame.
- * The grid mixes one wide tile with tall ones instead.
+ * The work, as a record.
+ *
+ * Each job is a full-width entry: a large photograph with its real number set
+ * in display type beside it. The specs ARE the argument — 45kWh of storage
+ * says more to someone comparing quotes than any adjective would, so the
+ * figure is the headline rather than a line of grey text in a spec list.
+ *
+ * Entries alternate sides so the page has a rhythm instead of one repeated card.
  */
-const picks = [
-  { key: "projects/rhema-chapel-lekki-lagos/02-panels-completed-from-above", span: "wide" },
-  { key: "projects/daffodil-gardens-estate-lagos/04-inverter-wall-three-units-angled", span: "tall" },
-  { key: "projects/inverter-install-a/01-three-inverters-two-batteries", span: "tall" },
-  { key: "projects/daffodil-gardens-estate-lagos/05-crew-on-roof-and-balcony", span: "tall" },
-  { key: "projects/rhema-chapel-lekki-lagos/01-solar-array-on-roof", span: "tall" },
-  { key: "projects/oasis-integrated-farms/01-hybrid-inverter-and-battery", span: "tall" },
-  { key: "projects/inverter-install-c/01-inverter-and-battery", span: "tall" },
-  { key: "projects/inverter-install-a/03-roof-crew-mounting-panels", span: "tall" },
-] as const
-
-/** Look the photo up in the project data so alt text has one source of truth. */
-function findPhoto(key: string) {
-  for (const project of projects) {
-    const hit = project.photos.find((p) => p.key === key)
-    if (hit) return hit
-  }
-  throw new Error(`Featured photo "${key}" is not in any project.`)
-}
-
-function findVideo(key: string) {
-  for (const project of projects) {
-    const hit = project.videos.find((v) => v.key === key)
-    if (hit) return hit
-  }
-  throw new Error(`Featured video "${key}" is not in any project.`)
-}
+const entries = [
+  {
+    slug: "daffodil-gardens-estate-lagos",
+    figure: "45",
+    unit: "kWh",
+    note: "of storage across three batteries, on a new-build duplex",
+  },
+  {
+    slug: "rhema-chapel-lekki-lagos",
+    figure: "24",
+    unit: "panels",
+    note: "15.6kWp across one church roof in Lekki",
+  },
+  {
+    slug: "oasis-integrated-farms",
+    figure: "12",
+    unit: "kVA",
+    note: "hybrid system keeping a working farm running",
+  },
+]
 
 export function FeaturedWork() {
-  const clips = [
-    findVideo("projects/daffodil-gardens-estate-lagos/video-01-roof-panels-installed"),
-    findVideo("projects/oasis-integrated-farms/video-01-inverter-and-battery"),
-  ]
-
   return (
-    <section id="work" className="scroll-mt-20 bg-bone-deep py-16 md:py-24">
-      <Container>
-        <div className="flex flex-wrap items-baseline justify-between gap-4">
-          <SectionHeading>Recent work</SectionHeading>
-          <ButtonLink href="/projects/" variant="quiet" className="px-0 py-0">
-            View all projects
-          </ButtonLink>
-        </div>
+    <Section id="work" rhythm="loose">
+      <Frame width="wide">
+        <h2 className="text-title max-w-[18ch] font-semibold">
+          Systems we have built
+        </h2>
+      </Frame>
 
-        <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-          {picks.map((pick) => {
-            const photo = findPhoto(pick.key)
-            const wide = pick.span === "wide"
-            return (
-              <figure
-                key={pick.key}
-                className={wide ? "col-span-2 lg:col-span-2" : ""}
-              >
-                <Img
-                  photo={photo}
-                  sizes="(min-width: 1024px) 25vw, 50vw"
-                  className={`w-full rounded-sm object-cover ${
-                    wide ? "aspect-4/3 lg:aspect-16/10" : "aspect-3/4"
+      <div className="mt-14 space-y-20 md:mt-20 md:space-y-32">
+        {entries.map((entry, i) => {
+          const project = projects.find((p) => p.slug === entry.slug)!
+          const photo = project.photos[0]
+          const flip = i % 2 === 1
+
+          return (
+            <article key={entry.slug}>
+              <Frame width="wide">
+                <div
+                  className={`grid items-center gap-8 md:grid-cols-12 md:gap-12 ${
+                    flip ? "md:[direction:rtl]" : ""
                   }`}
-                />
-              </figure>
-            )
-          })}
-        </div>
+                >
+                  <div
+                    className={`md:col-span-8 ${flip ? "md:[direction:ltr]" : ""}`}
+                  >
+                    <Link
+                      href={`/projects/${project.slug}/`}
+                      className="block overflow-hidden"
+                    >
+                      <Img
+                        photo={photo}
+                        sizes="(min-width: 768px) 66vw, 100vw"
+                        className="aspect-4/3 w-full object-cover transition-transform duration-500 hover:scale-[1.02] md:aspect-16/10"
+                      />
+                    </Link>
+                  </div>
 
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          {clips.map((clip) => (
-            <Clip
-              key={clip.key}
-              clip={clip}
-              className="[&_video]:aspect-3/4 [&_video]:rounded-sm sm:[&_video]:aspect-video"
-            />
-          ))}
-        </div>
-      </Container>
-    </section>
+                  <div
+                    className={`md:col-span-4 ${flip ? "md:[direction:ltr]" : ""}`}
+                  >
+                    <p className="text-spec font-display font-semibold text-canopy">
+                      {entry.figure}
+                      <span className="text-title align-baseline font-display font-normal text-ink-soft">
+                        {entry.unit}
+                      </span>
+                    </p>
+                    <p className="text-lede mt-3 max-w-[30ch] text-ink">
+                      {entry.note}
+                    </p>
+                    <p className="text-meta mt-6 border-t border-hairline pt-3 text-ink-soft">
+                      {project.title}
+                      {project.location ? `, ${project.location}` : ""}
+                    </p>
+                  </div>
+                </div>
+              </Frame>
+            </article>
+          )
+        })}
+      </div>
+
+      <Frame width="wide" className="mt-14 md:mt-20">
+        <Link
+          href="/projects/"
+          className="text-lede border-b border-canopy/30 pb-1 text-canopy transition-colors hover:border-canopy"
+        >
+          All projects
+        </Link>
+      </Frame>
+    </Section>
   )
 }

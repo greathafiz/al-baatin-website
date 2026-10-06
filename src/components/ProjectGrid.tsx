@@ -15,12 +15,15 @@ const filters: { value: Filter; label: string }[] = [
   { value: "other", label: "Other" },
 ]
 
-const typeLabel: Record<ProjectType, string> = {
-  residential: "Home",
-  commercial: "Business",
-  other: "Other",
-}
-
+/**
+ * The work as an indexed schedule: one row per job, specs in columns, the way
+ * a contractor's own schedule of works reads. Denser and more scannable than a
+ * card grid when someone is comparing systems, and the numbers stay aligned
+ * down the page instead of being buried in each card.
+ *
+ * Thumbnails sit in grayscale and come to colour on hover or focus, so the
+ * index reads as one calm list until you point at a row.
+ */
 export function ProjectGrid({ projects }: { projects: Project[] }) {
   const [filter, setFilter] = useState<Filter>("all")
 
@@ -29,7 +32,11 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
 
   return (
     <>
-      <div className="flex flex-wrap gap-2" role="group" aria-label="Filter projects">
+      <div
+        className="flex flex-wrap gap-x-6 gap-y-2"
+        role="group"
+        aria-label="Filter projects"
+      >
         {filters.map((f) => {
           const active = filter === f.value
           const count =
@@ -43,77 +50,73 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
               onClick={() => setFilter(f.value)}
               aria-pressed={active}
               disabled={count === 0}
-              className={`rounded-sm border px-4 py-2 text-sm transition-colors disabled:opacity-40 ${
+              className={`border-b pb-1 text-base transition-colors disabled:opacity-30 ${
                 active
-                  ? "border-canopy bg-canopy text-white"
-                  : "border-hairline text-ink hover:border-canopy"
+                  ? "border-canopy text-canopy"
+                  : "border-transparent text-ink-soft hover:border-hairline hover:text-ink"
               }`}
             >
               {f.label}
-              <span className="ml-1.5 text-xs opacity-70">{count}</span>
+              <span className="text-meta ml-1.5 align-super opacity-60">
+                {count}
+              </span>
             </button>
           )
         })}
       </div>
 
-      {/* aria-live so the count change is announced when a filter is pressed. */}
       <p className="sr-only" aria-live="polite">
         Showing {shown.length} of {projects.length} projects.
       </p>
 
-      <ul className="mt-8 grid gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-        {shown.map((project) => {
-          const cover = project.photos[0]
-          return (
-            <li key={project.slug}>
-              <Link href={`/projects/${project.slug}/`} className="group block">
-                {cover ? (
+      <ul className="mt-10 border-t border-canopy">
+        {shown.map((project) => (
+          <li key={project.slug} className="border-b border-hairline">
+            <Link
+              href={`/projects/${project.slug}/`}
+              className="group grid grid-cols-12 items-center gap-x-5 gap-y-1 py-4 transition-colors hover:bg-bone-deep"
+            >
+              <div className="col-span-3 sm:col-span-2 lg:col-span-1">
+                {project.photos[0] ? (
                   <Img
-                    photo={cover}
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="aspect-5/4 w-full rounded-sm object-cover"
+                    photo={project.photos[0]}
+                    sizes="110px"
+                    className="aspect-square w-full max-w-22 object-cover grayscale transition-all duration-300 group-hover:grayscale-0 group-focus-visible:grayscale-0"
                   />
                 ) : project.videos[0] ? (
-                  // Video-only project: its poster frame stands in as the cover.
+                  // Video-only job: its poster frame stands in as the thumbnail.
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={video(project.videos[0].key).poster}
                     alt={project.videos[0].alt}
                     loading="lazy"
                     decoding="async"
-                    className="aspect-5/4 w-full rounded-sm object-cover"
+                    className="aspect-square w-full max-w-22 object-cover grayscale transition-all duration-300 group-hover:grayscale-0"
                   />
                 ) : null}
-                <h2 className="mt-4 font-display text-xl font-semibold text-canopy group-hover:text-signal-dark">
+              </div>
+
+              <div className="col-span-9 sm:col-span-4 lg:col-span-4">
+                <h2 className="font-display text-lg font-semibold text-canopy sm:text-xl">
                   {project.title}
                 </h2>
-              </Link>
-
-              <dl className="mt-1 text-sm text-ink-soft">
                 {project.location ? (
-                  <div>
-                    <dt className="sr-only">Location</dt>
-                    <dd>{project.location}</dd>
-                  </div>
+                  <p className="text-meta mt-0.5 text-ink-soft">
+                    {project.location}
+                  </p>
                 ) : null}
-                {project.systemSize ? (
-                  <div className="mt-1">
-                    <dt className="sr-only">System</dt>
-                    <dd className="text-ink">{project.systemSize}</dd>
-                  </div>
-                ) : null}
-                {project.type ? (
-                  <div className="mt-2">
-                    <dt className="sr-only">Type</dt>
-                    <dd className="inline-block border border-hairline px-2 py-0.5 text-xs">
-                      {typeLabel[project.type]}
-                    </dd>
-                  </div>
-                ) : null}
-              </dl>
-            </li>
-          )
-        })}
+              </div>
+
+              <p className="text-meta col-span-9 col-start-4 text-ink sm:col-span-5 sm:col-start-auto lg:col-span-5">
+                {project.systemSize ?? ""}
+              </p>
+
+              <p className="text-meta col-span-12 text-ink-soft sm:col-span-1 sm:text-right lg:col-span-2">
+                {project.date ?? ""}
+              </p>
+            </Link>
+          </li>
+        ))}
       </ul>
     </>
   )
