@@ -82,13 +82,14 @@ at 32px.
 
 ## Environment variables
 
-Copy `.env.example` to `.env.local` and fill it in. Both values are
+Copy `.env.example` to `.env.local` and fill it in. All values are
 `NEXT_PUBLIC_*` and get baked into the static HTML at build time, so never put a
 real secret there.
 
 | Variable | Purpose |
 | --- | --- |
-| `NEXT_PUBLIC_FORM_KEY` | Web3Forms access key for the contact form. Without it the form renders disabled with a note pointing at WhatsApp. |
+| `NEXT_PUBLIC_FORMSPREE_FORM_ID` | Formspree form id for the contact form. Without it (or the Turnstile key below) the form renders disabled with a note pointing at WhatsApp. |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Cloudflare Turnstile site key, shown as a "verify you are human" widget on the contact form. The matching *secret* key is never in this repo — it's pasted into Formspree's dashboard under the form's CAPTCHA settings. |
 | `NEXT_PUBLIC_SITE_URL` | Canonical origin, no trailing slash. Used by `sitemap.xml`, `robots.txt` and Open Graph tags. |
 
 **These must also be set in Cloudflare Pages**, under *Settings → Environment

@@ -1,5 +1,6 @@
 "use client"
 
+import Script from "next/script"
 import { useState } from "react"
 import { whatsapp } from "@/data/business"
 
@@ -12,19 +13,21 @@ const field =
 const label = "block text-meta text-bone/70"
 
 /**
- * Web3Forms via a client-side POST — the site is a static export, so there is
- * no server to receive a form.
+ * Formspree via a client-side POST — the site is a static export, so there is
+ * no server to receive a form. Cloudflare Turnstile guards it against bots;
+ * Formspree verifies the token server-side using the secret key configured in
+ * its own dashboard (never in this repo).
  *
- * The access key is a NEXT_PUBLIC_* value baked into the HTML at build time.
- * That is by design for Web3Forms: the key only allows submissions to his
- * inbox. Without a key the form renders disabled and points at WhatsApp, which
- * is how most of his customers reach him anyway.
+ * Both ids are NEXT_PUBLIC_* values baked into the HTML at build time — that
+ * is by design, neither is a secret. Without them the form renders disabled
+ * and points at WhatsApp, which is how most of his customers reach him anyway.
  */
 export function ContactForm() {
-  const accessKey = process.env.NEXT_PUBLIC_FORM_KEY
+  const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
   const [status, setStatus] = useState<Status>("idle")
 
-  if (!accessKey) {
+  if (!formId || !turnstileSiteKey) {
     return (
       <div className="border border-bone/25 p-6">
         <p className="font-display text-xl font-semibold text-white">
@@ -44,28 +47,29 @@ export function ContactForm() {
         {/* Visible to whoever is building the site, not to customers. */}
         <p className="text-meta mt-6 border-l-2 border-live-red bg-live-red/15 px-3 py-2 text-bone">
           <strong className="font-semibold">[PLACEHOLDER]</strong> Set
-          NEXT_PUBLIC_FORM_KEY in .env.local to enable this form. See
-          .env.example.
+          NEXT_PUBLIC_FORMSPREE_FORM_ID and NEXT_PUBLIC_TURNSTILE_SITE_KEY in
+          .env.local to enable this form. See .env.example.
         </p>
       </div>
     )
   }
 
-  async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(event: React.SubmitEvent<HTMLFormElement>) {
     event.preventDefault()
-    const form = event.currentTarget
+    const form = event.target
     setStatus("sending")
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch(`https://formspree.io/f/${formId}`, {
         method: "POST",
         headers: { Accept: "application/json" },
         body: new FormData(form),
       })
-      const result = await response.json()
-      if (result.success) {
+      if (response.ok) {
         setStatus("sent")
         form.reset()
+        // @ts-expect-error -- loaded globally by the Turnstile script, no types
+        window.turnstile?.reset()
       } else {
         setStatus("error")
       }
@@ -96,10 +100,15 @@ export function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="grid gap-4">
-      <input type="hidden" name="access_key" value={accessKey} />
+      <Script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        strategy="afterInteractive"
+        async
+        defer
+      />
       <input
         type="hidden"
-        name="subject"
+        name="_subject"
         value="New enquiry from the Al-Baatin website"
       />
       {/* Spam trap: real people never fill this in. */}
@@ -146,6 +155,8 @@ export function ContactForm() {
           className={`${field} mt-1.5 resize-y`}
         />
       </div>
+
+      <div className="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="dark" />
 
       {status === "error" ? (
         <p role="alert" className="text-sm text-red-300">
