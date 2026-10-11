@@ -2,8 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Frame, Section } from "@/components/layout"
-import { Lightbox } from "@/components/Lightbox"
-import { Clip } from "@/components/Media"
+import { Lightbox, type LightboxItem } from "@/components/Lightbox"
 import { WhatsAppIcon } from "@/components/ui"
 import { whatsapp } from "@/data/business"
 import { projects } from "@/data/projects"
@@ -73,6 +72,12 @@ export default async function ProjectPage({
   const project = projects.find((p) => p.slug === slug)
   if (!project) notFound()
 
+  /** Stills then clips, as one run the viewer can arrow straight through. */
+  const gallery: LightboxItem[] = [
+    ...project.photos.map((photo) => ({ kind: "photo", photo }) as const),
+    ...project.videos.map((clip) => ({ kind: "video", clip }) as const),
+  ]
+
   // Only the facts we actually have — a missing row is omitted, never "N/A".
   const specs = [
     project.systemSize && { label: "System", value: project.systemSize },
@@ -86,7 +91,10 @@ export default async function ProjectPage({
       <Frame width="wide">
         <Link
           href="/projects/"
-          className="text-meta text-ink-soft underline underline-offset-4 transition-colors hover:text-canopy"
+          /* min-h-11 to match every other link on the site: this is the back
+             navigation on a page most people arrive at from a phone, and it
+             was the one tap target under the 44px minimum. */
+          className="text-meta inline-flex min-h-11 items-center text-ink-soft underline underline-offset-4 transition-colors hover:text-canopy"
         >
           Back to all work
         </Link>
@@ -113,21 +121,26 @@ export default async function ProjectPage({
           </dl>
         ) : null}
 
-        {project.photos.length > 0 ? (
+        {/*
+          Photographs and clips in ONE gallery, in that order.
+
+          They used to be two separate blocks: a lightbox of stills, then a row
+          of inline video players underneath. That split meant the videos were
+          not in the viewer at all — opening a photo and arrowing through it
+          skipped every clip, which reads as the videos being broken rather
+          than deliberately placed elsewhere. It also gave the page two
+          different ways to look at the same job.
+
+          Photos first because every project has them and only some have
+          video, so a mixed grid still opens with a consistent run of stills.
+        */}
+        {gallery.length > 0 ? (
           <Lightbox
-            photos={project.photos}
+            items={gallery}
             className="mt-10 grid gap-4 sm:grid-cols-2"
             itemClassName="aspect-4/3"
             sizes="(min-width: 640px) 50vw, 100vw"
           />
-        ) : null}
-
-        {project.videos.length > 0 ? (
-          <div className="mt-6 grid gap-6 sm:grid-cols-2">
-            {project.videos.map((clip) => (
-              <Clip key={clip.key} clip={clip}  />
-            ))}
-          </div>
         ) : null}
 
         <div className="mt-16 border-t border-hairline pt-10">

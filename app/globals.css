@@ -134,55 +134,127 @@
 }
 
 /* ---------------------------------------------------------------------------
-   Brand rail — the "brands we fit" band under the services section.
+   Brand marquee — the "brands we fit" band under the services section.
 
    Thirteen manufacturer names, set as type because we have no licence to show
-   their logos. The problem to solve is that thirteen nouns in a row read as a
-   paragraph; these rules make them read as a list of suppliers instead.
+   their logos. The names in the display face carry the same information, cost
+   nothing in page weight, survive a brand change (one edit in business.ts) and
+   cannot arrive as thirteen mismatched rasters from a logo scraper.
 
-   The separator is a small rotated square on each item's ::after, so it
-   TRAILS every name but the last. Putting it on ::before instead leaves a
-   stray diamond at the start of each wrapped row — a leading mark that looks
-   like a bullet the designer forgot to remove. Trailing marks wrap cleanly:
-   a diamond at the end of a row reads as "continues below", which is true.
+   Two rows running in opposite directions. One row sliding alone reads as a
+   stock ticker; two in counterpoint read as a supply chain moving, and the
+   opposed vectors cancel visually so the band sits still as a block even
+   though its contents move. The crossing motion is also what makes thirteen
+   nouns stop reading as a grey paragraph.
+
+   HOW THE LOOP WORKS
+   The track holds the list TWICE (the second copy aria-hidden) and animates
+   to -50%, so the moment the first copy leaves the frame the second sits
+   exactly where it started. Seamless, no JS, no measuring. This is why the
+   duplicate must be an exact copy: drop one name and the seam jumps.
+
+   Row gap handling: the gap after the final item of a copy is supplied by the
+   track's own `gap`, so copy 2 begins one gap after copy 1 ends — which is
+   what keeps the wrap point invisible. Do not put the gap on the items.
 --------------------------------------------------------------------------- */
-.brand-rail {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  /* Tight on a phone so the thirteen names pack into a few full rows rather
-     than a tall ladder of two-name lines; roomier once there is width. */
-  column-gap: 0.75rem;
-  row-gap: 0.5rem;
+.brand-marquee {
+  /* Mask the ends so names enter and leave by fading rather than being
+     guillotined at the container edge. A hard cut announces the overflow as a
+     bug; the fade reads as "this list continues". */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 7rem,
+    #000 calc(100% - 7rem),
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 7rem,
+    #000 calc(100% - 7rem),
+    transparent
+  );
+  overflow: hidden;
 }
 
-.brand-rail > li {
+.brand-marquee-track {
   display: flex;
   align-items: baseline;
-  gap: 0.75rem;
+  width: max-content;
+  gap: 1.5rem;
+  animation: brand-scroll 48s linear infinite;
+  /* Promote once, up front: without this the browser repaints thirteen pieces
+     of large display type every frame, which is visible as jitter on the
+     low-end Android hardware most of this audience is on. */
+  will-change: transform;
 }
 
 @media (min-width: 640px) {
-  .brand-rail {
-    column-gap: 1.25rem;
-    row-gap: 0.625rem;
-  }
-  .brand-rail > li {
-    gap: 1.25rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .brand-rail {
-    column-gap: 2.25rem;
-    row-gap: 0.75rem;
-  }
-  .brand-rail > li {
+  .brand-marquee-track {
     gap: 2.25rem;
   }
 }
 
-.brand-rail > li:not(:last-child)::after {
+@media (min-width: 768px) {
+  .brand-marquee-track {
+    gap: 3.5rem;
+  }
+}
+
+/* The second row runs the other way. Slower, so the two rows never lock into
+   a visible shared beat — equal speeds in opposite directions still read as
+   one mechanism, and the slight drift is what makes it feel alive. */
+.brand-marquee-track[data-direction="reverse"] {
+  animation-duration: 62s;
+  animation-direction: reverse;
+}
+
+@keyframes brand-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* Exactly half: the track is two identical copies, so -50% lands copy 2
+       precisely where copy 1 began. A rounded value here is what causes the
+       slow horizontal drift you see on hand-built marquees. */
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover AND on keyboard focus inside the band.
+   The band carries real information someone may want to read — "is my
+   inverter brand on this list?" — and a name that will not hold still cannot
+   be read. Focus-within covers the keyboard path, since the names are not
+   links and a sighted keyboard user tabbing past needs the same reprieve. */
+.brand-marquee:hover .brand-marquee-track,
+.brand-marquee:focus-within .brand-marquee-track {
+  animation-play-state: paused;
+}
+
+/* The separator: a small rotated square trailing each name, carried over from
+   the static rail. It TRAILS rather than leads, so a mark never appears
+   orphaned at the start of a row. */
+.brand-marquee-track > li {
+  display: flex;
+  flex: none;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .brand-marquee-track > li {
+    gap: 2.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .brand-marquee-track > li {
+    gap: 3.5rem;
+  }
+}
+
+.brand-marquee-track > li::after {
   content: "";
   display: block;
   width: 0.3125rem;
@@ -194,6 +266,50 @@
   translate: 0 -0.4em;
   background: var(--color-signal);
   opacity: 0.75;
+}
+
+/* ---------------------------------------------------------------------------
+   Reduced motion: the marquee becomes the static rail it replaced.
+
+   Not merely "animation paused" — a paused marquee strands the list
+   mid-scroll with names half-cut at both edges, which is worse than either
+   state. Here the track stops being a track: it wraps, the duplicate copy is
+   dropped via [hidden], the end-fade mask is removed, and all thirteen names
+   are on screen at once. That was the strongest argument for the static rail,
+   and it is preserved exactly for the people who need it.
+--------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .brand-marquee {
+    -webkit-mask-image: none;
+    mask-image: none;
+    overflow: visible;
+    /* Cancel the edge bleed. The negative margin is correct for a band that
+       scrolls past the screen edge, but once the list wraps and sits still it
+       just pushes the first name of every row off the left of the viewport.
+       Restoring the gutter puts the static rail back on the page's own
+       margin, aligned with the heading above it. */
+    margin-inline: 0;
+  }
+
+  .brand-marquee-track {
+    flex-wrap: wrap;
+    width: auto;
+    animation: none;
+    will-change: auto;
+    row-gap: 0.625rem;
+  }
+
+  /* Drop the seamless-loop duplicate: with the track wrapped, the second copy
+     is thirteen repeated names rather than an invisible continuation. */
+  .brand-marquee-dupe {
+    display: none;
+  }
+
+  /* The second row is the same thirteen names in another order; with both
+     wrapped and static it is pure repetition. */
+  .brand-marquee-row-2 {
+    display: none;
+  }
 }
 
 /* ---------------------------------------------------------------------------

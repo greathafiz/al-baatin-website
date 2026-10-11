@@ -57,7 +57,11 @@ export function Clip({
       <video
         controls
         preload="none"
+        /* Silent by construction: scripts/optimize-media.mjs encodes every
+           clip with -an, so the file has no audio stream to unmute. */
         muted
+        controlsList="nodownload noplaybackrate"
+        disablePictureInPicture
         playsInline
         poster={resolved.poster}
         width={resolved.width}

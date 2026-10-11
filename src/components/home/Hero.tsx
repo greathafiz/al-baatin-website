@@ -81,9 +81,18 @@ export function Hero() {
             <WhatsAppIcon className="h-5 w-5" />
             Chat on WhatsApp
           </a>
+          {/*
+            Set at body size, not text-meta. This is the only navigational
+            call to action in the hero, and at 13px it was the smallest type
+            on the screen — smaller than the figure captions — which put the
+            least weight on the one link inviting people further into the
+            site. It stays a underlined link rather than a second button so
+            the WhatsApp button keeps its primacy; the fix is legibility, not
+            promotion.
+          */}
           <a
             href="#work"
-            className="text-meta inline-flex min-h-11 items-center border-b border-white/40 text-white/90 transition-colors hover:border-white"
+            className="inline-flex min-h-11 items-center border-b border-white/40 text-base text-white transition-colors hover:border-white"
           >
             See the work
           </a>

@@ -272,7 +272,24 @@ async function processVideo(file, manifest, next, bins) {
     "-c:v", "libx264", "-profile:v", "main", "-crf", "26", "-preset", "slow",
     "-pix_fmt", "yuv420p",
     "-movflags", "+faststart", // metadata first so playback starts sooner
-    "-c:a", "aac", "-b:a", "96k",
+    // No audio track at all.
+    //
+    // These are site walkthroughs shot on a phone: generator noise, traffic,
+    // crew talking over each other, and the occasional remark that was never
+    // meant to be published. None of it adds anything to a clip whose job is
+    // to show an inverter wall, and a page that starts making noise is the
+    // behaviour people most dislike on a phone — which is most of this
+    // audience.
+    //
+    // Stripped at the ENCODE step rather than muted in the player, because
+    // `muted` on a <video> is one tap (or one right-click → "Show controls")
+    // away from being undone. With no audio stream in the file there is
+    // nothing to unmute, on any browser or in any downloaded copy. It also
+    // takes roughly 96kbps off every clip, which is real money on mobile data.
+    //
+    // Re-run `pnpm media:video` after changing this; the hash check in this
+    // script will rebuild the clips.
+    "-an",
     destVideo,
   ])
 

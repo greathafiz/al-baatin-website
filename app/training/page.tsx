@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
-import { Lightbox } from "@/components/Lightbox"
-import { Clip, Img } from "@/components/Media"
+import { Lightbox, type LightboxItem } from "@/components/Lightbox"
+import { Img } from "@/components/Media"
 import { Frame, Section } from "@/components/layout"
 import { WhatsAppIcon } from "@/components/ui"
 import { whatsapp } from "@/data/business"
@@ -21,6 +21,12 @@ export const metadata: Metadata = {
 }
 
 export default function TrainingPage() {
+  /** Practical photos then class footage, as one run in the viewer. */
+  const classGallery: LightboxItem[] = [
+    ...classPhotos.map((photo) => ({ kind: "photo", photo }) as const),
+    ...trainingVideos.map((clip) => ({ kind: "video", clip }) as const),
+  ]
+
   return (
     <Section rhythm="normal">
       <Frame width="wide">
@@ -121,8 +127,13 @@ export default function TrainingPage() {
             cropping about half out of every landscape shot — including the
             whiteboard lesson, where the whiteboard is the subject. Each photo
             keeps its own shape; the columns keep the grid tidy. */}
+        {/* Class photos and class footage in one gallery. The clips used to
+            sit in a separate row at the very bottom of the page, after the
+            certificates section — so footage of a practical appeared under a
+            heading about certificates, and none of it was reachable from the
+            viewer. */}
         <Lightbox
-          photos={classPhotos}
+          items={classGallery}
           className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4"
           preserveAspect
           sizes="(min-width: 1024px) 25vw, 50vw"
@@ -148,13 +159,6 @@ export default function TrainingPage() {
           </>
         ) : null}
 
-        {trainingVideos.length > 0 ? (
-          <div className="mt-6 grid gap-6 sm:grid-cols-2">
-            {trainingVideos.map((clip) => (
-              <Clip key={clip.key} clip={clip}  />
-            ))}
-          </div>
-        ) : null}
       </Frame>
     </Section>
   )
