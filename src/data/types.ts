@@ -47,6 +47,13 @@ export interface Project {
   systemSize: string | null
   /** Human-readable, e.g. "August 2026". */
   date: string | null
+  /**
+   * Sortable form of `date`, as "YYYY-MM". Null where the client never gave a
+   * date; those jobs sort last. Kept separate from `date` so the displayed
+   * wording stays his ("March 2025") while the ordering stays machine-safe —
+   * sorting the display string would put "May" before "September".
+   */
+  sortDate: string | null
   description: string | null
   photos: Photo[]
   videos: Video[]

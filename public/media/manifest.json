@@ -1,391 +1,995 @@
 {
-  "projects/daffodil-gardens-estate-lagos/01-three-inverters-three-batteries": {
-    "hash": "4fc12c08ff15",
-    "type": "image",
-    "width": 828,
-    "height": 1097,
-    "variants": {
-      "800": {
-        "src": "/media/projects/daffodil-gardens-estate-lagos/01-three-inverters-three-batteries-800.webp",
-        "width": 800,
-        "height": 1060
-      },
-      "1600": {
-        "src": "/media/projects/daffodil-gardens-estate-lagos/01-three-inverters-three-batteries-1600.webp",
-        "width": 828,
-        "height": 1097
-      }
-    },
-    "social": {
-      "src": "/media/projects/daffodil-gardens-estate-lagos/01-three-inverters-three-batteries-social.jpg",
-      "width": 828,
-      "height": 1097
-    }
-  },
-  "projects/daffodil-gardens-estate-lagos/02-crew-member-at-inverter-wall": {
-    "hash": "ca027365abcc",
-    "type": "image",
-    "width": 1440,
-    "height": 2560,
-    "variants": {
-      "800": {
-        "src": "/media/projects/daffodil-gardens-estate-lagos/02-crew-member-at-inverter-wall-800.webp",
-        "width": 800,
-        "height": 1422
-      },
-      "1600": {
-        "src": "/media/projects/daffodil-gardens-estate-lagos/02-crew-member-at-inverter-wall-1600.webp",
-        "width": 1440,
-        "height": 2560
-      }
-    },
-    "social": {
-      "src": "/media/projects/daffodil-gardens-estate-lagos/02-crew-member-at-inverter-wall-social.jpg",
-      "width": 1200,
-      "height": 2133
-    }
-  },
-  "projects/daffodil-gardens-estate-lagos/03-estate-entrance-gate": {
-    "hash": "04b98b6b3d7c",
-    "type": "image",
-    "width": 1440,
-    "height": 2560,
-    "variants": {
-      "800": {
-        "src": "/media/projects/daffodil-gardens-estate-lagos/03-estate-entrance-gate-800.webp",
-        "width": 800,
-        "height": 1422
-      },
-      "1600": {
-        "src": "/media/projects/daffodil-gardens-estate-lagos/03-estate-entrance-gate-1600.webp",
-        "width": 1440,
-        "height": 2560
-      }
-    },
-    "social": {
-      "src": "/media/projects/daffodil-gardens-estate-lagos/03-estate-entrance-gate-social.jpg",
-      "width": 1200,
-      "height": 2133
-    }
-  },
-  "projects/daffodil-gardens-estate-lagos/04-inverter-wall-three-units-angled": {
-    "hash": "040c9b0f5bd5",
-    "type": "image",
-    "width": 1920,
-    "height": 2560,
-    "variants": {
-      "800": {
-        "src": "/media/projects/daffodil-gardens-estate-lagos/04-inverter-wall-three-units-angled-800.webp",
-        "width": 800,
-        "height": 1067
-      },
-      "1600": {
-        "src": "/media/projects/daffodil-gardens-estate-lagos/04-inverter-wall-three-units-angled-1600.webp",
-        "width": 1600,
-        "height": 2133
-      }
-    },
-    "social": {
-      "src": "/media/projects/daffodil-gardens-estate-lagos/04-inverter-wall-three-units-angled-social.jpg",
-      "width": 1200,
-      "height": 1600
-    }
-  },
-  "projects/daffodil-gardens-estate-lagos/05-crew-on-roof-and-balcony": {
-    "hash": "c9a990a2ac27",
-    "type": "image",
-    "width": 1920,
-    "height": 2560,
-    "variants": {
-      "800": {
-        "src": "/media/projects/daffodil-gardens-estate-lagos/05-crew-on-roof-and-balcony-800.webp",
-        "width": 800,
-        "height": 1067
-      },
-      "1600": {
-        "src": "/media/projects/daffodil-gardens-estate-lagos/05-crew-on-roof-and-balcony-1600.webp",
-        "width": 1600,
-        "height": 2133
-      }
-    },
-    "social": {
-      "src": "/media/projects/daffodil-gardens-estate-lagos/05-crew-on-roof-and-balcony-social.jpg",
-      "width": 1200,
-      "height": 1600
-    }
-  },
-  "projects/inverter-install-a/01-three-inverters-two-batteries": {
-    "hash": "6e8fa19da65c",
-    "type": "image",
-    "width": 3000,
-    "height": 4000,
-    "variants": {
-      "800": {
-        "src": "/media/projects/inverter-install-a/01-three-inverters-two-batteries-800.webp",
-        "width": 800,
-        "height": 1067
-      },
-      "1600": {
-        "src": "/media/projects/inverter-install-a/01-three-inverters-two-batteries-1600.webp",
-        "width": 1600,
-        "height": 2133
-      }
-    },
-    "social": {
-      "src": "/media/projects/inverter-install-a/01-three-inverters-two-batteries-social.jpg",
-      "width": 1200,
-      "height": 1600
-    }
-  },
-  "projects/inverter-install-a/02-inverter-wall-front-view": {
-    "hash": "70e301f0a6a9",
-    "type": "image",
-    "width": 3000,
-    "height": 4000,
-    "variants": {
-      "800": {
-        "src": "/media/projects/inverter-install-a/02-inverter-wall-front-view-800.webp",
-        "width": 800,
-        "height": 1067
-      },
-      "1600": {
-        "src": "/media/projects/inverter-install-a/02-inverter-wall-front-view-1600.webp",
-        "width": 1600,
-        "height": 2133
-      }
-    },
-    "social": {
-      "src": "/media/projects/inverter-install-a/02-inverter-wall-front-view-social.jpg",
-      "width": 1200,
-      "height": 1600
-    }
-  },
-  "projects/inverter-install-a/03-roof-crew-mounting-panels": {
-    "hash": "bcf77ef2238e",
-    "type": "image",
-    "width": 1440,
-    "height": 2560,
-    "variants": {
-      "800": {
-        "src": "/media/projects/inverter-install-a/03-roof-crew-mounting-panels-800.webp",
-        "width": 800,
-        "height": 1422
-      },
-      "1600": {
-        "src": "/media/projects/inverter-install-a/03-roof-crew-mounting-panels-1600.webp",
-        "width": 1440,
-        "height": 2560
-      }
-    },
-    "social": {
-      "src": "/media/projects/inverter-install-a/03-roof-crew-mounting-panels-social.jpg",
-      "width": 1200,
-      "height": 2133
-    }
-  },
-  "projects/inverter-install-c/01-inverter-and-battery": {
-    "hash": "c7465ef2d8d9",
-    "type": "image",
-    "width": 1440,
-    "height": 2560,
-    "variants": {
-      "800": {
-        "src": "/media/projects/inverter-install-c/01-inverter-and-battery-800.webp",
-        "width": 800,
-        "height": 1422
-      },
-      "1600": {
-        "src": "/media/projects/inverter-install-c/01-inverter-and-battery-1600.webp",
-        "width": 1440,
-        "height": 2560
-      }
-    },
-    "social": {
-      "src": "/media/projects/inverter-install-c/01-inverter-and-battery-social.jpg",
-      "width": 1200,
-      "height": 2133
-    }
-  },
-  "projects/inverter-install-c/02-crew-with-inverter-and-battery": {
-    "hash": "06330597da2c",
-    "type": "image",
-    "width": 1920,
-    "height": 2560,
-    "variants": {
-      "800": {
-        "src": "/media/projects/inverter-install-c/02-crew-with-inverter-and-battery-800.webp",
-        "width": 800,
-        "height": 1067
-      },
-      "1600": {
-        "src": "/media/projects/inverter-install-c/02-crew-with-inverter-and-battery-1600.webp",
-        "width": 1600,
-        "height": 2133
-      }
-    },
-    "social": {
-      "src": "/media/projects/inverter-install-c/02-crew-with-inverter-and-battery-social.jpg",
-      "width": 1200,
-      "height": 1600
-    }
-  },
-  "projects/oasis-integrated-farms/01-hybrid-inverter-and-battery": {
-    "hash": "8cc532fc33e1",
+  "projects/abule-egba-new-look-hotel-upgrade/01-after-4-2kva-hybrid-inverter-installed": {
+    "hash": "84cac6ad8312",
     "type": "image",
     "width": 720,
     "height": 1280,
     "variants": {
-      "800": {
-        "src": "/media/projects/oasis-integrated-farms/01-hybrid-inverter-and-battery-800.webp",
-        "width": 720,
-        "height": 1280
-      },
-      "1600": {
-        "src": "/media/projects/oasis-integrated-farms/01-hybrid-inverter-and-battery-1600.webp",
+      "2400": {
+        "src": "/media/projects/abule-egba-new-look-hotel-upgrade/01-after-4-2kva-hybrid-inverter-installed-2400.webp",
         "width": 720,
         "height": 1280
       }
     },
     "social": {
-      "src": "/media/projects/oasis-integrated-farms/01-hybrid-inverter-and-battery-social.jpg",
+      "src": "/media/projects/abule-egba-new-look-hotel-upgrade/01-after-4-2kva-hybrid-inverter-installed-social.jpg",
       "width": 720,
       "height": 1280
     }
   },
-  "projects/oasis-integrated-farms/02-farm-gate-sign": {
-    "hash": "7460a903529e",
+  "projects/abule-egba-new-look-hotel-upgrade/02-before-2kva-inverter-and-tubular-batteries": {
+    "hash": "76a64fcc2706",
+    "type": "image",
+    "width": 720,
+    "height": 1280,
+    "variants": {
+      "2400": {
+        "src": "/media/projects/abule-egba-new-look-hotel-upgrade/02-before-2kva-inverter-and-tubular-batteries-2400.webp",
+        "width": 720,
+        "height": 1280
+      }
+    },
+    "social": {
+      "src": "/media/projects/abule-egba-new-look-hotel-upgrade/02-before-2kva-inverter-and-tubular-batteries-social.jpg",
+      "width": 720,
+      "height": 1280
+    }
+  },
+  "projects/centrepoint-supermarket-ibadan/01-inverter-and-battery-installed": {
+    "hash": "bb99f2f44454",
+    "type": "image",
+    "width": 720,
+    "height": 1280,
+    "variants": {
+      "2400": {
+        "src": "/media/projects/centrepoint-supermarket-ibadan/01-inverter-and-battery-installed-2400.webp",
+        "width": 720,
+        "height": 1280
+      }
+    },
+    "social": {
+      "src": "/media/projects/centrepoint-supermarket-ibadan/01-inverter-and-battery-installed-social.jpg",
+      "width": 720,
+      "height": 1280
+    }
+  },
+  "projects/centrepoint-supermarket-ibadan/02-technician-wiring-inverter-and-battery": {
+    "hash": "4eb21a27fa00",
+    "type": "image",
+    "width": 720,
+    "height": 1280,
+    "variants": {
+      "2400": {
+        "src": "/media/projects/centrepoint-supermarket-ibadan/02-technician-wiring-inverter-and-battery-2400.webp",
+        "width": 720,
+        "height": 1280
+      }
+    },
+    "social": {
+      "src": "/media/projects/centrepoint-supermarket-ibadan/02-technician-wiring-inverter-and-battery-social.jpg",
+      "width": 720,
+      "height": 1280
+    }
+  },
+  "projects/centrepoint-supermarket-ibadan/03-panels-staged-along-compound-wall": {
+    "hash": "4182702c605e",
+    "type": "image",
+    "width": 720,
+    "height": 1280,
+    "variants": {
+      "2400": {
+        "src": "/media/projects/centrepoint-supermarket-ibadan/03-panels-staged-along-compound-wall-2400.webp",
+        "width": 720,
+        "height": 1280
+      }
+    },
+    "social": {
+      "src": "/media/projects/centrepoint-supermarket-ibadan/03-panels-staged-along-compound-wall-social.jpg",
+      "width": 720,
+      "height": 1280
+    }
+  },
+  "projects/centrepoint-supermarket-ibadan/04-crew-on-roof-fitting-panels": {
+    "hash": "4893d69b197d",
     "type": "image",
     "width": 1920,
     "height": 2560,
     "variants": {
       "800": {
-        "src": "/media/projects/oasis-integrated-farms/02-farm-gate-sign-800.webp",
+        "src": "/media/projects/centrepoint-supermarket-ibadan/04-crew-on-roof-fitting-panels-800.webp",
         "width": 800,
         "height": 1067
       },
       "1600": {
-        "src": "/media/projects/oasis-integrated-farms/02-farm-gate-sign-1600.webp",
+        "src": "/media/projects/centrepoint-supermarket-ibadan/04-crew-on-roof-fitting-panels-1600.webp",
         "width": 1600,
         "height": 2133
-      }
-    },
-    "social": {
-      "src": "/media/projects/oasis-integrated-farms/02-farm-gate-sign-social.jpg",
-      "width": 1200,
-      "height": 1600
-    }
-  },
-  "projects/rhema-chapel-lekki-lagos/01-solar-array-on-roof": {
-    "hash": "aa17c8452558",
-    "type": "image",
-    "width": 3000,
-    "height": 4000,
-    "variants": {
-      "800": {
-        "src": "/media/projects/rhema-chapel-lekki-lagos/01-solar-array-on-roof-800.webp",
-        "width": 800,
-        "height": 1067
       },
-      "1600": {
-        "src": "/media/projects/rhema-chapel-lekki-lagos/01-solar-array-on-roof-1600.webp",
-        "width": 1600,
-        "height": 2133
+      "2400": {
+        "src": "/media/projects/centrepoint-supermarket-ibadan/04-crew-on-roof-fitting-panels-2400.webp",
+        "width": 1920,
+        "height": 2560
       }
     },
     "social": {
-      "src": "/media/projects/rhema-chapel-lekki-lagos/01-solar-array-on-roof-social.jpg",
+      "src": "/media/projects/centrepoint-supermarket-ibadan/04-crew-on-roof-fitting-panels-social.jpg",
       "width": 1200,
       "height": 1600
     }
   },
-  "projects/rhema-chapel-lekki-lagos/02-panels-completed-from-above": {
-    "hash": "c7f784e37fc2",
+  "projects/centrepoint-supermarket-ibadan/05-crew-member-on-roof-in-safety-harness": {
+    "hash": "84fd51c2dfc5",
     "type": "image",
     "width": 1920,
-    "height": 1080,
+    "height": 2560,
     "variants": {
       "800": {
-        "src": "/media/projects/rhema-chapel-lekki-lagos/02-panels-completed-from-above-800.webp",
+        "src": "/media/projects/centrepoint-supermarket-ibadan/05-crew-member-on-roof-in-safety-harness-800.webp",
         "width": 800,
-        "height": 450
+        "height": 1067
       },
       "1600": {
-        "src": "/media/projects/rhema-chapel-lekki-lagos/02-panels-completed-from-above-1600.webp",
+        "src": "/media/projects/centrepoint-supermarket-ibadan/05-crew-member-on-roof-in-safety-harness-1600.webp",
         "width": 1600,
-        "height": 900
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/centrepoint-supermarket-ibadan/05-crew-member-on-roof-in-safety-harness-2400.webp",
+        "width": 1920,
+        "height": 2560
       }
     },
     "social": {
-      "src": "/media/projects/rhema-chapel-lekki-lagos/02-panels-completed-from-above-social.jpg",
+      "src": "/media/projects/centrepoint-supermarket-ibadan/05-crew-member-on-roof-in-safety-harness-social.jpg",
       "width": 1200,
-      "height": 675
+      "height": 1600
     }
   },
-  "projects/rhema-chapel-lekki-lagos/03-panels-unpacked-in-compound": {
-    "hash": "790a26b4c40c",
+  "projects/centrepoint-supermarket-ibadan/06-supermarket-building-exterior": {
+    "hash": "2fc0b191e6ea",
+    "type": "image",
+    "width": 720,
+    "height": 1280,
+    "variants": {
+      "2400": {
+        "src": "/media/projects/centrepoint-supermarket-ibadan/06-supermarket-building-exterior-2400.webp",
+        "width": 720,
+        "height": 1280
+      }
+    },
+    "social": {
+      "src": "/media/projects/centrepoint-supermarket-ibadan/06-supermarket-building-exterior-social.jpg",
+      "width": 720,
+      "height": 1280
+    }
+  },
+  "projects/daffodil-garden-estate-lekki-lagos/01-three-inverters-and-three-batteries-wall": {
+    "hash": "4d8130fcf50a",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/01-three-inverters-and-three-batteries-wall-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/01-three-inverters-and-three-batteries-wall-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/01-three-inverters-and-three-batteries-wall-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/daffodil-garden-estate-lekki-lagos/01-three-inverters-and-three-batteries-wall-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/daffodil-garden-estate-lekki-lagos/02-roof-array-fully-laid": {
+    "hash": "9954c2bae27e",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/02-roof-array-fully-laid-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/02-roof-array-fully-laid-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/02-roof-array-fully-laid-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/daffodil-garden-estate-lekki-lagos/02-roof-array-fully-laid-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/daffodil-garden-estate-lekki-lagos/03-changeover-switches-and-breakers-closeup": {
+    "hash": "b1b291b32ad9",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/03-changeover-switches-and-breakers-closeup-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/03-changeover-switches-and-breakers-closeup-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/03-changeover-switches-and-breakers-closeup-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/daffodil-garden-estate-lekki-lagos/03-changeover-switches-and-breakers-closeup-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/daffodil-garden-estate-lekki-lagos/04-crew-member-at-inverter-wall": {
+    "hash": "9d1731dd3efb",
     "type": "image",
     "width": 1440,
     "height": 2560,
     "variants": {
       "800": {
-        "src": "/media/projects/rhema-chapel-lekki-lagos/03-panels-unpacked-in-compound-800.webp",
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/04-crew-member-at-inverter-wall-800.webp",
         "width": 800,
         "height": 1422
       },
-      "1600": {
-        "src": "/media/projects/rhema-chapel-lekki-lagos/03-panels-unpacked-in-compound-1600.webp",
+      "2400": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/04-crew-member-at-inverter-wall-2400.webp",
         "width": 1440,
         "height": 2560
       }
     },
     "social": {
-      "src": "/media/projects/rhema-chapel-lekki-lagos/03-panels-unpacked-in-compound-social.jpg",
+      "src": "/media/projects/daffodil-garden-estate-lekki-lagos/04-crew-member-at-inverter-wall-social.jpg",
       "width": 1200,
       "height": 2133
     }
   },
-  "projects/rhema-chapel-lekki-lagos/04-panel-closeup-before-install": {
-    "hash": "a997db5bf7c7",
+  "projects/daffodil-garden-estate-lekki-lagos/05-crew-hoisting-panels-to-roof": {
+    "hash": "ca6d870a3741",
+    "type": "image",
+    "width": 1440,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/05-crew-hoisting-panels-to-roof-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "2400": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/05-crew-hoisting-panels-to-roof-2400.webp",
+        "width": 1440,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/daffodil-garden-estate-lekki-lagos/05-crew-hoisting-panels-to-roof-social.jpg",
+      "width": 1200,
+      "height": 2133
+    }
+  },
+  "projects/daffodil-garden-estate-lekki-lagos/06-crew-briefing-at-site-gate": {
+    "hash": "39ac393c61bf",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/06-crew-briefing-at-site-gate-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/06-crew-briefing-at-site-gate-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/06-crew-briefing-at-site-gate-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/daffodil-garden-estate-lekki-lagos/06-crew-briefing-at-site-gate-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/daffodil-garden-estate-lekki-lagos/07-bifacial-panels-delivered-on-site": {
+    "hash": "44b40ff43f9f",
     "type": "image",
     "width": 2560,
     "height": 1920,
     "variants": {
       "800": {
-        "src": "/media/projects/rhema-chapel-lekki-lagos/04-panel-closeup-before-install-800.webp",
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/07-bifacial-panels-delivered-on-site-800.webp",
         "width": 800,
         "height": 600
       },
       "1600": {
-        "src": "/media/projects/rhema-chapel-lekki-lagos/04-panel-closeup-before-install-1600.webp",
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/07-bifacial-panels-delivered-on-site-1600.webp",
         "width": 1600,
         "height": 1200
+      },
+      "2400": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/07-bifacial-panels-delivered-on-site-2400.webp",
+        "width": 2400,
+        "height": 1800
       }
     },
     "social": {
-      "src": "/media/projects/rhema-chapel-lekki-lagos/04-panel-closeup-before-install-social.jpg",
+      "src": "/media/projects/daffodil-garden-estate-lekki-lagos/07-bifacial-panels-delivered-on-site-social.jpg",
       "width": 1200,
       "height": 900
     }
   },
-  "projects/rhema-chapel-lekki-lagos/05-crew-unpacking-panels-at-wall": {
-    "hash": "243e6fe08854",
+  "projects/daffodil-garden-estate-lekki-lagos/08-house-exterior": {
+    "hash": "d5306bd5cb7d",
+    "type": "image",
+    "width": 963,
+    "height": 1280,
+    "variants": {
+      "800": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/08-house-exterior-800.webp",
+        "width": 800,
+        "height": 1063
+      },
+      "2400": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/08-house-exterior-2400.webp",
+        "width": 963,
+        "height": 1280
+      }
+    },
+    "social": {
+      "src": "/media/projects/daffodil-garden-estate-lekki-lagos/08-house-exterior-social.jpg",
+      "width": 963,
+      "height": 1280
+    }
+  },
+  "projects/daffodil-garden-estate-lekki-lagos/09-estate-entrance-gate": {
+    "hash": "b6ee5182e0be",
+    "type": "image",
+    "width": 1440,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/09-estate-entrance-gate-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "2400": {
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/09-estate-entrance-gate-2400.webp",
+        "width": 1440,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/daffodil-garden-estate-lekki-lagos/09-estate-entrance-gate-social.jpg",
+      "width": 1200,
+      "height": 2133
+    }
+  },
+  "projects/gbopa-ibadan-first-fix-wiring/01-crew-chasing-wall-for-conduit": {
+    "hash": "0b07d61d80ab",
     "type": "image",
     "width": 1920,
     "height": 2560,
     "variants": {
       "800": {
-        "src": "/media/projects/rhema-chapel-lekki-lagos/05-crew-unpacking-panels-at-wall-800.webp",
+        "src": "/media/projects/gbopa-ibadan-first-fix-wiring/01-crew-chasing-wall-for-conduit-800.webp",
         "width": 800,
         "height": 1067
       },
       "1600": {
-        "src": "/media/projects/rhema-chapel-lekki-lagos/05-crew-unpacking-panels-at-wall-1600.webp",
+        "src": "/media/projects/gbopa-ibadan-first-fix-wiring/01-crew-chasing-wall-for-conduit-1600.webp",
         "width": 1600,
         "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/gbopa-ibadan-first-fix-wiring/01-crew-chasing-wall-for-conduit-2400.webp",
+        "width": 1920,
+        "height": 2560
       }
     },
     "social": {
-      "src": "/media/projects/rhema-chapel-lekki-lagos/05-crew-unpacking-panels-at-wall-social.jpg",
+      "src": "/media/projects/gbopa-ibadan-first-fix-wiring/01-crew-chasing-wall-for-conduit-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/gbopa-ibadan-first-fix-wiring/02-crew-carrying-conduit-pipes": {
+    "hash": "ba1aa6f13902",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/gbopa-ibadan-first-fix-wiring/02-crew-carrying-conduit-pipes-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/gbopa-ibadan-first-fix-wiring/02-crew-carrying-conduit-pipes-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/gbopa-ibadan-first-fix-wiring/02-crew-carrying-conduit-pipes-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/gbopa-ibadan-first-fix-wiring/02-crew-carrying-conduit-pipes-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/gbopa-ibadan-first-fix-wiring/03-van-loaded-with-wiring-materials": {
+    "hash": "381680fa35e2",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/gbopa-ibadan-first-fix-wiring/03-van-loaded-with-wiring-materials-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/gbopa-ibadan-first-fix-wiring/03-van-loaded-with-wiring-materials-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/gbopa-ibadan-first-fix-wiring/03-van-loaded-with-wiring-materials-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/gbopa-ibadan-first-fix-wiring/03-van-loaded-with-wiring-materials-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/ilorin-princess-luxury-hotels/01-finished-inverter-and-battery-wall": {
+    "hash": "fdac772044c1",
+    "type": "image",
+    "width": 1440,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/ilorin-princess-luxury-hotels/01-finished-inverter-and-battery-wall-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "2400": {
+        "src": "/media/projects/ilorin-princess-luxury-hotels/01-finished-inverter-and-battery-wall-2400.webp",
+        "width": 1440,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/ilorin-princess-luxury-hotels/01-finished-inverter-and-battery-wall-social.jpg",
+      "width": 1200,
+      "height": 2133
+    }
+  },
+  "projects/ilorin-princess-luxury-hotels/02-crew-mounting-panels-on-roof": {
+    "hash": "f55b932da92d",
+    "type": "image",
+    "width": 1440,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/ilorin-princess-luxury-hotels/02-crew-mounting-panels-on-roof-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "2400": {
+        "src": "/media/projects/ilorin-princess-luxury-hotels/02-crew-mounting-panels-on-roof-2400.webp",
+        "width": 1440,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/ilorin-princess-luxury-hotels/02-crew-mounting-panels-on-roof-social.jpg",
+      "width": 1200,
+      "height": 2133
+    }
+  },
+  "projects/ilorin-princess-luxury-hotels/03-crew-laying-panels-on-roof-close": {
+    "hash": "fa28aefd0ed0",
+    "type": "image",
+    "width": 1080,
+    "height": 608,
+    "variants": {
+      "800": {
+        "src": "/media/projects/ilorin-princess-luxury-hotels/03-crew-laying-panels-on-roof-close-800.webp",
+        "width": 800,
+        "height": 450
+      },
+      "2400": {
+        "src": "/media/projects/ilorin-princess-luxury-hotels/03-crew-laying-panels-on-roof-close-2400.webp",
+        "width": 1080,
+        "height": 608
+      }
+    },
+    "social": {
+      "src": "/media/projects/ilorin-princess-luxury-hotels/03-crew-laying-panels-on-roof-close-social.jpg",
+      "width": 1080,
+      "height": 608
+    }
+  },
+  "projects/ilorin-princess-luxury-hotels/04-technician-wiring-inverter-wall": {
+    "hash": "ff030e0945c7",
+    "type": "image",
+    "width": 720,
+    "height": 1280,
+    "variants": {
+      "2400": {
+        "src": "/media/projects/ilorin-princess-luxury-hotels/04-technician-wiring-inverter-wall-2400.webp",
+        "width": 720,
+        "height": 1280
+      }
+    },
+    "social": {
+      "src": "/media/projects/ilorin-princess-luxury-hotels/04-technician-wiring-inverter-wall-social.jpg",
+      "width": 720,
+      "height": 1280
+    }
+  },
+  "projects/ilorin-princess-luxury-hotels/05-inverter-mounted-with-laser-level": {
+    "hash": "740aeacc249c",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/ilorin-princess-luxury-hotels/05-inverter-mounted-with-laser-level-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/ilorin-princess-luxury-hotels/05-inverter-mounted-with-laser-level-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/ilorin-princess-luxury-hotels/05-inverter-mounted-with-laser-level-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/ilorin-princess-luxury-hotels/05-inverter-mounted-with-laser-level-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/ilorin-princess-luxury-hotels/06-distribution-board-and-conduit-run": {
+    "hash": "5a4084724d38",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/ilorin-princess-luxury-hotels/06-distribution-board-and-conduit-run-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/ilorin-princess-luxury-hotels/06-distribution-board-and-conduit-run-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/ilorin-princess-luxury-hotels/06-distribution-board-and-conduit-run-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/ilorin-princess-luxury-hotels/06-distribution-board-and-conduit-run-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/kolapo-ishola-gra-ibadan/01-three-inverters-and-two-batteries-wall": {
+    "hash": "e34a4d31af9a",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/01-three-inverters-and-two-batteries-wall-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/01-three-inverters-and-two-batteries-wall-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/01-three-inverters-and-two-batteries-wall-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/kolapo-ishola-gra-ibadan/01-three-inverters-and-two-batteries-wall-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/kolapo-ishola-gra-ibadan/02-md-with-inverter-wall": {
+    "hash": "1bf508f23536",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/02-md-with-inverter-wall-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/02-md-with-inverter-wall-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/02-md-with-inverter-wall-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/kolapo-ishola-gra-ibadan/02-md-with-inverter-wall-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/kolapo-ishola-gra-ibadan/03-roof-array-installed": {
+    "hash": "69831675a261",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/03-roof-array-installed-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/03-roof-array-installed-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/03-roof-array-installed-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/kolapo-ishola-gra-ibadan/03-roof-array-installed-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/kolapo-ishola-gra-ibadan/04-crew-fixing-panels-on-metal-roof": {
+    "hash": "b64e9b71cb7c",
+    "type": "image",
+    "width": 1920,
+    "height": 1080,
+    "variants": {
+      "800": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/04-crew-fixing-panels-on-metal-roof-800.webp",
+        "width": 800,
+        "height": 450
+      },
+      "1600": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/04-crew-fixing-panels-on-metal-roof-1600.webp",
+        "width": 1600,
+        "height": 900
+      },
+      "2400": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/04-crew-fixing-panels-on-metal-roof-2400.webp",
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    "social": {
+      "src": "/media/projects/kolapo-ishola-gra-ibadan/04-crew-fixing-panels-on-metal-roof-social.jpg",
+      "width": 1200,
+      "height": 675
+    }
+  },
+  "projects/kolapo-ishola-gra-ibadan/05-crew-handing-panels-up-from-balcony": {
+    "hash": "4ba9c4eba31c",
+    "type": "image",
+    "width": 1440,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/05-crew-handing-panels-up-from-balcony-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "2400": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/05-crew-handing-panels-up-from-balcony-2400.webp",
+        "width": 1440,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/kolapo-ishola-gra-ibadan/05-crew-handing-panels-up-from-balcony-social.jpg",
+      "width": 1200,
+      "height": 2133
+    }
+  },
+  "projects/kolapo-ishola-gra-ibadan/06-inverter-wall-installation-in-progress": {
+    "hash": "071a8881f97b",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/06-inverter-wall-installation-in-progress-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/06-inverter-wall-installation-in-progress-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/06-inverter-wall-installation-in-progress-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/kolapo-ishola-gra-ibadan/06-inverter-wall-installation-in-progress-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/kolapo-ishola-gra-ibadan/07-crew-unpacking-battery-crate": {
+    "hash": "a354543332be",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/07-crew-unpacking-battery-crate-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/07-crew-unpacking-battery-crate-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/07-crew-unpacking-battery-crate-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/kolapo-ishola-gra-ibadan/07-crew-unpacking-battery-crate-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/kolapo-ishola-gra-ibadan/08-panels-staged-along-side-passage": {
+    "hash": "d5a9978bcaec",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/08-panels-staged-along-side-passage-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/08-panels-staged-along-side-passage-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/08-panels-staged-along-side-passage-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/kolapo-ishola-gra-ibadan/08-panels-staged-along-side-passage-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/kolapo-ishola-gra-ibadan/09-estate-signboard-at-night": {
+    "hash": "4610d43d884a",
+    "type": "image",
+    "width": 1440,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/09-estate-signboard-at-night-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "2400": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/09-estate-signboard-at-night-2400.webp",
+        "width": 1440,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/kolapo-ishola-gra-ibadan/09-estate-signboard-at-night-social.jpg",
+      "width": 1200,
+      "height": 2133
+    }
+  },
+  "projects/oasis-integrated-farms-ibadan/01-hybrid-inverter-and-battery": {
+    "hash": "607a4feb0a0f",
+    "type": "image",
+    "width": 720,
+    "height": 1280,
+    "variants": {
+      "2400": {
+        "src": "/media/projects/oasis-integrated-farms-ibadan/01-hybrid-inverter-and-battery-2400.webp",
+        "width": 720,
+        "height": 1280
+      }
+    },
+    "social": {
+      "src": "/media/projects/oasis-integrated-farms-ibadan/01-hybrid-inverter-and-battery-social.jpg",
+      "width": 720,
+      "height": 1280
+    }
+  },
+  "projects/oasis-integrated-farms-ibadan/02-farm-gate-sign": {
+    "hash": "dc39a456807f",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/oasis-integrated-farms-ibadan/02-farm-gate-sign-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/oasis-integrated-farms-ibadan/02-farm-gate-sign-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/oasis-integrated-farms-ibadan/02-farm-gate-sign-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/oasis-integrated-farms-ibadan/02-farm-gate-sign-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/oasis-integrated-farms-ibadan/03-crew-measuring-farm-building-interior": {
+    "hash": "970d1fbabeda",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/oasis-integrated-farms-ibadan/03-crew-measuring-farm-building-interior-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/oasis-integrated-farms-ibadan/03-crew-measuring-farm-building-interior-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/oasis-integrated-farms-ibadan/03-crew-measuring-farm-building-interior-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/oasis-integrated-farms-ibadan/03-crew-measuring-farm-building-interior-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/oasis-integrated-farms-ibadan/04-crew-marking-wall-for-wiring": {
+    "hash": "8e9428a6e51d",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/oasis-integrated-farms-ibadan/04-crew-marking-wall-for-wiring-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/oasis-integrated-farms-ibadan/04-crew-marking-wall-for-wiring-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/oasis-integrated-farms-ibadan/04-crew-marking-wall-for-wiring-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/oasis-integrated-farms-ibadan/04-crew-marking-wall-for-wiring-social.jpg",
+      "width": 1200,
+      "height": 1600
+    }
+  },
+  "projects/oasis-integrated-farms-ibadan/05-crew-running-wiring-at-roof-trusses": {
+    "hash": "c004eb7dc940",
+    "type": "image",
+    "width": 1920,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/oasis-integrated-farms-ibadan/05-crew-running-wiring-at-roof-trusses-800.webp",
+        "width": 800,
+        "height": 1067
+      },
+      "1600": {
+        "src": "/media/projects/oasis-integrated-farms-ibadan/05-crew-running-wiring-at-roof-trusses-1600.webp",
+        "width": 1600,
+        "height": 2133
+      },
+      "2400": {
+        "src": "/media/projects/oasis-integrated-farms-ibadan/05-crew-running-wiring-at-roof-trusses-2400.webp",
+        "width": 1920,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/oasis-integrated-farms-ibadan/05-crew-running-wiring-at-roof-trusses-social.jpg",
       "width": 1200,
       "height": 1600
     }
@@ -401,8 +1005,8 @@
         "width": 800,
         "height": 600
       },
-      "1600": {
-        "src": "/media/training/nysc-saed/01-hands-on-training-a-1600.webp",
+      "2400": {
+        "src": "/media/training/nysc-saed/01-hands-on-training-a-2400.webp",
         "width": 1280,
         "height": 960
       }
@@ -424,8 +1028,8 @@
         "width": 800,
         "height": 1067
       },
-      "1600": {
-        "src": "/media/training/nysc-saed/02-hands-on-training-b-1600.webp",
+      "2400": {
+        "src": "/media/training/nysc-saed/02-hands-on-training-b-2400.webp",
         "width": 960,
         "height": 1280
       }
@@ -447,8 +1051,8 @@
         "width": 800,
         "height": 1067
       },
-      "1600": {
-        "src": "/media/training/nysc-saed/03-intercom-practical-1600.webp",
+      "2400": {
+        "src": "/media/training/nysc-saed/03-intercom-practical-2400.webp",
         "width": 960,
         "height": 1280
       }
@@ -470,8 +1074,8 @@
         "width": 800,
         "height": 1067
       },
-      "1600": {
-        "src": "/media/training/nysc-saed/04-wiring-practical-1600.webp",
+      "2400": {
+        "src": "/media/training/nysc-saed/04-wiring-practical-2400.webp",
         "width": 960,
         "height": 1280
       }
@@ -497,6 +1101,11 @@
         "src": "/media/training/nysc-saed/05-camp-stand-with-banner-1600.webp",
         "width": 1600,
         "height": 1200
+      },
+      "2400": {
+        "src": "/media/training/nysc-saed/05-camp-stand-with-banner-2400.webp",
+        "width": 2400,
+        "height": 1800
       }
     },
     "social": {
@@ -520,6 +1129,11 @@
         "src": "/media/training/nysc-saed/06-corps-members-at-banner-1600.webp",
         "width": 1600,
         "height": 2133
+      },
+      "2400": {
+        "src": "/media/training/nysc-saed/06-corps-members-at-banner-2400.webp",
+        "width": 1920,
+        "height": 2560
       }
     },
     "social": {
@@ -539,8 +1153,8 @@
         "width": 800,
         "height": 1067
       },
-      "1600": {
-        "src": "/media/training/nysc-saed/07-certificate-presentation-a-1600.webp",
+      "2400": {
+        "src": "/media/training/nysc-saed/07-certificate-presentation-a-2400.webp",
         "width": 960,
         "height": 1280
       }
@@ -562,8 +1176,8 @@
         "width": 800,
         "height": 1067
       },
-      "1600": {
-        "src": "/media/training/nysc-saed/08-certificate-presentation-b-1600.webp",
+      "2400": {
+        "src": "/media/training/nysc-saed/08-certificate-presentation-b-2400.webp",
         "width": 960,
         "height": 1280
       }
@@ -580,13 +1194,8 @@
     "width": 720,
     "height": 1280,
     "variants": {
-      "800": {
-        "src": "/media/training/nysc-saed/09-camp-stand-collage-800.webp",
-        "width": 720,
-        "height": 1280
-      },
-      "1600": {
-        "src": "/media/training/nysc-saed/09-camp-stand-collage-1600.webp",
+      "2400": {
+        "src": "/media/training/nysc-saed/09-camp-stand-collage-2400.webp",
         "width": 720,
         "height": 1280
       }
@@ -603,13 +1212,8 @@
     "width": 800,
     "height": 640,
     "variants": {
-      "800": {
-        "src": "/media/training/nysc-saed/10-corps-members-in-hall-800.webp",
-        "width": 800,
-        "height": 640
-      },
-      "1600": {
-        "src": "/media/training/nysc-saed/10-corps-members-in-hall-1600.webp",
+      "2400": {
+        "src": "/media/training/nysc-saed/10-corps-members-in-hall-2400.webp",
         "width": 800,
         "height": 640
       }
@@ -626,13 +1230,8 @@
     "width": 720,
     "height": 1280,
     "variants": {
-      "800": {
-        "src": "/media/training/nysc-saed/11-stand-banner-and-tv-800.webp",
-        "width": 720,
-        "height": 1280
-      },
-      "1600": {
-        "src": "/media/training/nysc-saed/11-stand-banner-and-tv-1600.webp",
+      "2400": {
+        "src": "/media/training/nysc-saed/11-stand-banner-and-tv-2400.webp",
         "width": 720,
         "height": 1280
       }
@@ -658,6 +1257,11 @@
         "src": "/media/training/nysc-saed/12-instructor-whiteboard-lesson-1600.webp",
         "width": 1600,
         "height": 1200
+      },
+      "2400": {
+        "src": "/media/training/nysc-saed/12-instructor-whiteboard-lesson-2400.webp",
+        "width": 2400,
+        "height": 1800
       }
     },
     "social": {
@@ -681,6 +1285,11 @@
         "src": "/media/training/nysc-saed/13-corps-members-group-photo-1600.webp",
         "width": 1600,
         "height": 1200
+      },
+      "2400": {
+        "src": "/media/training/nysc-saed/13-corps-members-group-photo-2400.webp",
+        "width": 2400,
+        "height": 1800
       }
     },
     "social": {
@@ -704,6 +1313,11 @@
         "src": "/media/training/nysc-saed/14-instructor-addressing-camp-hall-1600.webp",
         "width": 1600,
         "height": 2133
+      },
+      "2400": {
+        "src": "/media/training/nysc-saed/14-instructor-addressing-camp-hall-2400.webp",
+        "width": 1920,
+        "height": 2560
       }
     },
     "social": {
@@ -718,13 +1332,8 @@
     "width": 720,
     "height": 1280,
     "variants": {
-      "800": {
-        "src": "/media/team/01-crew-in-hi-vis-daytime-800.webp",
-        "width": 720,
-        "height": 1280
-      },
-      "1600": {
-        "src": "/media/team/01-crew-in-hi-vis-daytime-1600.webp",
+      "2400": {
+        "src": "/media/team/01-crew-in-hi-vis-daytime-2400.webp",
         "width": 720,
         "height": 1280
       }
@@ -746,8 +1355,8 @@
         "width": 800,
         "height": 1422
       },
-      "1600": {
-        "src": "/media/team/02-crew-in-hi-vis-night-a-1600.webp",
+      "2400": {
+        "src": "/media/team/02-crew-in-hi-vis-night-a-2400.webp",
         "width": 1440,
         "height": 2560
       }
@@ -769,8 +1378,8 @@
         "width": 800,
         "height": 1422
       },
-      "1600": {
-        "src": "/media/team/03-crew-in-hi-vis-night-b-1600.webp",
+      "2400": {
+        "src": "/media/team/03-crew-in-hi-vis-night-b-2400.webp",
         "width": 1440,
         "height": 2560
       }
@@ -792,8 +1401,8 @@
         "width": 800,
         "height": 1778
       },
-      "1600": {
-        "src": "/media/testimonials/01-whatsapp-client-reply-1600.webp",
+      "2400": {
+        "src": "/media/testimonials/01-whatsapp-client-reply-2400.webp",
         "width": 1080,
         "height": 2400
       }
@@ -819,6 +1428,11 @@
         "src": "/media/_unassigned/car-carrying-panels-low-quality-1600.webp",
         "width": 1600,
         "height": 2133
+      },
+      "2400": {
+        "src": "/media/_unassigned/car-carrying-panels-low-quality-2400.webp",
+        "width": 2400,
+        "height": 3200
       }
     },
     "social": {
@@ -838,8 +1452,8 @@
         "width": 800,
         "height": 1422
       },
-      "1600": {
-        "src": "/media/_unassigned/crew-on-rooftop-wall-1600.webp",
+      "2400": {
+        "src": "/media/_unassigned/crew-on-rooftop-wall-2400.webp",
         "width": 1080,
         "height": 1920
       }
@@ -861,8 +1475,8 @@
         "width": 800,
         "height": 1422
       },
-      "1600": {
-        "src": "/media/_unassigned/mppt-charge-controller-closeup-1600.webp",
+      "2400": {
+        "src": "/media/_unassigned/mppt-charge-controller-closeup-2400.webp",
         "width": 1080,
         "height": 1920
       }
@@ -884,8 +1498,8 @@
         "width": 800,
         "height": 1422
       },
-      "1600": {
-        "src": "/media/_unassigned/rooftop-install-c-original-sideways-1600.webp",
+      "2400": {
+        "src": "/media/_unassigned/rooftop-install-c-original-sideways-2400.webp",
         "width": 1080,
         "height": 1920
       }
@@ -896,35 +1510,155 @@
       "height": 1920
     }
   },
-  "projects/daffodil-gardens-estate-lagos/video-01-roof-panels-installed": {
-    "hash": "46f4da449842",
+  "projects/abule-egba-new-look-hotel-upgrade/video-01-after-new-inverter-wall-walkthrough": {
+    "hash": "9fa05a892fc1",
     "type": "video",
-    "src": "/media/projects/daffodil-gardens-estate-lagos/video-01-roof-panels-installed.mp4",
-    "poster": "/media/projects/daffodil-gardens-estate-lagos/video-01-roof-panels-installed-poster.webp",
+    "src": "/media/projects/abule-egba-new-look-hotel-upgrade/video-01-after-new-inverter-wall-walkthrough.mp4",
+    "poster": "/media/projects/abule-egba-new-look-hotel-upgrade/video-01-after-new-inverter-wall-walkthrough-poster.webp",
+    "width": 720,
+    "height": 1280,
+    "duration": 20,
+    "trimmed": true
+  },
+  "projects/abule-egba-new-look-hotel-upgrade/video-02-before-old-tubular-batteries": {
+    "hash": "c0e0756870fd",
+    "type": "video",
+    "src": "/media/projects/abule-egba-new-look-hotel-upgrade/video-02-before-old-tubular-batteries.mp4",
+    "poster": "/media/projects/abule-egba-new-look-hotel-upgrade/video-02-before-old-tubular-batteries-poster.webp",
+    "width": 720,
+    "height": 1280,
+    "duration": 6.995367,
+    "trimmed": false
+  },
+  "projects/abule-egba-new-look-hotel-upgrade/video-03-crew-installing-panels-on-roof": {
+    "hash": "b7a70fdff979",
+    "type": "video",
+    "src": "/media/projects/abule-egba-new-look-hotel-upgrade/video-03-crew-installing-panels-on-roof.mp4",
+    "poster": "/media/projects/abule-egba-new-look-hotel-upgrade/video-03-crew-installing-panels-on-roof-poster.webp",
+    "width": 720,
+    "height": 1280,
+    "duration": 12.595,
+    "trimmed": false
+  },
+  "projects/centrepoint-supermarket-ibadan/video-01-crew-fitting-panels-on-roof": {
+    "hash": "2d2b2cd9c333",
+    "type": "video",
+    "src": "/media/projects/centrepoint-supermarket-ibadan/video-01-crew-fitting-panels-on-roof.mp4",
+    "poster": "/media/projects/centrepoint-supermarket-ibadan/video-01-crew-fitting-panels-on-roof-poster.webp",
+    "width": 1280,
+    "height": 720,
+    "duration": 10.466667,
+    "trimmed": false
+  },
+  "projects/centrepoint-supermarket-ibadan/video-02-technician-wiring-inverter-wall": {
+    "hash": "5ddf13d4b1e5",
+    "type": "video",
+    "src": "/media/projects/centrepoint-supermarket-ibadan/video-02-technician-wiring-inverter-wall.mp4",
+    "poster": "/media/projects/centrepoint-supermarket-ibadan/video-02-technician-wiring-inverter-wall-poster.webp",
+    "width": 720,
+    "height": 1280,
+    "duration": 10.898333,
+    "trimmed": false
+  },
+  "projects/daffodil-garden-estate-lekki-lagos/video-01-roof-panels-installed": {
+    "hash": "2c0745272706",
+    "type": "video",
+    "src": "/media/projects/daffodil-garden-estate-lekki-lagos/video-01-roof-panels-installed.mp4",
+    "poster": "/media/projects/daffodil-garden-estate-lekki-lagos/video-01-roof-panels-installed-poster.webp",
     "width": 1280,
     "height": 720,
     "duration": 7.333333,
     "trimmed": false
   },
-  "projects/daffodil-gardens-estate-lagos/video-02-crew-briefing-on-site": {
-    "hash": "fc9668ca899b",
+  "projects/daffodil-garden-estate-lekki-lagos/video-02-roof-array-walkthrough": {
+    "hash": "81d47e15107f",
     "type": "video",
-    "src": "/media/projects/daffodil-gardens-estate-lagos/video-02-crew-briefing-on-site.mp4",
-    "poster": "/media/projects/daffodil-gardens-estate-lagos/video-02-crew-briefing-on-site-poster.webp",
+    "src": "/media/projects/daffodil-garden-estate-lekki-lagos/video-02-roof-array-walkthrough.mp4",
+    "poster": "/media/projects/daffodil-garden-estate-lekki-lagos/video-02-roof-array-walkthrough-poster.webp",
+    "width": 1280,
+    "height": 720,
+    "duration": 16.233333,
+    "trimmed": false
+  },
+  "projects/daffodil-garden-estate-lekki-lagos/video-03-crew-briefing-on-site": {
+    "hash": "ada9291753a6",
+    "type": "video",
+    "src": "/media/projects/daffodil-garden-estate-lekki-lagos/video-03-crew-briefing-on-site.mp4",
+    "poster": "/media/projects/daffodil-garden-estate-lekki-lagos/video-03-crew-briefing-on-site-poster.webp",
     "width": 1280,
     "height": 720,
     "duration": 14.633333,
     "trimmed": false
   },
-  "projects/daffodil-gardens-estate-lagos/video-03-inverter-wall-walkthrough": {
-    "hash": "c9ee1ebf0eef",
+  "projects/daffodil-garden-estate-lekki-lagos/video-04-inverter-wall-walkthrough": {
+    "hash": "1bb69284a801",
     "type": "video",
-    "src": "/media/projects/daffodil-gardens-estate-lagos/video-03-inverter-wall-walkthrough.mp4",
-    "poster": "/media/projects/daffodil-gardens-estate-lagos/video-03-inverter-wall-walkthrough-poster.webp",
+    "src": "/media/projects/daffodil-garden-estate-lekki-lagos/video-04-inverter-wall-walkthrough.mp4",
+    "poster": "/media/projects/daffodil-garden-estate-lekki-lagos/video-04-inverter-wall-walkthrough-poster.webp",
     "width": 720,
     "height": 1280,
     "duration": 20,
     "trimmed": true
+  },
+  "projects/gbopa-ibadan-first-fix-wiring/video-01-checking-distribution-board-breakers": {
+    "hash": "41588e1d5d35",
+    "type": "video",
+    "src": "/media/projects/gbopa-ibadan-first-fix-wiring/video-01-checking-distribution-board-breakers.mp4",
+    "poster": "/media/projects/gbopa-ibadan-first-fix-wiring/video-01-checking-distribution-board-breakers-poster.webp",
+    "width": 720,
+    "height": 1280,
+    "duration": 12.731667,
+    "trimmed": false
+  },
+  "projects/gbopa-ibadan-first-fix-wiring/video-02-unloading-conduit-and-materials": {
+    "hash": "d62f3c1ee87f",
+    "type": "video",
+    "src": "/media/projects/gbopa-ibadan-first-fix-wiring/video-02-unloading-conduit-and-materials.mp4",
+    "poster": "/media/projects/gbopa-ibadan-first-fix-wiring/video-02-unloading-conduit-and-materials-poster.webp",
+    "width": 720,
+    "height": 1280,
+    "duration": 20,
+    "trimmed": true
+  },
+  "projects/ilorin-princess-luxury-hotels/video-01-crew-mounting-inverter-and-battery": {
+    "hash": "068bcf5cdba0",
+    "type": "video",
+    "src": "/media/projects/ilorin-princess-luxury-hotels/video-01-crew-mounting-inverter-and-battery.mp4",
+    "poster": "/media/projects/ilorin-princess-luxury-hotels/video-01-crew-mounting-inverter-and-battery-poster.webp",
+    "width": 720,
+    "height": 1280,
+    "duration": 9.288833,
+    "trimmed": false
+  },
+  "projects/ilorin-princess-luxury-hotels/video-02-crew-on-roof-at-panel-rails": {
+    "hash": "99ddebacc2b9",
+    "type": "video",
+    "src": "/media/projects/ilorin-princess-luxury-hotels/video-02-crew-on-roof-at-panel-rails.mp4",
+    "poster": "/media/projects/ilorin-princess-luxury-hotels/video-02-crew-on-roof-at-panel-rails-poster.webp",
+    "width": 1280,
+    "height": 720,
+    "duration": 11.24825,
+    "trimmed": false
+  },
+  "projects/kolapo-ishola-gra-ibadan/video-01-roof-array-pan": {
+    "hash": "de6e49f50139",
+    "type": "video",
+    "src": "/media/projects/kolapo-ishola-gra-ibadan/video-01-roof-array-pan.mp4",
+    "poster": "/media/projects/kolapo-ishola-gra-ibadan/video-01-roof-array-pan-poster.webp",
+    "width": 720,
+    "height": 1280,
+    "duration": 5.011813,
+    "trimmed": false
+  },
+  "projects/kolapo-ishola-gra-ibadan/video-02-inverters-and-breaker-panels-closeup": {
+    "hash": "7c9dd77fc154",
+    "type": "video",
+    "src": "/media/projects/kolapo-ishola-gra-ibadan/video-02-inverters-and-breaker-panels-closeup.mp4",
+    "poster": "/media/projects/kolapo-ishola-gra-ibadan/video-02-inverters-and-breaker-panels-closeup-poster.webp",
+    "width": 720,
+    "height": 1280,
+    "duration": 14.028875,
+    "trimmed": false
   },
   "projects/nysc-oyo-coordinator-office/video-01-installation-at-state-coordinator-office": {
     "hash": "f0d5142638c6",
@@ -936,14 +1670,24 @@
     "duration": 13.898333,
     "trimmed": false
   },
-  "projects/oasis-integrated-farms/video-01-inverter-and-battery": {
-    "hash": "e72aef5f0eba",
+  "projects/oasis-integrated-farms-ibadan/video-01-inverter-and-battery": {
+    "hash": "3ee3192c7be4",
     "type": "video",
-    "src": "/media/projects/oasis-integrated-farms/video-01-inverter-and-battery.mp4",
-    "poster": "/media/projects/oasis-integrated-farms/video-01-inverter-and-battery-poster.webp",
+    "src": "/media/projects/oasis-integrated-farms-ibadan/video-01-inverter-and-battery.mp4",
+    "poster": "/media/projects/oasis-integrated-farms-ibadan/video-01-inverter-and-battery-poster.webp",
     "width": 720,
     "height": 1280,
     "duration": 17.630272,
+    "trimmed": false
+  },
+  "projects/oasis-integrated-farms-ibadan/video-02-farm-gate-sign": {
+    "hash": "0d502362b24e",
+    "type": "video",
+    "src": "/media/projects/oasis-integrated-farms-ibadan/video-02-farm-gate-sign.mp4",
+    "poster": "/media/projects/oasis-integrated-farms-ibadan/video-02-farm-gate-sign-poster.webp",
+    "width": 1280,
+    "height": 720,
+    "duration": 6.933333,
     "trimmed": false
   },
   "training/nysc-saed/video-01-camp-selfie-with-corps-members": {

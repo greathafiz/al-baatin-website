@@ -4,10 +4,18 @@ import { WhatsAppIcon } from "@/components/ui"
 import { whatsapp } from "@/data/business"
 import { image } from "@/lib/media"
 
-/** The one landscape photo in the set, and the sharpest. */
+/**
+ * The sharpest true landscape in the set (1920×1080), which is why it is the
+ * hero: every other project photo is a portrait phone shot that has to be
+ * cropped hard to fill a wide frame.
+ *
+ * This file was previously filed under a "Rhema Chapel, Lekki" folder. The
+ * client's October 2026 notes corrected that — it is the Kolapo Ishola GRA
+ * roof in Ibadan. Same photograph, right job.
+ */
 const heroPhoto = {
-  key: "projects/rhema-chapel-lekki-lagos/02-panels-completed-from-above",
-  alt: "Two Al-Baatin fitters in hi-vis vests wiring a completed solar array on a dark metal roof, with Lekki rooftops behind them.",
+  key: "projects/kolapo-ishola-gra-ibadan/04-crew-fixing-panels-on-metal-roof",
+  alt: "Two Al-Baatin fitters in hi-vis vests fixing solar panels to a dark metal roof, with the rooftops of the estate behind them.",
   focal: "50% 45%",
 }
 

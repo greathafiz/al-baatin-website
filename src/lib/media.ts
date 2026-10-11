@@ -46,11 +46,14 @@ export interface ResolvedImage {
 
 /**
  * Resolve an image to its largest variant plus a srcSet, so the browser can
- * pick the 800px file on a phone and the larger one on a desktop.
+ * pick the 800px file on a phone and a larger one on a desktop.
  *
- * Sources below 1600px wide were never upscaled, so the two variants can be the
- * same size; in that case we emit a single srcSet entry rather than claiming two
- * widths that are really identical.
+ * Built from whatever tiers the manifest actually has rather than a fixed
+ * pair: these photos top out anywhere between 720px and 2560px wide and are
+ * never upscaled, so a small source has fewer tiers than a large one. Entries
+ * are de-duplicated by real width, because two tiers capped at the same source
+ * width are the same file and advertising both would let the browser pick a
+ * "larger" image that is no sharper.
  */
 export function image(key: MediaKey): ResolvedImage {
   const entry = manifest[key]
@@ -60,17 +63,19 @@ export function image(key: MediaKey): ResolvedImage {
     )
   }
 
-  const large = entry.variants["1600"]
-  const small = entry.variants["800"]
+  const byWidth = new Map<number, Variant>()
+  for (const variant of Object.values(entry.variants)) {
+    if (!byWidth.has(variant.width)) byWidth.set(variant.width, variant)
+  }
 
-  const parts = [`${small.src} ${small.width}w`]
-  if (large.width > small.width) parts.push(`${large.src} ${large.width}w`)
+  const tiers = [...byWidth.values()].sort((a, b) => a.width - b.width)
+  const largest = tiers[tiers.length - 1]
 
   return {
-    src: large.src,
-    srcSet: parts.join(", "),
-    width: large.width,
-    height: large.height,
+    src: largest.src,
+    srcSet: tiers.map((v) => `${v.src} ${v.width}w`).join(", "),
+    width: largest.width,
+    height: largest.height,
   }
 }
 

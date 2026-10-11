@@ -102,13 +102,34 @@ export const googleListings = {
   },
 } as const
 
-/** Equipment he mostly fits. Named because customers ask. */
+/**
+ * Equipment he mostly fits. Named because customers ask — someone comparing
+ * quotes wants to know whose inverter is going on their wall.
+ *
+ * Spellings were checked against Nigerian retailer and manufacturer listings
+ * (11 Oct 2026), since his note was handwritten:
+ *   - "Cwotht" is sold as Cworth / C-Worth.
+ *   - Kartel Energy is a Nigerian maker; its battery line is Luxxwatt, which
+ *     is almost certainly the "Luxwatt" in his note. [CONFIRM spelling]
+ *   - Felicity is the brand his own installations show most (see the photos).
+ *
+ * The list is the single source of truth for the brand band on the homepage;
+ * adding one here adds it to the page.
+ */
 export const brands = [
   "Felicity",
-  "Novel",
+  "Deye",
+  "Sako",
   "Welion",
+  "Novel",
   "Itel",
   "Starplus",
+  "SMS",
+  "Kartel",
+  "Cworth",
+  "Luxxwatt",
+  "Africell",
+  "Famicare",
 ] as const
 
 const WHATSAPP_DIAL = "2348032392690"

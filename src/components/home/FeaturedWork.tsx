@@ -14,21 +14,32 @@ import { isPortrait } from "@/lib/media"
  *
  * Entries alternate sides so the page has a rhythm instead of one repeated card.
  */
-const entries = [
+const entries: {
+  slug: string
+  figure: string
+  unit: string
+  note: string
+  /** Overrides the project's lead photo for this entry only. */
+  photoKey?: string
+}[] = [
   {
-    slug: "daffodil-gardens-estate-lagos",
+    slug: "daffodil-garden-estate-lekki-lagos",
     figure: "45",
     unit: "kWh",
-    note: "of storage across three batteries, on a new-build duplex",
+    note: "of storage across three batteries, on one house in Lekki",
   },
   {
-    slug: "rhema-chapel-lekki-lagos",
-    figure: "24",
+    slug: "kolapo-ishola-gra-ibadan",
+    figure: "18",
     unit: "panels",
-    note: "15.6kWp across one church roof in Lekki",
+    note: "12.6kWp, plus an electric fence and CCTV on the same property",
+    // This project's lead photo IS the hero image. Showing it again a screen
+    // later reads as a bug, so this entry uses the inverter wall instead.
+    photoKey:
+      "projects/kolapo-ishola-gra-ibadan/01-three-inverters-and-two-batteries-wall",
   },
   {
-    slug: "oasis-integrated-farms",
+    slug: "oasis-integrated-farms-ibadan",
     figure: "12",
     unit: "kVA",
     note: "hybrid system keeping a working farm running",
@@ -47,7 +58,10 @@ export function FeaturedWork() {
       <div className="mt-14 space-y-20 md:mt-20 md:space-y-32">
         {entries.map((entry, i) => {
           const project = projects.find((p) => p.slug === entry.slug)!
-          const photo = project.photos[0]
+          const photo = entry.photoKey
+            ? (project.photos.find((p) => p.key === entry.photoKey) ??
+              project.photos[0])
+            : project.photos[0]
           const flip = i % 2 === 1
 
           /**

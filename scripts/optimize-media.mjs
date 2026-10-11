@@ -26,13 +26,26 @@ const CONTENT_DIR = "content"
 const OUT_DIR = path.join("public", "media")
 const MANIFEST = path.join(OUT_DIR, "manifest.json")
 
-const WIDTHS = [1600, 800]
+/**
+ * 2400 exists for the hero and other full-bleed images on a wide or retina
+ * screen. It is capped at the source width like every other tier, so it is
+ * only emitted for the few photos that actually have the pixels — most of
+ * these are 720-1920px phone shots and simply never produce one.
+ */
+const WIDTHS = [2400, 1600, 800]
 /**
  * 68, not 75. Lighthouse flagged ~57KB of avoidable weight on the 800px hero
  * alone. These are phone photos on mobile data — at this size the difference
  * is invisible and the saving is not.
+ *
+ * The exception is the large tiers: a photo rendered full-bleed across a
+ * desktop viewport shows WebP's smoothing on panel edges and hi-vis mesh,
+ * which is exactly where this set is already soft. They get a little more
+ * room, and the 800px file that phones actually download is untouched.
  */
 const QUALITY = 68
+const QUALITY_LARGE = 78
+const LARGE_FROM = 1600
 /** og:image JPEG — WhatsApp will not reliably preview WebP. ~300KB ceiling. */
 const SOCIAL_WIDTH = 1200
 const SOCIAL_QUALITY = 62
@@ -122,8 +135,20 @@ async function processImage(file, manifest, next) {
   const variants = {}
   let wrote = 0
 
+  /**
+   * Skip a tier that would just duplicate a bigger one.
+   *
+   * A 1920px source cannot fill the 2400 tier, so without this it would emit
+   * a second identical 1920px file under the 2400 name and the srcSet would
+   * advertise a width the file does not have.
+   */
+  const emitted = new Set()
+
   for (const target of WIDTHS) {
     const width = Math.min(target, srcWidth) // never upscale
+    if (emitted.has(width)) continue
+    emitted.add(width)
+
     const dest = path.join(OUT_DIR, `${slug}-${target}.webp`)
     variants[target] = {
       src: `/media/${slug}-${target}.webp`,
@@ -144,7 +169,7 @@ async function processImage(file, manifest, next) {
     await sharp(file)
       .autoOrient()
       .resize({ width, withoutEnlargement: true })
-      .webp({ quality: QUALITY })
+      .webp({ quality: width >= LARGE_FROM ? QUALITY_LARGE : QUALITY })
       .toFile(dest)
     wrote++
   }

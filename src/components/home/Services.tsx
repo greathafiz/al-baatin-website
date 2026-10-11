@@ -44,15 +44,26 @@ export function Services() {
           would imply an authorised-dealer relationship he may not hold. The
           names in the display face carry the same information, cost nothing in
           page weight, survive a brand change (one edit in business.ts) and
-          cannot arrive as five mismatched rasters from a logo scraper.
+          cannot arrive as thirteen mismatched rasters from a logo scraper.
+
+          Set as one continuous rail rather than a wrapped list. At five names
+          a wrap was fine; at thirteen it became a grey paragraph of nouns —
+          the "wordy" failure mode. A single line that runs past the edge of
+          the screen reads as a supply list rather than a spec sheet, and the
+          names stay large enough to actually be read.
+
+          Deliberately NOT a scrolling marquee. The brief allows one motion
+          moment on this site and the hero already spends it; a band that
+          animates forever would also mean the list is never all on screen at
+          once. This sits still and simply reads.
         */}
         <div className="mt-14 border-t border-bone/20 pt-8 md:mt-20">
           <h3 className="text-meta text-bone/60">Brands we fit</h3>
-          <ul className="mt-5 flex flex-wrap items-baseline gap-x-10 gap-y-3 md:gap-x-16">
+          <ul className="brand-rail mt-5">
             {brands.map((brand) => (
               <li
                 key={brand}
-                className="font-display text-2xl font-semibold tracking-tight text-bone/90 md:text-3xl"
+                className="font-display text-base font-semibold tracking-tight text-bone/90 sm:text-lg md:text-2xl lg:text-[1.75rem]"
               >
                 {brand}
               </li>
