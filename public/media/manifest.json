@@ -349,25 +349,25 @@
       "height": 900
     }
   },
-  "projects/daffodil-garden-estate-lekki-lagos/09-estate-entrance-gate": {
+  "projects/daffodil-garden-estate-lekki-lagos/08-estate-entrance-gate": {
     "hash": "b6ee5182e0be",
     "type": "image",
     "width": 1440,
     "height": 2560,
     "variants": {
       "800": {
-        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/09-estate-entrance-gate-800.webp",
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/08-estate-entrance-gate-800.webp",
         "width": 800,
         "height": 1422
       },
       "2400": {
-        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/09-estate-entrance-gate-2400.webp",
+        "src": "/media/projects/daffodil-garden-estate-lekki-lagos/08-estate-entrance-gate-2400.webp",
         "width": 1440,
         "height": 2560
       }
     },
     "social": {
-      "src": "/media/projects/daffodil-garden-estate-lekki-lagos/09-estate-entrance-gate-social.jpg",
+      "src": "/media/projects/daffodil-garden-estate-lekki-lagos/08-estate-entrance-gate-social.jpg",
       "width": 1200,
       "height": 2133
     }
@@ -818,50 +818,50 @@
       "height": 1600
     }
   },
-  "projects/kolapo-ishola-gra-ibadan/09-estate-signboard-at-night": {
-    "hash": "4610d43d884a",
-    "type": "image",
-    "width": 1440,
-    "height": 2560,
-    "variants": {
-      "800": {
-        "src": "/media/projects/kolapo-ishola-gra-ibadan/09-estate-signboard-at-night-800.webp",
-        "width": 800,
-        "height": 1422
-      },
-      "2400": {
-        "src": "/media/projects/kolapo-ishola-gra-ibadan/09-estate-signboard-at-night-2400.webp",
-        "width": 1440,
-        "height": 2560
-      }
-    },
-    "social": {
-      "src": "/media/projects/kolapo-ishola-gra-ibadan/09-estate-signboard-at-night-social.jpg",
-      "width": 1200,
-      "height": 2133
-    }
-  },
-  "projects/kolapo-ishola-gra-ibadan/10-house-exterior": {
+  "projects/kolapo-ishola-gra-ibadan/09-house-exterior": {
     "hash": "d5306bd5cb7d",
     "type": "image",
     "width": 963,
     "height": 1280,
     "variants": {
       "800": {
-        "src": "/media/projects/kolapo-ishola-gra-ibadan/10-house-exterior-800.webp",
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/09-house-exterior-800.webp",
         "width": 800,
         "height": 1063
       },
       "2400": {
-        "src": "/media/projects/kolapo-ishola-gra-ibadan/10-house-exterior-2400.webp",
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/09-house-exterior-2400.webp",
         "width": 963,
         "height": 1280
       }
     },
     "social": {
-      "src": "/media/projects/kolapo-ishola-gra-ibadan/10-house-exterior-social.jpg",
+      "src": "/media/projects/kolapo-ishola-gra-ibadan/09-house-exterior-social.jpg",
       "width": 963,
       "height": 1280
+    }
+  },
+  "projects/kolapo-ishola-gra-ibadan/10-estate-signboard-at-night": {
+    "hash": "4610d43d884a",
+    "type": "image",
+    "width": 1440,
+    "height": 2560,
+    "variants": {
+      "800": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/10-estate-signboard-at-night-800.webp",
+        "width": 800,
+        "height": 1422
+      },
+      "2400": {
+        "src": "/media/projects/kolapo-ishola-gra-ibadan/10-estate-signboard-at-night-2400.webp",
+        "width": 1440,
+        "height": 2560
+      }
+    },
+    "social": {
+      "src": "/media/projects/kolapo-ishola-gra-ibadan/10-estate-signboard-at-night-social.jpg",
+      "width": 1200,
+      "height": 2133
     }
   },
   "projects/oasis-integrated-farms-ibadan/01-hybrid-inverter-and-battery": {

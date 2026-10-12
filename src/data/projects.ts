@@ -64,12 +64,7 @@ const entries: Project[] = [
         focal: "center",
       },
       {
-        key: "projects/daffodil-garden-estate-lekki-lagos/08-house-exterior",
-        alt: "The two-storey house the system was installed on, seen from the driveway.",
-        focal: "center",
-      },
-      {
-        key: "projects/daffodil-garden-estate-lekki-lagos/09-estate-entrance-gate",
+        key: "projects/daffodil-garden-estate-lekki-lagos/08-estate-entrance-gate",
         alt: "The entrance gate to Daffodil Garden Estate on Chevron Drive.",
         focal: "center",
       },
@@ -151,7 +146,12 @@ const entries: Project[] = [
         focal: "center",
       },
       {
-        key: "projects/kolapo-ishola-gra-ibadan/09-estate-signboard-at-night",
+        key: "projects/kolapo-ishola-gra-ibadan/09-house-exterior",
+        alt: "The two-storey house the system was installed on, seen from the driveway.",
+        focal: "center",
+      },
+      {
+        key: "projects/kolapo-ishola-gra-ibadan/10-estate-signboard-at-night",
         alt: "The Kolapo Ishola GRA estate signboard lit at night.",
         focal: "center",
       },
