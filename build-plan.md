@@ -7,14 +7,14 @@ Last updated: 6 Oct 2026
 
 ---
 
-## Stage 0 — Read content and agree the design  `[x]`
+## Stage 0 — Read content and agree the design `[x]`
 
 - [x] 0.1 Read everything in `content/` and summarise what is there / missing
 - [x] 0.2 Sample the real colours out of `content/logo.jpg`
 - [x] 0.3 Measure every image and video (dimensions, file size, orientation)
 - [~] 0.4 Design plan: palette, type, layout, principles — **waiting for approval**
 
-## Stage 1 — Project foundation  `[x]`
+## Stage 1 — Project foundation `[x]`
 
 - [x] 1.1 Build fresh (old demo components already removed in `d01aae1`)
 - [x] 1.2 `next.config.ts`: `output: 'export'`, `images: { unoptimized: true }`, `trailingSlash`
@@ -22,7 +22,7 @@ Last updated: 6 Oct 2026
 - [x] 1.4 Fonts via `next/font` — Fraunces (display) + Inter (body), self-hosted
 - [x] 1.5 Base layout, metadata defaults, skip link, focus styles, `prefers-reduced-motion`
 
-## Stage 2 — Media pipeline  `[x]`
+## Stage 2 — Media pipeline `[x]`
 
 - [x] 2.1 `scripts/optimize-media.mjs` with sharp → WebP 1600px + 800px into `public/media/`, never upscaling past source width
 - [x] 2.2 Video posters extracted with ffmpeg (installed 9.0.2); poster at 1s to avoid black frames
@@ -31,7 +31,7 @@ Last updated: 6 Oct 2026
 - [x] 2.5 ffmpeg commands documented in the README
 - [x] 2.6 Incremental manifest (`public/media/manifest.json`) with real dimensions, so components can set width/height and avoid layout shift
 
-## Stage 3 — Typed content data  `[x]`
+## Stage 3 — Typed content data `[x]`
 
 - [x] 3.1 `src/data/business.ts` — name, phones (all five), email, addresses, socials, service areas
 - [x] 3.2 `src/data/services.ts` — solar first, then the rest
@@ -41,7 +41,7 @@ Last updated: 6 Oct 2026
 - [x] 3.6 Shared types, `src/data/team.ts`, and a single `whatsappLink()` helper
 - [x] 3.7 `src/lib/media.ts` — typed manifest access with srcSet and real dimensions
 
-## Stage 4 — Homepage  `[x]`
+## Stage 4 — Homepage `[x]`
 
 - [x] 4.1 Header + nav (mobile menu)
 - [x] 4.2 Hero
@@ -55,7 +55,7 @@ Last updated: 6 Oct 2026
 - [x] 4.10 Footer
 - [x] 4.11 Sticky WhatsApp button (mobile), clear of the footer
 
-## Stage 5 — Other pages  `[x]`
+## Stage 5 — Other pages `[x]`
 
 - [x] 5.1 `/projects` with All / Homes / Business / Other filters
 - [x] 5.2 `/projects/[slug]` static detail pages (all 6 prerendered)
@@ -64,7 +64,7 @@ Last updated: 6 Oct 2026
 - [x] 5.5 Custom 404
 - [x] 5.6 `robots.txt` + `sitemap.xml`
 
-## Stage 6 — SEO, accessibility, polish  `[~]`
+## Stage 6 — SEO, accessibility, polish `[~]`
 
 - [x] 6.1 Per-page titles/descriptions + Open Graph + canonicals
 - [x] 6.2 `LocalBusiness` JSON-LD
@@ -72,7 +72,7 @@ Last updated: 6 Oct 2026
 - [x] 6.4 Check at 375px and desktop
 - [~] 6.5 Lighthouse mobile: a11y/BP/SEO 100, performance 79-84 locally (see README)
 
-## Stage 7 — Ship  `[x]`
+## Stage 7 — Ship `[x]`
 
 - [x] 7.1 `npm run build` produces `out/`
 - [x] 7.2 README: add a project/testimonial, run the media script, deploy to Cloudflare Pages, custom domain, Zoho MX note
@@ -145,43 +145,43 @@ Across this session (`3cde0ad..HEAD`), excluding regenerated media under
 
 ### Created
 
-| File | Why |
-| --- | --- |
-| `app/robots.ts` | robots.txt, `force-static` for `output: export` |
-| `app/sitemap.ts` | sitemap.xml, picks up projects automatically |
-| `src/components/StructuredData.tsx` | `LocalBusiness` JSON-LD, no fabricated rating |
-| `src/components/Lightbox.tsx` | Native `<dialog>` photo viewer, no dependency |
-| `src/data/site.ts` | Single source of truth for the canonical origin |
+| File                                | Why                                             |
+| ----------------------------------- | ----------------------------------------------- |
+| `app/robots.ts`                     | robots.txt, `force-static` for `output: export` |
+| `app/sitemap.ts`                    | sitemap.xml, picks up projects automatically    |
+| `src/components/StructuredData.tsx` | `LocalBusiness` JSON-LD, no fabricated rating   |
+| `src/components/Lightbox.tsx`       | Native `<dialog>` photo viewer, no dependency   |
+| `src/data/site.ts`                  | Single source of truth for the canonical origin |
 
 ### Modified
 
-| File | Why |
-| --- | --- |
-| `app/globals.css` | Accent raised to #46cf66; skip link moved outside `@layer` |
-| `app/layout.tsx` | Fonts pinned to used weights; canonical; JSON-LD mounted |
-| `app/not-found.tsx` | Own title, `noindex`, `canonical: null` |
-| `app/projects/[slug]/page.tsx` | Lightbox, per-project OG image, canonical |
-| `app/projects/page.tsx` | Canonical |
-| `app/training/page.tsx` | Certificates split out, heading levels, lightbox |
-| `scripts/optimize-media.mjs` | JPEG social variant; WebP quality 75 -> 68 |
-| `src/components/ContactForm.tsx` | `cursor-pointer`, `cursor-wait`, tap target |
-| `src/components/ProjectGrid.tsx` | Filter buttons to 44px, `cursor-pointer` |
-| `src/components/SiteHeader.tsx` | 44px tap targets, `cursor-pointer` |
-| `src/components/SiteFooter.tsx` | 44px tap targets |
-| `src/components/home/Contact.tsx` | Phone/email 44px; "WhatsApp" label contrast |
-| `src/components/home/FeaturedWork.tsx` | Portrait photos keep their shape |
-| `src/components/home/Hero.tsx` | LCP preload; secondary CTA tap target |
-| `src/components/home/HowItWorks.tsx` | Numerals readable and `aria-hidden` |
-| `src/components/home/Services.tsx` | Brands as type; "Also installed and serviced" |
-| `src/components/home/Testimonials.tsx` | Google link tap target |
-| `src/components/home/TrainingTeaser.tsx` | Named lead photo, tap target |
-| `src/components/layout.tsx` | Section rhythm down from py-44 |
-| `src/data/projects.ts` | Oasis alt text and focal point |
-| `src/data/training.ts` | `classPhotos` / `certificatePhotos` split |
-| `src/lib/media.ts` | `socialImage()` for og:image |
-| `README.md` | Add a project/testimonial, Cloudflare deploy, Zoho MX warning |
-| `CLAUDE.md` | Locked-in design decisions |
-| `build-plan.md` | This file |
+| File                                     | Why                                                           |
+| ---------------------------------------- | ------------------------------------------------------------- |
+| `app/globals.css`                        | Accent raised to #46cf66; skip link moved outside `@layer`    |
+| `app/layout.tsx`                         | Fonts pinned to used weights; canonical; JSON-LD mounted      |
+| `app/not-found.tsx`                      | Own title, `noindex`, `canonical: null`                       |
+| `app/projects/[slug]/page.tsx`           | Lightbox, per-project OG image, canonical                     |
+| `app/projects/page.tsx`                  | Canonical                                                     |
+| `app/training/page.tsx`                  | Certificates split out, heading levels, lightbox              |
+| `scripts/optimize-media.mjs`             | JPEG social variant; WebP quality 75 -> 68                    |
+| `src/components/ContactForm.tsx`         | `cursor-pointer`, `cursor-wait`, tap target                   |
+| `src/components/ProjectGrid.tsx`         | Filter buttons to 44px, `cursor-pointer`                      |
+| `src/components/SiteHeader.tsx`          | 44px tap targets, `cursor-pointer`                            |
+| `src/components/SiteFooter.tsx`          | 44px tap targets                                              |
+| `src/components/home/Contact.tsx`        | Phone/email 44px; "WhatsApp" label contrast                   |
+| `src/components/home/FeaturedWork.tsx`   | Portrait photos keep their shape                              |
+| `src/components/home/Hero.tsx`           | LCP preload; secondary CTA tap target                         |
+| `src/components/home/HowItWorks.tsx`     | Numerals readable and `aria-hidden`                           |
+| `src/components/home/Services.tsx`       | Brands as type; "Also installed and serviced"                 |
+| `src/components/home/Testimonials.tsx`   | Google link tap target                                        |
+| `src/components/home/TrainingTeaser.tsx` | Named lead photo, tap target                                  |
+| `src/components/layout.tsx`              | Section rhythm down from py-44                                |
+| `src/data/projects.ts`                   | Oasis alt text and focal point                                |
+| `src/data/training.ts`                   | `classPhotos` / `certificatePhotos` split                     |
+| `src/lib/media.ts`                       | `socialImage()` for og:image                                  |
+| `README.md`                              | Add a project/testimonial, Cloudflare deploy, Zoho MX warning |
+| `CLAUDE.md`                              | Locked-in design decisions                                    |
+| `build-plan.md`                          | This file                                                     |
 
 ---
 

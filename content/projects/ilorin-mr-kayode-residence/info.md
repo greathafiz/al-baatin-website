@@ -1,6 +1,6 @@
-# Princess Luxury Hotels and Tourism, Ilorin: 8kVA hybrid install
+# Mr Kayode residence, Ilorin: 8kVA hybrid install
 
-- **Location:** Princess Luxury Hotels and Tourism, Ilorin, Kwara State
+- **Location:** Mr Kayode residence, Ilorin, Kwara State
 - **Type:** commercial (hotel). The client name comes from the overlay on the video clips; owner is fine with using it.
 - **System size:** 8kVA hybrid inverter, 15kWh lithium-ion battery and 10 x 650W solar panels (6.5kWp). From the owner's note.
 - **Date:** August 2026 (owner's note; a photo overlay reads 15 Aug 2026)

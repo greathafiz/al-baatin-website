@@ -222,8 +222,8 @@ const entries: Project[] = [
     ],
   },
   {
-    slug: "ilorin-princess-luxury-hotels",
-    title: "Princess Luxury Hotels and Tourism",
+    slug: "ilorin-mr-kayode-residence",
+    title: "Mr Kayode residence",
     location: "Ilorin, Kwara State",
     type: "commercial",
     systemSize: "8kVA hybrid inverter · 15kWh storage · 10 × 650W panels",
@@ -235,44 +235,44 @@ const entries: Project[] = [
     featured: true,
     photos: [
       {
-        key: "projects/ilorin-princess-luxury-hotels/01-finished-inverter-and-battery-wall",
+        key: "projects/ilorin-mr-kayode-residence/01-finished-inverter-and-battery-wall",
         alt: "A Felicity hybrid inverter mounted on the wall beside a distribution box and changeover switch, conduit curving down to a floor-standing lithium battery below.",
         focal: "center",
       },
       {
-        key: "projects/ilorin-princess-luxury-hotels/02-crew-mounting-panels-on-roof",
+        key: "projects/ilorin-mr-kayode-residence/02-crew-mounting-panels-on-roof",
         alt: "Fitters in hi-vis vests mounting solar panels on the hotel roof.",
         focal: "center",
       },
       {
-        key: "projects/ilorin-princess-luxury-hotels/03-crew-laying-panels-on-roof-close",
+        key: "projects/ilorin-mr-kayode-residence/03-crew-laying-panels-on-roof-close",
         alt: "A close view of the crew laying panels onto the mounting rails.",
         focal: "center",
       },
       {
-        key: "projects/ilorin-princess-luxury-hotels/04-technician-wiring-inverter-wall",
+        key: "projects/ilorin-mr-kayode-residence/04-technician-wiring-inverter-wall",
         alt: "A technician wiring the inverter into the distribution board.",
         focal: "center",
       },
       {
-        key: "projects/ilorin-princess-luxury-hotels/05-inverter-mounted-with-laser-level",
+        key: "projects/ilorin-mr-kayode-residence/05-inverter-mounted-with-laser-level",
         alt: "The inverter being set on the wall against a laser level line to get it square.",
         focal: "center",
       },
       {
-        key: "projects/ilorin-princess-luxury-hotels/06-distribution-board-and-conduit-run",
+        key: "projects/ilorin-mr-kayode-residence/06-distribution-board-and-conduit-run",
         alt: "The finished distribution board with its conduit run neatly along the wall.",
         focal: "center",
       },
     ],
     videos: [
       {
-        key: "projects/ilorin-princess-luxury-hotels/video-01-crew-mounting-inverter-and-battery",
+        key: "projects/ilorin-mr-kayode-residence/video-01-crew-mounting-inverter-and-battery",
         alt: "The crew mounting the inverter and setting the battery in place.",
         caption: "Mounting the inverter and battery",
       },
       {
-        key: "projects/ilorin-princess-luxury-hotels/video-02-crew-on-roof-at-panel-rails",
+        key: "projects/ilorin-mr-kayode-residence/video-02-crew-on-roof-at-panel-rails",
         alt: "The crew working along the panel rails on the hotel roof.",
         caption: "Fitting the roof array",
       },
@@ -338,8 +338,8 @@ const entries: Project[] = [
     ],
   },
   {
-    slug: "abule-egba-new-look-hotel-upgrade",
-    title: "New Look Hotel",
+    slug: "abule-egba-mr-olalekan-residence",
+    title: "Mr Olalekan residence",
     location: "Abule Egba, Lagos",
     type: "commercial",
     systemSize: "4.2kVA hybrid inverter · 5kWh storage · 6 × 650W panels",
@@ -351,29 +351,29 @@ const entries: Project[] = [
     featured: false,
     photos: [
       {
-        key: "projects/abule-egba-new-look-hotel-upgrade/01-after-4-2kva-hybrid-inverter-installed",
+        key: "projects/abule-egba-mr-olalekan-residence/01-after-4-2kva-hybrid-inverter-installed",
         alt: "After the upgrade: a Felicity hybrid inverter and matching lithium battery unit mounted side by side on the wall, with a monitor and isolator above them.",
         focal: "center",
       },
       {
-        key: "projects/abule-egba-new-look-hotel-upgrade/02-before-2kva-inverter-and-tubular-batteries",
+        key: "projects/abule-egba-mr-olalekan-residence/02-before-2kva-inverter-and-tubular-batteries",
         alt: "Before the upgrade: the old 2kVA inverter sitting above a pair of tubular batteries.",
         focal: "center",
       },
     ],
     videos: [
       {
-        key: "projects/abule-egba-new-look-hotel-upgrade/video-01-after-new-inverter-wall-walkthrough",
+        key: "projects/abule-egba-mr-olalekan-residence/video-01-after-new-inverter-wall-walkthrough",
         alt: "A walkthrough of the finished wall after the upgrade, showing the new inverter and lithium battery.",
         caption: "After: the new hybrid inverter and battery",
       },
       {
-        key: "projects/abule-egba-new-look-hotel-upgrade/video-02-before-old-tubular-batteries",
+        key: "projects/abule-egba-mr-olalekan-residence/video-02-before-old-tubular-batteries",
         alt: "The old tubular batteries and 2kVA inverter before they were replaced.",
         caption: "Before: the old 2kVA inverter",
       },
       {
-        key: "projects/abule-egba-new-look-hotel-upgrade/video-03-crew-installing-panels-on-roof",
+        key: "projects/abule-egba-mr-olalekan-residence/video-03-crew-installing-panels-on-roof",
         alt: "The crew installing the new panels on the hotel's corrugated roof.",
         caption: "Fitting the new panels",
       },

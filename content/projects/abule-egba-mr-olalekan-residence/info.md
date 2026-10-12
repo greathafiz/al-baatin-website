@@ -1,6 +1,6 @@
-# New Look Hotel, Abule Egba, Lagos: upgrade from 2kVA inverter to 4.2kVA hybrid
+# Mr Olalekan residence, Abule Egba, Lagos: upgrade from 2kVA inverter to 4.2kVA hybrid
 
-- **Location:** New Look Hotel, Abule Egba, Lagos (the clips also carry an "Agege" location tag, which is the neighbouring area)
+- **Location:** Mr Olalekan residence, Abule Egba, Lagos (the clips also carry an "Agege" location tag, which is the neighbouring area)
 - **Type:** commercial (hotel). The client name comes from the overlay on the photos and clips; owner is fine with using it.
 - **System size:** Upgraded from a 2kVA inverter with 2 tubular batteries to a 4.2kVA hybrid inverter, 5kWh lithium-ion battery and 6 x 650W solar panels (3.9kWp). From the owner's note.
 - **Date:** March 2026 (owner's note; overlays read 25 Mar 2026)

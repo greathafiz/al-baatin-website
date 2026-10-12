@@ -27,11 +27,11 @@ export function TrainingTeaser() {
         compete with it rather than echo it.
       */}
       <Frame width="wide">
-        <div className="relative isolate overflow-hidden">
+        <div className="relative isolate min-h-120 overflow-hidden sm:min-h-0">
           <Img
             photo={trainingLeadPhoto}
             sizes="(min-width: 1600px) 100rem, 100vw"
-            className="aspect-4/3 w-full object-cover sm:aspect-16/10 lg:aspect-21/9"
+            className="absolute inset-0 h-full w-full object-cover sm:static sm:aspect-16/10 sm:h-auto lg:aspect-21/9"
           />
           {/* Scrim weighted to the bottom where the type sits. Black rather
               than green: a green wash over a photograph of people in NYSC kit
@@ -52,11 +52,11 @@ export function TrainingTeaser() {
               the faces in the upper half of the frame keep their contrast
               instead of the whole image going muddy. */}
           <div
-            className="absolute inset-0 -z-0 bg-linear-to-t from-black/90 via-black/60 to-black/15"
+            className="absolute inset-0 z-0 bg-linear-to-t from-black/90 via-black/60 to-black/15"
             aria-hidden="true"
           />
           <div
-            className="absolute inset-x-0 bottom-0 -z-0 h-2/3 bg-linear-to-t from-black/75 to-transparent"
+            className="absolute inset-x-0 bottom-0 z-0 h-2/3 bg-linear-to-t from-black/75 to-transparent"
             aria-hidden="true"
           />
 
@@ -66,8 +66,8 @@ export function TrainingTeaser() {
               {training.trained.slice(1)}
             </p>
             <h2 className="text-lede mt-3 max-w-[34ch] font-sans font-normal text-white/90">
-              of corps members have trained with us in solar, CCTV and
-              intercom — {training.accreditedBy.split(" (")[0]} accredited.
+              of corps members have trained with us in solar, CCTV and intercom
+              — {training.accreditedBy.split(" (")[0]} accredited.
             </h2>
 
             <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">

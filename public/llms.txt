@@ -1,0 +1,19 @@
+# Al-Baatin Technologies Limited
+
+> Solar, inverter and security systems installer based in Ibadan, Nigeria, serving customers nationwide. Trading since 2010, registered as Al-Baatin Technologies Limited in 2018 (RC 1513930). Also known as ICT Master.
+
+Al-Baatin designs and installs solar power, inverter and battery systems for homes and businesses, plus CCTV, electric fencing, intercoms, networking, smart home/access control, vehicle tracking, satellite TV, electrical engineering, computer/ICT sales and repair, and estate/facility management. The company also runs an NYSC-accredited (SAED) training programme in solar, CCTV and intercom installation.
+
+Primary contact is WhatsApp: +234 803 239 2690. Head office and branches are in Ibadan, with a further branch in Lagos; named service areas include Ibadan, Lagos, Ogun, Osun, Ado-Ekiti, Abuja, Kaduna, Kano, Port Harcourt and Ilorin.
+
+## Site
+
+- [Home](/): Company overview, services summary, featured project photos, training teaser, and contact/WhatsApp call to action.
+- [Projects](/projects/): Gallery of completed installations (solar/inverter, hybrid systems, before-and-after upgrades) with photos, system specs and locations. Individual projects are at /projects/{slug}/.
+- [Training](/training/): Details of the NYSC SAED-accredited solar, CCTV and intercom training programme — cost, schedule, camp location and how to enrol.
+
+## Notes for agents
+
+- Prices, system sizes and dates shown on project pages are specific to that installation and should not be generalized as fixed pricing.
+- "Thousands" of installations and trained corps members is the owner's own figure; no exact count exists.
+- To reach the business, direct users to WhatsApp (+234 803 239 2690) or the addresses listed in the site footer, not to a form — the site has no online checkout or booking system.
