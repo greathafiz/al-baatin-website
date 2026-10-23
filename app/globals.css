@@ -120,13 +120,14 @@
     animation: hero-settle 900ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
   }
 
+  /* Scale only — no fade. The hero is the LCP element, and Chrome does not
+     count it as painted until its opacity animation lets it show, so a fade
+     from 0 added most of the 900ms straight onto mobile LCP. */
   @keyframes hero-settle {
     from {
-      opacity: 0;
       transform: scale(1.04);
     }
     to {
-      opacity: 1;
       transform: scale(1);
     }
   }

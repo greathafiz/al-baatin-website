@@ -709,6 +709,11 @@
       "src": "/media/projects/kolapo-ishola-gra-ibadan/04-crew-fixing-panels-on-metal-roof-social.jpg",
       "width": 1200,
       "height": 675
+    },
+    "portrait": {
+      "src": "/media/projects/kolapo-ishola-gra-ibadan/04-crew-fixing-panels-on-metal-roof-portrait.avif",
+      "width": 480,
+      "height": 800
     }
   },
   "projects/kolapo-ishola-gra-ibadan/05-crew-handing-panels-up-from-balcony": {

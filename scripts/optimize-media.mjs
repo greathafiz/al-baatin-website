@@ -49,6 +49,24 @@ const LARGE_FROM = 1600
 /** og:image JPEG — WhatsApp will not reliably preview WebP. ~300KB ceiling. */
 const SOCIAL_WIDTH = 1200
 const SOCIAL_QUALITY = 62
+/**
+ * Phone-shaped crops of full-bleed landscape images, keyed by slug, with the
+ * horizontal focal point (0 = left edge, 1 = right) to centre the crop on.
+ *
+ * A phone shows the hero as a tall slice — about the middle third of a 16:9
+ * photo — so the landscape 800px file spends two thirds of its bytes on pixels
+ * that are cropped away, and stretches the third that survives. A crop at the
+ * phone's own shape is sharper AND smaller: 480x800 AVIF is ~40KB against
+ * ~69KB for the 800px WebP. AVIF only, because the <picture> falls back to
+ * the WebP srcSet for any browser that cannot decode it.
+ */
+const PORTRAIT = {
+  "projects/kolapo-ishola-gra-ibadan/04-crew-fixing-panels-on-metal-roof": { x: 0.5 },
+}
+/** width / height. A phone hero is ~412x708 CSS px, about 0.58. */
+const PORTRAIT_ASPECT = 0.6
+const PORTRAIT_WIDTH = 480
+const PORTRAIT_QUALITY = 50
 const MAX_VIDEO_SECONDS = 20
 const POSTER_AT = 1.0 // seconds into the clip; 0 often lands on a black frame
 
@@ -208,6 +226,40 @@ async function processImage(file, manifest, next) {
     wrote++
   }
 
+  let portrait
+  if (PORTRAIT[slug]) {
+    const cropWidth = Math.min(srcWidth, Math.round(srcHeight * PORTRAIT_ASPECT))
+    const left = Math.max(
+      0,
+      Math.min(srcWidth - cropWidth, Math.round(srcWidth * PORTRAIT[slug].x - cropWidth / 2)),
+    )
+    const width = Math.min(PORTRAIT_WIDTH, cropWidth)
+    const portraitDest = path.join(OUT_DIR, `${slug}-portrait.avif`)
+    portrait = {
+      src: `/media/${slug}-portrait.avif`,
+      width,
+      height: Math.round((width / cropWidth) * srcHeight),
+    }
+
+    let portraitCurrent = manifest[slug]?.hash === hash && Boolean(manifest[slug]?.portrait)
+    if (portraitCurrent) {
+      try {
+        await fs.access(portraitDest)
+      } catch {
+        portraitCurrent = false
+      }
+    }
+    if (!portraitCurrent) {
+      await sharp(file)
+        .autoOrient()
+        .extract({ left, top: 0, width: cropWidth, height: srcHeight })
+        .resize({ width, withoutEnlargement: true })
+        .avif({ quality: PORTRAIT_QUALITY })
+        .toFile(portraitDest)
+      wrote++
+    }
+  }
+
   next[slug] = {
     hash,
     type: "image",
@@ -215,6 +267,7 @@ async function processImage(file, manifest, next) {
     height: srcHeight,
     variants,
     social,
+    ...(portrait ? { portrait } : {}),
   }
   return wrote
 }

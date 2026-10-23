@@ -1,7 +1,7 @@
 "use client"
 
 import Script from "next/script"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { whatsapp } from "@/data/business"
 
 type Status = "idle" | "sending" | "sent" | "error"
@@ -26,6 +26,34 @@ export function ContactForm() {
   const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID
   const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
   const [status, setStatus] = useState<Status>("idle")
+  const formRef = useRef<HTMLFormElement>(null)
+
+  /**
+   * Turnstile loads only once the form is close to the screen (or someone
+   * focuses a field), not with the page. Rendered during the server pass, the
+   * script became a <link rel=preload> in <head> — which Cloudflare promotes to
+   * an early hint — so a third-party script and its challenge iframe competed
+   * with the hero photo for bandwidth and CPU on every visit, for a form at
+   * the very bottom of the page.
+   */
+  const [turnstileWanted, setTurnstileWanted] = useState(false)
+
+  useEffect(() => {
+    const form = formRef.current
+    if (!form || turnstileWanted) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          setTurnstileWanted(true)
+        }
+      },
+      // Start well before it scrolls in, so the widget is ready by the time
+      // anyone has typed a name.
+      { rootMargin: "600px 0px" },
+    )
+    observer.observe(form)
+    return () => observer.disconnect()
+  }, [turnstileWanted])
 
   if (!formId || !turnstileSiteKey) {
     return (
@@ -99,13 +127,20 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="grid gap-4">
-      <Script
-        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-        strategy="afterInteractive"
-        async
-        defer
-      />
+    <form
+      ref={formRef}
+      onSubmit={onSubmit}
+      onFocus={() => setTurnstileWanted(true)}
+      className="grid gap-4"
+    >
+      {turnstileWanted ? (
+        <Script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          strategy="afterInteractive"
+          async
+          defer
+        />
+      ) : null}
       <input
         type="hidden"
         name="_subject"

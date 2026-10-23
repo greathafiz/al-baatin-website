@@ -21,6 +21,8 @@ interface ImageEntry {
   variants: Record<string, Variant>
   /** JPEG copy for og:image. Absent until `npm run media` is re-run. */
   social?: Variant
+  /** Phone-shaped AVIF crop; only for images listed in PORTRAIT in the script. */
+  portrait?: Variant
 }
 
 interface VideoEntry {
@@ -96,6 +98,12 @@ export function video(key: MediaKey): ResolvedVideo {
   }
   const { src, poster, width, height, duration } = entry
   return { src, poster, width, height, duration }
+}
+
+/** The phone-shaped crop of a full-bleed image, if the media script made one. */
+export function portraitImage(key: MediaKey): Variant | undefined {
+  const entry = manifest[key]
+  return entry?.type === "image" ? entry.portrait : undefined
 }
 
 /** True when the source is portrait, so layouts can reserve a taller box. */

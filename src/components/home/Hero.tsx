@@ -2,7 +2,7 @@ import { Frame } from "@/components/layout"
 import { Img } from "@/components/Media"
 import { WhatsAppIcon } from "@/components/ui"
 import { whatsapp } from "@/data/business"
-import { image } from "@/lib/media"
+import { image, portraitImage } from "@/lib/media"
 
 /**
  * The sharpest true landscape in the set (1920×1080), which is why it is the
@@ -29,29 +29,57 @@ const heroPhoto = {
  */
 export function Hero() {
   const hero = image(heroPhoto.key)
+  // Portrait phones get a crop at their own shape (see PORTRAIT in
+  // scripts/optimize-media.mjs): sharper than the slice of the landscape
+  // file they would otherwise show, and ~40% smaller.
+  const portrait = portraitImage(heroPhoto.key)
+  const phone = "(max-width: 767px) and (orientation: portrait)"
 
   return (
     <header className="relative isolate flex min-h-[86svh] flex-col justify-end overflow-hidden">
       {/*
         Preload the hero: it is the LCP element on every first visit, and
         without this the browser only discovers it after the stylesheet parses.
-        imageSrcSet mirrors the <img> exactly so preload and render agree on
-        which file to fetch — a mismatch downloads both.
+        Each preload mirrors exactly what the <picture> will pick for the same
+        screen — the media queries are complementary — so no device fetches
+        both files.
       */}
+      {portrait ? (
+        <link
+          rel="preload"
+          as="image"
+          href={portrait.src}
+          type="image/avif"
+          media={phone}
+          fetchPriority="high"
+        />
+      ) : null}
       <link
         rel="preload"
         as="image"
         href={hero.src}
         imageSrcSet={hero.srcSet}
         imageSizes="100vw"
+        media={portrait ? `not all and ${phone}` : undefined}
         fetchPriority="high"
       />
-      <Img
-        photo={heroPhoto}
-        priority
-        sizes="100vw"
-        className="hero-settle absolute inset-0 -z-10 h-full w-full object-cover"
-      />
+      <picture>
+        {portrait ? (
+          <source
+            media={phone}
+            type="image/avif"
+            srcSet={portrait.src}
+            width={portrait.width}
+            height={portrait.height}
+          />
+        ) : null}
+        <Img
+          photo={heroPhoto}
+          priority
+          sizes="100vw"
+          className="hero-settle absolute inset-0 -z-10 h-full w-full object-cover"
+        />
+      </picture>
       {/* Neutral scrim, weighted to the bottom where the type sits. Black
           rather than brand green: a green wash tints the panels and the
           hi-vis vests, which are the two things worth seeing. */}

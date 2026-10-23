@@ -83,7 +83,11 @@ export function TrainingTeaser() {
                 rel="noopener noreferrer"
                 className="text-meta inline-flex min-h-11 items-center border-b border-white/40 text-white/90 transition-colors hover:border-white"
               >
-                {training.cost}, certificate on completion
+                {/* The naira sign is set in the system face. Inter's latin
+                    subset has no ₦, so this one glyph otherwise pulls in its
+                    84KB latin-ext file at top priority on every homepage load. */}
+                <span style={{ fontFamily: "system-ui, sans-serif" }}>₦</span>
+                {training.cost.replace("₦", "")}, certificate on completion
               </a>
             </div>
           </div>

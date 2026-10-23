@@ -1,0 +1,6 @@
+# Cloudflare Pages response headers. Copied to out/ by `next build`.
+
+# Next's build output is content-hashed: a changed file gets a new name, so
+# these can be cached for good. Pages' default is 4 hours with revalidation.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
