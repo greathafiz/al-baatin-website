@@ -12,3 +12,6 @@ const configured = process.env.NEXT_PUBLIC_SITE_URL?.trim()
 export const SITE_URL = (configured || "https://albaatintechnologies.com")
   // A trailing slash here would produce "https://site.com//projects/".
   .replace(/\/+$/, "")
+
+/** Google Tag Manager container (carries the Google Analytics tag). */
+export const GTM_ID = "GTM-5T48LNL9"

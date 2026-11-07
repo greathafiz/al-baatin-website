@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import { Fraunces, Inter } from "next/font/google"
+import { Analytics } from "@/components/Analytics"
 import { SiteFooter } from "@/components/SiteFooter"
 import { SiteHeader } from "@/components/SiteHeader"
 import { StickyWhatsApp } from "@/components/StickyWhatsApp"
@@ -75,6 +76,7 @@ export default function RootLayout({
         <SiteFooter />
         <StickyWhatsApp />
         <StructuredData />
+        <Analytics />
       </body>
     </html>
   )
